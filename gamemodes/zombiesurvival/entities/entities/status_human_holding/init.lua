@@ -255,15 +255,28 @@ function ENT:Think()
 			end
 		end
 
-		if owner:KeyDown(IN_SPEED) then
-			if owner:KeyPressed(IN_SPEED) then
-				self.ObjectAngles = object:GetAngles()
+		if owner:KeyDown(IN_SPEED) then 
+			if owner:KeyDown(IN_WALK) then 
+				local xdiff = math.NormalizeAngle(self.StartX - (owner.InputMouseX or 0))
+				local ydiff = math.NormalizeAngle(self.StartY - (owner.InputMouseY or 0))
+				local sxdiff = xdiff * FrameTime() * 30 --mouse input sensitivity, needs to be readjusted on each machine
+				local sydiff = ydiff * FrameTime() * 30 --mouse input sensitivity, needs to be readjusted on each machine
+
+				self.ObjectAngles:RotateAroundAxis(owner:GetUp(), sxdiff)
+				self.ObjectAngles:RotateAroundAxis(owner:GetRight(), sydiff)
+				self.ObjectAngles:SnapTo( "p", 45 ):SnapTo( "y", 45 ):SnapTo( "r", 45 ) 
+
+				self.StartX = math.NormalizeAngle(self.StartX - (sxdiff))
+				self.StartY = math.NormalizeAngle(self.StartY - (sydiff)) 
+			elseif owner:KeyPressed(IN_SPEED) then 
+					self.ObjectAngles = object:GetAngles() 
 			end
-		elseif owner:KeyDown(IN_WALK) then
+			
+		elseif owner:KeyDown(IN_WALK) then 
 			local xdiff = math.NormalizeAngle(self.StartX - (owner.InputMouseX or 0))
 			local ydiff = math.NormalizeAngle(self.StartY - (owner.InputMouseY or 0))
 			local sxdiff = xdiff * FrameTime() * 8
-			local sydiff = ydiff * FrameTime() * 8
+			local sydiff = ydiff * FrameTime() * 8 
 
 			self.ObjectAngles:RotateAroundAxis(owner:GetUp(), sxdiff)
 			self.ObjectAngles:RotateAroundAxis(owner:GetRight(), sydiff)
@@ -271,6 +284,7 @@ function ENT:Think()
 			self.StartX = math.NormalizeAngle(self.StartX - (sxdiff))
 			self.StartY = math.NormalizeAngle(self.StartY - (sydiff))
 		end
+
 
 		ShadowParams.pos = self.ObjectPosition
 		ShadowParams.angle = self.ObjectAngles
