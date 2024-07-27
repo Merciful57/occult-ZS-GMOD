@@ -7,7 +7,7 @@ local cam = cam
 
 local Particles = {}
 
-local col = Color(220, 0, 0)
+local col = Color(255,255,255)
 local colprop = Color(0,0,0)
 hook.Add("PostDrawTranslucentRenderables", "DrawDamage", function()
 	if #Particles == 0 then return end
