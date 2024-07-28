@@ -3,7 +3,7 @@ local function pointslabelThink(self)
 	if self.m_LastPoints ~= points then
 		self.m_LastPoints = points
 
-		self:SetText("Points to spend: "..points)
+		self:SetText("Silver in your pockets: "..points)
 		self:SizeToContents()
 	end
 end
