@@ -671,7 +671,7 @@ function GM:OpenArsenalMenu()
 	topspace:AlignTop(8)
 	topspace:CenterHorizontal()
 
-	local wsb = EasyButton(topspace, "Worth Menu", 8, 4)
+	local wsb = EasyButton(topspace, "Gold Shop", 8, 4)
 	wsb:SetFont("ZSHUDFontSmaller")
 	wsb:SizeToContents()
 	wsb:AlignRight(8)
