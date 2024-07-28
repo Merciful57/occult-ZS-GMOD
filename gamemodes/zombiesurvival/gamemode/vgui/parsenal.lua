@@ -662,7 +662,7 @@ function GM:OpenArsenalMenu()
 
 	local title = EasyLabel(topspace, "The Silver Shop", "ZSHUDFontSmall", COLOR_WHITE)
 	title:CenterHorizontal()
-	local subtitle = EasyLabel(topspace, "For all of your zombie apocalypse needs!", "ZSHUDFontTiny", COLOR_WHITE)
+	local subtitle = EasyLabel(topspace, "What're ya buyin?", "ZSHUDFontTiny", COLOR_WHITE)
 	subtitle:CenterHorizontal()
 	subtitle:MoveBelow(title, 4)
 
