@@ -676,7 +676,10 @@ function GM:OpenArsenalMenu()
 	wsb:SizeToContents()
 	wsb:AlignRight(8)
 	wsb:AlignTop(8)
-	wsb.DoClick = worthmenuDoClick
+	wsb.DoClick = function()
+		--open cosmetic shop code goes here
+		GAMEMODE.ArsenalInterface:Close()
+	end
 
 	local bottomspace = vgui.Create("DPanel", frame)
 	bottomspace:SetWide(topspace:GetWide())
