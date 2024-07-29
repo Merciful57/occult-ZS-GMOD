@@ -13,11 +13,6 @@ concommand.Add("zs_pointsshopbuy", function(sender, command, arguments)
 		return
 	end
 
-	if usescrap and not sender:NearRemantler() or not usescrap and not sender:NearArsenalCrate() then
-		GAMEMODE:ConCommandErrorMessage(sender, translate.ClientGet(sender, usescrap and "need_to_be_near_remantler" or "need_to_be_near_arsenal_crate"))
-		return
-	end
-
 	if not (usescrap or gamemode.Call("PlayerCanPurchase", sender)) then
 		GAMEMODE:ConCommandErrorMessage(sender, translate.ClientGet(sender, "cant_purchase_right_now"))
 		return
