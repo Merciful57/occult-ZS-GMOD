@@ -548,7 +548,7 @@ end
 
 function GM:ShowTeam(pl)
 	if pl:Team() == TEAM_HUMAN and not self.ZombieEscape then
-		pl:SendLua(self:GetWave() > 0 and "GAMEMODE:OpenArsenalMenu()" or "MakepWorth()")
+		pl:SendLua(self:GetWave() > 0 and "GAMEMODE:OpenArsenalMenu()" or "GAMEMODE:OpenArsenalMenu()")
 	end
 end
 
