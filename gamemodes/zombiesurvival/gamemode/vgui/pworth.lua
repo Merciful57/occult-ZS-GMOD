@@ -2,7 +2,7 @@ function InitialWorthMenu()
 	timer.Create("WaitUntilSkillsLoaded", 0, 0, function()
 		if GAMEMODE.ReceivedInitialSkills then
 			timer.Remove("WaitUntilSkillsLoaded")
-			MakepWorth()
+			GAMEMODE:OpenArsenalMenu()
 		end
 	end)
 end
