@@ -747,7 +747,7 @@ function GM:OpenArsenalMenu()
 				local ind, tbn = 1
 				for i = ind, (trinkets and #subcats or 5) do
 					local ispacer = trinkets and ((i-1) % 3)+1 or i
-					local start = i == (catid == ITEMCAT_GUNS and 2 or ind)
+					local start = i == (catid == ITEMCAT_GUNS and 1 or ind)
 
 					tbn = EasyButton(tabpane, trinkets and subcats[i] or ("Tier " .. i), 2, 8)
 					tbn:SetFont(trinkets and "ZSHUDFontSmallest" or "ZSHUDFontSmall")
