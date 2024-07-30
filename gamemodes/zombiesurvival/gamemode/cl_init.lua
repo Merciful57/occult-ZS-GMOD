@@ -866,7 +866,7 @@ function GM:HumanHUD(screenscale)
 			draw_SimpleTextBlurry(translate.Get("waiting_for_players").." "..util.ToMinutesSecondsCD(math.max(0, self:GetWaveStart() - curtime)), "ZSHUDFontSmall", w * 0.5, h * 0.25, COLOR_GRAY, TEXT_ALIGN_CENTER)
 
 			if desiredzombies > 0 then
-				draw_SimpleTextBlurry(translate.Get(self:HasSigils() and "humans_furthest_from_sigils_are_zombies" or "humans_closest_to_spawns_are_zombies"), "ZSHUDFontSmall", w * 0.5, h * 0.25 + txth, COLOR_GRAY, TEXT_ALIGN_CENTER)
+				--[[draw_SimpleTextBlurry(translate.Get(self:HasSigils() and "humans_furthest_from_sigils_are_zombies" or "humans_closest_to_spawns_are_zombies"), "ZSHUDFontSmall", w * 0.5, h * 0.25 + txth, COLOR_GRAY, TEXT_ALIGN_CENTER)
 				draw_SimpleTextBlurry(translate.Format("number_of_initial_zombies_this_game", self.WaveOneZombies * 100, desiredzombies), "ZSHUDFontSmall", w * 0.5, h * 0.7, COLOR_GRAY, TEXT_ALIGN_CENTER)
 
 				for i, pl in ipairs(self.ZombieVolunteers) do
@@ -883,7 +883,7 @@ function GM:HumanHUD(screenscale)
 						draw_SimpleTextBlurry(pl:Name(), "ZSHUDFontTiny", w * 0.5, y, pl == MySelf and COLOR_SOFTRED or COLOR_GRAY, TEXT_ALIGN_CENTER)
 						y = y + txth * 0.8
 					end
-				end
+				end]]
 			end
 		end
 
