@@ -68,31 +68,6 @@ function PANEL:Init( )
 		self:SetText( LocalPlayer().PS2_Wallet.points )
 	end
 
-	self.donationMoneyPanel = vgui.Create( "DPanel", self.currencyPanel )
-	self.donationMoneyPanel:Dock( TOP )
-	self.donationMoneyPanel:DockMargin( 0, 0, 0, 5 )
-	self.donationMoneyPanel:SetTall( 24 )
-	self.donationMoneyPanel:SetTooltip( "Donator Points" )
-	function self.donationMoneyPanel:Paint( w, h)
-	end
-
-	self.donationMoneyPanel.icon = vgui.Create( "DImage", self.donationMoneyPanel )
-	self.donationMoneyPanel.icon:SetMaterial( Material( "pointshop2/donation_small.png", "noclamp smooth" ) )
-	self.donationMoneyPanel.icon:SetSize( 22, 22 )
-	self.donationMoneyPanel.icon:Dock( LEFT )
-	self.donationMoneyPanel.icon:DockMargin( 0, 2, 5, 2 )
-	function self.donationMoneyPanel.icon:PerformLayout( )
-		self:SetWide( self:GetTall( ) )
-	end
-
-	self.donationMoneyPanel.label = vgui.Create( "DLabel", self.donationMoneyPanel )
-	self.donationMoneyPanel.label:SetText( "370" )
-	self.donationMoneyPanel.label:SetFont( self:GetSkin( ).fontName )
-	self.donationMoneyPanel.label:Dock( FILL )
-	function self.donationMoneyPanel.label:Think( )
-		self:SetText( LocalPlayer().PS2_Wallet.premiumPoints )
-	end
-
 	self.contentsPanel = vgui.Create( "DPropertySheet", self )
 	self.contentsPanel:DockMargin( 0, 0, 0, 0 )
 	self.contentsPanel:Dock( FILL )
