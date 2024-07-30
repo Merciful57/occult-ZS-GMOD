@@ -192,14 +192,9 @@ MODULE.Settings.Server = {
 			tooltip = "Key used to open the shop"
 		},
 		ShopChat = {
-			value = "!shop",
+			value = "!goldshop",
 			possibleValues = {
-				"!shop",
-				"!ps",
-				"!ps2",
-				"!pointshop",
-				"!pointshop2",
-				"!points"
+				"!goldshop",
 			},
 			type = "option",
 			label = "Shop Chat Command",
