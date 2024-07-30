@@ -143,15 +143,6 @@ function GM:ShowHelp()
 
 	but = vgui.Create("DButton", menu)
 	but:SetFont("ZSHUDFontSmaller")
-	but:SetText("Player Model")
-	but:SetTall(buttonhei)
-	but:DockMargin(0, 0, 0, 12)
-	but:DockPadding(0, 12, 0, 12)
-	but:Dock(TOP)
-	but.DoClick = function() MakepPlayerModel() end
-
-	but = vgui.Create("DButton", menu)
-	but:SetFont("ZSHUDFontSmaller")
 	but:SetText("Player Color")
 	but:SetTall(buttonhei)
 	but:DockMargin(0, 0, 0, 12)
