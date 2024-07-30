@@ -702,7 +702,7 @@ GM.WaveOneLength = 220
 GM.TimeAddedPerWave = 15
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
-GM.NoNewHumansWave = 2
+GM.NoNewHumansWave = 7
 
 -- Humans can not commit suicide if the current wave is this or lower.
 GM.NoSuicideWave = 1
