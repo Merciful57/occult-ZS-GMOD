@@ -1,0 +1,22 @@
+{
+	"title" : "PAC3 [develop version]",
+	"type" : "tool",
+	"tags" : [ "fun", "roleplay" ],
+	"ignore" :
+	[
+		".editorconfig",
+		".git*",
+		".gitignore",
+		".glualint.json",
+		".vscode/*",
+		"*.7z",
+		"*.bat",
+		"*.md",
+		"*.md",
+		"*.sh",
+		"*.txt",
+		"*.yml",
+		"COPYING",
+		"icon.jpg"
+	]
+}
