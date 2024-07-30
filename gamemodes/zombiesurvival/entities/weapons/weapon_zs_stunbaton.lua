@@ -20,6 +20,7 @@ SWEP.LegDamage = 20
 SWEP.MeleeRange = 49
 SWEP.MeleeSize = 1.5
 SWEP.Primary.Delay = 0.9
+SWEP.NoDismantle = true
 
 SWEP.SwingTime = 0.25
 SWEP.SwingRotation = Angle(60, 0, 0)

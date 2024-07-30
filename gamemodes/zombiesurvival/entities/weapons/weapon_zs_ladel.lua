@@ -29,6 +29,7 @@ SWEP.UseHands = true
 SWEP.MeleeDamage = 34
 SWEP.MeleeRange = 58
 SWEP.MeleeSize = 1.15
+SWEP.NoDismantle = true
 
 SWEP.Primary.Delay = 0.9
 

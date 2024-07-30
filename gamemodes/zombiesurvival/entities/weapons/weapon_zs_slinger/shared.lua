@@ -24,6 +24,7 @@ SWEP.Primary.ClipSize = 1
 SWEP.Primary.Ammo = "XBowBolt"
 SWEP.Primary.ClipMultiplier = 2
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
+SWEP.NoDismantle = true
 
 SWEP.ConeMax = 2.5
 SWEP.ConeMin = 1.2

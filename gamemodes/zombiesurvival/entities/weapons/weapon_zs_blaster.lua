@@ -31,6 +31,7 @@ SWEP.Primary.ClipSize = 5
 SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "buckshot"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
+SWEP.NoDismantle = true
 
 SWEP.ConeMax = 8.75
 SWEP.ConeMin = 5

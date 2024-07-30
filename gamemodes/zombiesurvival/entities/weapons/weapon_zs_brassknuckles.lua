@@ -31,6 +31,7 @@ SWEP.WorldModel	= "models/weapons/w_grenade.mdl"
 SWEP.Weight = 4
 
 SWEP.MeleeDamage = 22.5
+SWEP.NoDismantle = true
 
 SWEP.Unarmed = false
 

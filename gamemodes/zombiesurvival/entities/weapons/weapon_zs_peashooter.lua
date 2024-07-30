@@ -34,6 +34,7 @@ SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.ClipMultiplier = 12/18 * 2 -- Battleaxe/Owens have 12 clip size, but this has half ammo usage
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
+SWEP.NoDismantle = true
 
 SWEP.ConeMax = 4
 SWEP.ConeMin = 0.75

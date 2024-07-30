@@ -22,6 +22,7 @@ SWEP.OriginalMeleeDamage = SWEP.MeleeDamage
 SWEP.MeleeRange = 55
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 110
+SWEP.NoDismantle = true
 
 SWEP.Primary.Delay = 0.7
 

@@ -29,6 +29,8 @@ SWEP.MeleeDamage = 45
 SWEP.MeleeRange = 55
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 125
+SWEP.NoDismantle = true
+
 
 SWEP.WalkSpeed = SPEED_FAST
 

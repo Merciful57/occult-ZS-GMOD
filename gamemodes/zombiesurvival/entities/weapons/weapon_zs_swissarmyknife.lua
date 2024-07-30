@@ -31,6 +31,7 @@ SWEP.MissGesture = SWEP.HitGesture
 
 SWEP.HitAnim = ACT_VM_MISSCENTER
 SWEP.MissAnim = ACT_VM_PRIMARYATTACK
+SWEP.NoDismantle = true
 
 SWEP.NoHitSoundFlesh = true
 

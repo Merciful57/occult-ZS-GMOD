@@ -32,6 +32,7 @@ SWEP.MeleeDamage = 16
 SWEP.MeleeRange = 48
 SWEP.MeleeSize = 0.875
 SWEP.Primary.Delay = 0.37
+SWEP.NoDismantle = true
 
 SWEP.WalkSpeed = SPEED_FASTER
 
