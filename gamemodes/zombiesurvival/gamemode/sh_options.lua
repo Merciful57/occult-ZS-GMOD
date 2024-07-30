@@ -758,7 +758,7 @@ GM.MaxPoisonDamage = 50
 GM.MaxBleedDamage = 50
 
 -- Give humans this many points when the wave ends.
-GM.EndWavePointsBonus = 5
+GM.EndWavePointsBonus = 0
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 1
+GM.EndWavePointsBonusPerWave = 0
