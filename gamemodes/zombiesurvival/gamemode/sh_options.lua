@@ -702,10 +702,10 @@ GM.WaveOneLength = 220
 GM.TimeAddedPerWave = 15
 
 -- New players are put on the zombie team if the current wave is this or higher. Do not put it lower than 1 or you'll break the game.
-GM.NoNewHumansWave = 2
+GM.NoNewHumansWave = 7
 
 -- Humans can not commit suicide if the current wave is this or lower.
-GM.NoSuicideWave = 1
+GM.NoSuicideWave = -1
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
 GM.WaveZeroLength = 150
@@ -758,7 +758,7 @@ GM.MaxPoisonDamage = 50
 GM.MaxBleedDamage = 50
 
 -- Give humans this many points when the wave ends.
-GM.EndWavePointsBonus = 5
+GM.EndWavePointsBonus = 0
 
 -- Also give humans this many points when the wave ends, multiplied by (wave - 1)
-GM.EndWavePointsBonusPerWave = 1
+GM.EndWavePointsBonusPerWave = 0
