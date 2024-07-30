@@ -677,7 +677,7 @@ function GM:OpenArsenalMenu()
 	wsb:AlignRight(8)
 	wsb:AlignTop(8)
 	wsb.DoClick = function()
-		--open cosmetic shop code goes here
+		Pointshop2:ToggleMenu( )
 		GAMEMODE.ArsenalInterface:Close()
 	end
 
