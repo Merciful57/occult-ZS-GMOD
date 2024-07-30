@@ -705,7 +705,7 @@ GM.TimeAddedPerWave = 15
 GM.NoNewHumansWave = 7
 
 -- Humans can not commit suicide if the current wave is this or lower.
-GM.NoSuicideWave = 1
+GM.NoSuicideWave = -1
 
 -- How long 'wave 0' should last in seconds. This is the time you should give for new players to join and get ready.
 GM.WaveZeroLength = 150
