@@ -179,7 +179,7 @@ MODULE.Settings.Server = {
 			label = "GUI Settings",
 		},
 		ShopKey = {
-			value = "F3",
+			value = "None",
 			possibleValues = {
 				"F1",
 				"F2",
