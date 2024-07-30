@@ -147,11 +147,11 @@ MODULE.Settings.Server = {
 		},
 		["DefaultWallet.Points"] = {
 			label = "Starting points",
-			value = 1000
+			value = 0
 		},
 		["DefaultWallet.PremiumPoints"] = {
 			label = "Starting donator points",
-			value = 1000
+			value = 0
 		},
 		PotAfkCheck = {
 			label = "Disable Points over Time for AFK Players",
