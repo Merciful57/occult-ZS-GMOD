@@ -887,6 +887,16 @@ function GM:HumanHUD(screenscale)
 			end
 		end
 
+				local x, y = w * 0.01, h * 0.11
+		local width, height, margin = 130, 32, 20
+		
+		draw.SimpleTextOutlined("Zombies Killed:", "ZSHUDFontSmall", x + 5, y - margin - 2, Color(255, 0, 0, 200), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER, 0.5, Color(50, 50, 50, 255))
+		
+		surface.SetFont("ZSHUDFontSmall")
+		local texW, texH = surface.GetTextSize("Zombies Killed:")
+		--draw.SimpleTextOutlined((ZombiesNumber)), "ZSHUDFontSmall", x + texW + 15, y - margin - 2, Color(255, 0, 0), TEXT_ALIGN_LEFT, TEXT_ALIGN_CENTER, 1, Color(50, 50, 50, 255))
+
+		
 		local drown = MySelf.status_drown
 		if drown and drown:IsValid() then
 			surface_SetDrawColor(0, 0, 0, 60)
