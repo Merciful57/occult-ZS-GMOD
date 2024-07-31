@@ -284,3 +284,11 @@ end
 if CLIENT then
 	CLASS.Icon = "zombiesurvival/killicons/zombie"
 end
+
+function CLASS:PrePlayerDraw(pl)
+	render.SetColorModulation(0.5, 0.9, 0.5)
+end
+
+function CLASS:PostPlayerDraw(pl)
+	render.SetColorModulation(1, 1, 1)
+end
