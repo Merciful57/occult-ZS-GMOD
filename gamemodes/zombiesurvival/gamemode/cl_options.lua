@@ -191,7 +191,7 @@ cvars.AddChangeCallback("zs_interfacesize", function(cvar, oldvalue, newvalue)
 	GAMEMODE:ScoreboardRebuild()
 end)
 
-GM.AlwaysShowNails = CreateClientConVar("zs_alwaysshownails", "0", true, false):GetBool()
+GM.AlwaysShowNails = CreateClientConVar("zs_alwaysshownails", "1", true, false):GetBool()
 cvars.AddChangeCallback("zs_alwaysshownails", function(cvar, oldvalue, newvalue)
 	GAMEMODE.AlwaysShowNails = tonumber(newvalue) == 1
 end)
