@@ -201,7 +201,7 @@ cvars.AddChangeCallback("zs_alwaysquickbuy", function(cvar, oldvalue, newvalue)
 	GAMEMODE.AlwaysQuickBuy = tonumber(newvalue) == 1
 end)
 
-GM.NoIronsights = CreateClientConVar("zs_noironsights", "0", true, false):GetBool()
+GM.NoIronsights = CreateClientConVar("zs_noironsights", "1", true, false):GetBool()
 cvars.AddChangeCallback("zs_noironsights", function(cvar, oldvalue, newvalue)
 	GAMEMODE.NoIronsights = tonumber(newvalue) == 1
 end)
