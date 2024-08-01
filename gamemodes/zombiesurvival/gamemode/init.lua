@@ -4015,6 +4015,7 @@ function GM:PlayerSpawn(pl)
 			end
 
 			pl:Give("weapon_zs_fists")
+			pl:GiveAmmo(50, "scrap")
 
 			if self.StartingLoadout then
 				self:GiveStartingLoadout(pl)
