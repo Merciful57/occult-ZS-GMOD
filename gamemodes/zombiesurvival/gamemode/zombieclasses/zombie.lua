@@ -206,78 +206,26 @@ if SERVER then
 	function CLASS:AltUse(pl)
 		pl:StartFeignDeath()
 	end
-
-	function CLASS:ProcessDamage(pl, dmginfo)
-		local damage = dmginfo:GetDamage()
-		if damage >= 70 or damage < pl:Health() then return end
-
-		local attacker, inflictor = dmginfo:GetAttacker(), dmginfo:GetInflictor()
-		if attacker == pl or not attacker:IsPlayer() or inflictor.IsMelee or inflictor.NoReviveFromKills then return end
-
-		local hitgroup = pl:LastHitGroup()
-		if pl:WasHitInHead() or pl:GetStatus("shockdebuff") or hitgroup == HITGROUP_LEFTLEG or hitgroup == HITGROUP_RIGHTLEG then return end
-
-		local dmgtype = dmginfo:GetDamageType()
-		if bit_band(dmgtype, DMG_ALWAYSGIB) ~= 0 or bit_band(dmgtype, DMG_BURN) ~= 0 or bit_band(dmgtype, DMG_CRUSH) ~= 0 then return end
-
-		if pl.FeignDeath and pl.FeignDeath:IsValid() then return end
-
-		if CurTime() < (pl.NextZombieRevive or 0) then return end
-		pl.NextZombieRevive = CurTime() + 3
-
-		dmginfo:SetDamage(0)
-		pl:SetHealth(10)
-
-		local status = pl:GiveStatus("revive_slump")
-		if status then
-			status:SetReviveTime(CurTime() + 2.25)
-			status:SetReviveHeal(10)
-		end
-
-		return true
+	
+	function CLASS:SwitchedAway(pl)
+		pl:SetAllowFullRotation(false)
 	end
 
-	function CLASS:ReviveCallback(pl, attacker, dmginfo)
-		if not pl:ShouldReviveFrom(dmginfo) then return false end
-
-		local classtable = math_random(3) == 3 and GAMEMODE.ZombieClasses["Zombie Legs"] or GAMEMODE.ZombieClasses["Zombie Torso"]
-		if classtable then
-			pl:RemoveStatus("overridemodel", false, true)
-			local deathclass = pl.DeathClass or pl:GetZombieClass()
-			pl:SetZombieClass(classtable.Index)
-			pl:DoHulls(classtable.Index, TEAM_UNDEAD)
-			pl.DeathClass = deathclass
-
-			pl:EmitSound("physics/flesh/flesh_bloody_break.wav", 100, 75)
-
-			if classtable == GAMEMODE.ZombieClasses["Zombie Torso"] then
-				local ent = ents.Create("prop_dynamic_override")
-				if ent:IsValid() then
-					ent:SetModel(Model("models/Zombie/Classic_legs.mdl"))
-					ent:SetPos(pl:GetPos())
-					ent:SetAngles(pl:GetAngles())
-					ent:Spawn()
-					ent:Fire("kill", "", 1.5)
-				end
-			end
-
-			pl:Gib()
-			pl.Gibbed = nil
-
-			timer.Simple(0, function()
-				if pl:IsValid() then
-					pl:SecondWind()
-				end
-			end)
+	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
+		pl:SetAllowFullRotation(false)
+		if pl:Health() < -45 then
+			local amount = pl:OBBMaxs():Length()
+			local vel = pl:GetVelocity()
+			util.Blood(pl:LocalToWorld(pl:OBBCenter()), math.Rand(amount * 0.25, amount * 0.5), vel:GetNormalized(), vel:Length() * 0.75)
 
 			return true
+		elseif not pl.KnockedDown then
+			pl:CreateRagdoll()
 		end
 
-		return false
-	end
-
-	function CLASS:OnSecondWind(pl)
-		pl:EmitSound("npc/zombie/zombie_voice_idle"..math_random(14)..".wav", 100, 85)
+		pl:SetHealth(pl:GetMaxHealth())
+		pl:StripWeapons()
+		pl:Spectate(OBS_MODE_ROAMING)
 	end
 end
 
