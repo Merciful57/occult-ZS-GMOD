@@ -1992,7 +1992,7 @@ function GM:_PrePlayerDraw(pl)
 	end
 end
 
-local colFriend = Color(10, 255, 10, 60)
+local colFriend = Color(10, 10, 255, 60)
 local matFriendRing = Material("SGM/playercircle")
 local matTargetTri = Material("gui/point.png")
 function GM:_PostPlayerDraw(pl)
