@@ -4,3 +4,4 @@ if SERVER then
 else
 	include( "ulib/cl_init.lua" )
 end
+--test
