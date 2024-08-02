@@ -919,7 +919,7 @@ function meta:Resupply(owner, obj)
 	if GAMEMODE:GetWave() <= 0 then return end
 
 	local stockpiling = self:IsSkillActive(SKILL_STOCKPILE)
-	local stowage = self:IsSkillActive(SKILL_STOWAGE)
+	local stowage = true
 
 	if (stowage and (self.StowageCaches or 0) <= 0) or (not stowage and CurTime() < (self.NextResupplyUse or 0)) then
 		self:CenterNotify(COLOR_RED, translate.ClientGet(self, "no_ammo_here"))
