@@ -1132,25 +1132,7 @@ function GM:SortZombieSpawnDistances(allplayers)
 end
 
 function GM:ShouldRestartRound()
-	if self.TimeLimit == -1 or self.RoundLimit == -1 then return true end
-
-	local roundlimit = self.RoundLimit
-	--[[if self.ZombieEscape and roundlimit > 0 then
-		roundlimit = math.ceil(roundlimit * 1.5)
-	end]]
-
-	local timelimit = self.TimeLimit
-	if self.ZombieEscape and timelimit > 0 then
-		timelimit = timelimit * 1.5
-	end
-
-	if timelimit > 0 and CurTime() >= timelimit
-	or roundlimit > 0 and self.CurrentRound >= roundlimit
-	or not self.ZombieEscape and ROUNDWINNER == TEAM_HUMAN then
-		return false
-	end
-
-	return true
+	return false
 end
 
 local NextTick = 0
