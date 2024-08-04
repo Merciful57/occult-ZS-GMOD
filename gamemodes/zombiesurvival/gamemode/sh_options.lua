@@ -656,7 +656,7 @@ GM:AddDeployableInfo("prop_drone_hauler",		"Hauler Drone",			"weapon_zs_drone_ha
 GM:AddDeployableInfo("prop_rollermine",			"Rollermine",			"weapon_zs_rollermine")
 GM:AddDeployableInfo("prop_tv",                   	 "TV",                    	"weapon_zs_tv")
 
-GM.MaxSigils = 3
+GM.MaxSigils = 1
 
 GM.DefaultRedeem = CreateConVar("zs_redeem", "4", FCVAR_REPLICATED + FCVAR_ARCHIVE + FCVAR_NOTIFY, "The amount of kills a zombie needs to do in order to redeem. Set to 0 to disable."):GetInt()
 cvars.AddChangeCallback("zs_redeem", function(cvar, oldvalue, newvalue)
