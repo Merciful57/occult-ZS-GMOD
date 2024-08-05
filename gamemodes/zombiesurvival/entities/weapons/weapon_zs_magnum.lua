@@ -1,7 +1,7 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Ricochete' Magnum"
+SWEP.PrintName = "'Ricochete' Revolver"
 SWEP.Description = "This gun's bullets will bounce off of walls which will then deal extra damage."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
