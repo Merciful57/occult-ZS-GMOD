@@ -32,7 +32,7 @@ SWEP.Primary.NumShots = 2
 SWEP.Primary.Delay = 0.2
 
 SWEP.Primary.ClipSize = 10
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.ClipMultiplier = 12/10
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
