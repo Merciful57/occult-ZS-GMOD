@@ -32,7 +32,7 @@ SWEP.WalkSpeed = SPEED_SLOWEST * 0.9
 
 SWEP.UseHands = true
 
-SWEP.MaxMines = 6
+SWEP.MaxMines = 10
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAXIMUM_MINES, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Sparkler' Laser Miner", "Fires damaging laser trip mines that last several seconds", function(wept)
