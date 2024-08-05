@@ -49,7 +49,7 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.2, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Commando' Assault Rifle", "Slower fire rate but higher damage and accuracy", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 1.6
 	wept.Primary.Delay = wept.Primary.Delay * 2
-	wept.Primary.ClipSize = 15
+	wept.Primary.ClipSize = 25
 	wept.ConeMin = wept.ConeMin * 0.7
 	wept.ConeMax = wept.ConeMax * 0.7
 	wept.Primary.Automatic = false
