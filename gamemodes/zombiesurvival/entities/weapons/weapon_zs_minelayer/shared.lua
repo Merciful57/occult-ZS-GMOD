@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Carrion' Impact Mine Layer"
+SWEP.PrintName = "Minelayer' Explosive Deployer"
 SWEP.Description = "A mine layer that shoots out simple tripmines that attach to surfaces."
 
 SWEP.Slot = 4
