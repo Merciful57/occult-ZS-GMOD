@@ -36,7 +36,7 @@ GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.IronSightsPos = Vector(-5.9, 12, 2.3)
 
 SWEP.ConeMax = 9
-SWEP.ConeMin = 0.75
+SWEP.ConeMin = 0.3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.0175, 1)
