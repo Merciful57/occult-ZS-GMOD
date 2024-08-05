@@ -80,3 +80,12 @@ function SWEP:GetDisplayAmmo(clip, spare, maxclip)
 	return math.max(0, (clip * 2) - minus), spare * 2, maxclip * 2
 end
 
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed/2))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + ((self.ReloadSpeed/2) - (self.ReloadSpeed/6)))
+	end
+end
+end 
