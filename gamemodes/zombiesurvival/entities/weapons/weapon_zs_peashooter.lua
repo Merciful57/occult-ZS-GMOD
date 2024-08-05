@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Peashooter' Handgun"
+SWEP.PrintName = "'Peashooter' Semi-Auto Pistol"
 SWEP.Description = "A low damage output pistol that only uses half the ammo."
 
 SWEP.Slot = 1
@@ -79,3 +79,4 @@ function SWEP:GetDisplayAmmo(clip, spare, maxclip)
 	local minus = self:GetAltUsage() and 0 or 1
 	return math.max(0, (clip * 2) - minus), spare * 2, maxclip * 2
 end
+
