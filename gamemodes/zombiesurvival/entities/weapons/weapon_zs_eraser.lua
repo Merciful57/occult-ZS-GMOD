@@ -1,7 +1,7 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Eraser' Tactical Pistol"
+SWEP.PrintName = "'Eraser' Pistol"
 SWEP.Description = "Damage increases as remaining bullets decrease."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
