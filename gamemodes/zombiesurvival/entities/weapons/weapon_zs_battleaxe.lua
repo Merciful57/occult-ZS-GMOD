@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Battleaxe' Handgun"
+SWEP.PrintName = "'Battleaxe' Pistol"
 SWEP.Description = "An accurate, reliable pistol with considerable damage."
 
 SWEP.Slot = 1
