@@ -18,7 +18,7 @@ SWEP.Primary.Delay = 1
 
 SWEP.Primary.Damage = 26.67
 SWEP.Primary.ClipSize = 1
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 7
 SWEP.NoDismantle = true
