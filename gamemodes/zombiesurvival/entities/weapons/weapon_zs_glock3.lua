@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Crossfire' Glock 3"
-SWEP.Description = "Fires 3 shots at once. Not very accurate, but very damaging up close."
+SWEP.PrintName = "'Crossfire' Pistol"
+SWEP.Description = "Somehwere between a Pistol and an SMG. Not very accurate, but very damaging up close."
 
 SWEP.Slot = 1
 SWEP.SlotPos = 0
@@ -24,12 +24,12 @@ SWEP.WorldModel = "models/weapons/w_pist_glock18.mdl"
 SWEP.UseHands = true
 
 SWEP.Primary.Sound = Sound("Weapon_Glock.Single")
-SWEP.Primary.Damage = 15.5
-SWEP.Primary.NumShots = 3
-SWEP.Primary.Delay = 0.3
+SWEP.Primary.Damage = 20
+SWEP.Primary.NumShots = 1
+SWEP.Primary.Delay = 0.2
 
-SWEP.Primary.ClipSize = 7
-SWEP.Primary.Automatic = false
+SWEP.Primary.ClipSize = 21
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
@@ -43,11 +43,12 @@ SWEP.IronSightsPos = Vector(-5.75, 10, 2.7)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.9, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.5, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 1 less but more accurate shots, higher base damage, and a chance to gain reaper stacks", function(wept)
-	wept.Primary.NumShots = 2
-	wept.Primary.Damage = wept.Primary.Damage * 1.2
-	wept.ConeMin = wept.ConeMin * 0.65
-	wept.ConeMax = wept.ConeMax * 0.65
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Pistol", "Fires slower, less accurate shots, higher base damage, and a chance to gain reaper stacks", function(wept)
+	wept.Primary.NumShots = 1
+	wept.Primary.Damage = 34
+	wept.ConeMin = wept.ConeMin * 1.65
+	wept.ConeMax = wept.ConeMax * 1.65
+	wept.Primary.Delay = 0.5
 
 	wept.BulletCallback = function(attacker, tr, dmginfo)
 		if SERVER and tr.Entity:IsValidLivingZombie() and math.random(20) == 1 then
@@ -59,10 +60,11 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Collider' Glock 3", "Fires 1 less but m
 		end
 	end
 end)
-local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Shroud' SOCOM Mark 23", "Fires 1 shot, hides your aura, deals less total damage but is more accurate", function(wept)
+local branch = GAMEMODE:AddNewRemantleBranch(SWEP, 2, "'Mk 23' Pistol", "Hides your aura, deals more total damage but has a smaller magazine", function(wept)
 	wept.Primary.NumShots = 1
 	wept.Primary.Damage = wept.Primary.Damage * 2.3
-	wept.Primary.Delay = 0.2
+	wept.Primary.ClipSize = 13
+	wept.Primary.Delay = 0.6
 	wept.ConeMin = wept.ConeMin * 0.3
 	wept.ConeMax = wept.ConeMax * 0.4
 	wept.Primary.Sound = Sound("weapons/usp/usp1.wav")
@@ -96,3 +98,13 @@ end)
 branch.Colors = {Color(170, 170, 170), Color(120, 120, 120), Color(70, 70, 70)}
 branch.NewNames = {"Cloaked", "Covert", "Silent"}
 branch.Killicon = "weapon_zs_shroud"
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.5))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2))
+	end
+end
+end
