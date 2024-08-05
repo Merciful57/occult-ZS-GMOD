@@ -40,8 +40,8 @@ SWEP.ConeMax = 4
 SWEP.ConeMin = 0.75
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Peashooter' Auto Handgun", "Fully automatic, increased clip size at the cost of accuracy", function(wept)
-	wept.Primary.Delay = 0.15
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Peasprayer' Automatic Handgun", increased clip size, faster fire rate and less accuracy", function(wept)
+	wept.Primary.Delay = 0.13
 	wept.Primary.Automatic = true
 	wept.Primary.ClipSize = math.floor(wept.Primary.ClipSize * 1.25)
 
