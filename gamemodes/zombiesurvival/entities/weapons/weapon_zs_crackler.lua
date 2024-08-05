@@ -36,7 +36,7 @@ SWEP.Primary.Ammo = "ar2"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
 SWEP.ConeMax = 3.0 --0.045
-SWEP.ConeMin = 1.6 --0.019
+SWEP.ConeMin = 0.15 --0.019
 
 SWEP.ReloadSpeed = 1.1
 
