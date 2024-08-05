@@ -41,7 +41,7 @@ SWEP.NoDismantle = true
 SWEP.ReloadSpeed = 0.7
 
 SWEP.ConeMax = 16
-SWEP.ConeMin = 2.5
+SWEP.ConeMin = 0.5
 
 SWEP.IronSightsPos = Vector(-5.95, 3, 2.75)
 SWEP.IronSightsAng = Vector(-0.15, -1, 2)
