@@ -43,7 +43,7 @@ SWEP.Primary.DefaultClip = 50
 SWEP.NoDismantle = true
 
 SWEP.ConeMax = 2
-SWEP.ConeMin = 1.5
+SWEP.ConeMin = 0.01
 
 SWEP.IronSightsPos = Vector(-5.95, 3, 2.75)
 SWEP.IronSightsAng = Vector(-0.15, -1, 2)
