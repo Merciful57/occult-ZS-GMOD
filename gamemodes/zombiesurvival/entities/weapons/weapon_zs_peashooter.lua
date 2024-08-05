@@ -36,8 +36,8 @@ SWEP.Primary.ClipMultiplier = 12/18 * 2 -- Battleaxe/Owens have 12 clip size, bu
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.NoDismantle = true
 
-SWEP.ConeMax = 4
-SWEP.ConeMin = 0.75
+SWEP.ConeMax = 8
+SWEP.ConeMin = 0.2
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Peasprayer' Automatic Handgun", increased clip size, faster fire rate and less accuracy", function(wept)
