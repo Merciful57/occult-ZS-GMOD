@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_baseshotgun"
 
-SWEP.PrintName = "'Blaster' Shotgun"
+SWEP.PrintName = "'Burster' Shotgun"
 SWEP.Description = "A basic shotgun that can deal significant amounts of damage at close range."
 
 if CLIENT then
