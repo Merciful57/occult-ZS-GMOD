@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Slinger' Bolt Pistol"
+SWEP.PrintName = "'Slinger' Crossbow Pistol"
 SWEP.Description = "A slow loading, inaccurate bolt pistol with no special properties."
 
 SWEP.Base = "weapon_zs_baseproj"
