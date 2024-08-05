@@ -50,7 +50,7 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Commando' Assault Rifle", "Slower fire 
 	wept.Primary.Damage = wept.Primary.Damage * 1.6
 	wept.Primary.Delay = wept.Primary.Delay * 2
 	wept.Primary.ClipSize = 25
-	wept.ConeMin = wept.ConeMin * 0.7
+	wept.ConeMin = wept.ConeMin * 0.5
 	wept.ConeMax = wept.ConeMax * 0.7
 	wept.Primary.Automatic = false
 end)
