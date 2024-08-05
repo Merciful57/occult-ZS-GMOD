@@ -65,3 +65,13 @@ function SWEP.BulletCallback(attacker, tr, dmginfo)
 		util.CreatePulseImpactEffect(tr.HitPos, tr.HitNormal)
 	end
 end
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 1.5))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 1))
+	end
+end
+end
