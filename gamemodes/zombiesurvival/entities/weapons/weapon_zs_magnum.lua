@@ -31,7 +31,7 @@ SWEP.Primary.Damage = 59
 SWEP.Primary.NumShots = 1
 
 SWEP.Primary.ClipSize = 6
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
