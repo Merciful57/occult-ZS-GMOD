@@ -35,7 +35,7 @@ SWEP.UseHands = true
 SWEP.MaxMines = 10
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAXIMUM_MINES, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Sparkler' Laser Miner", "Fires damaging laser trip mines that last several seconds", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "''Lasermine' Explosive Deployer", "Fires damaging laser trip mines that last several seconds", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 0.22
 	if SERVER then
 		wept.EntModify = function(self, ent)
