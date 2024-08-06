@@ -24,8 +24,6 @@ SWEP.MeleeDamage = 15
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 0.875
 
-SWEP.MaxStock = 5
-
 SWEP.UseMelee1 = true
 
 SWEP.NoPropThrowing = true
