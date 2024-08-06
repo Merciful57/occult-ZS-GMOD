@@ -216,11 +216,11 @@ function ENT:Think()
 	end
 
 	if self:GetIsHeavy() then
-		if self:GetHingePos():DistToSqr(self:GetPullPos()) >= 4096 then
+		if self:GetHingePos():DistToSqr(self:GetPullPos()) >= 8192 then
 			self:Remove()
 			return
 		end
-	elseif nearestpoint:DistToSqr(shootpos) >= 4096 then
+	elseif nearestpoint:DistToSqr(shootpos) >= 8192 then
 		self:Remove()
 		return
 	end
