@@ -211,6 +211,11 @@ if SERVER then
 		pl:SetAllowFullRotation(false)
 	end
 
+	function CLASS:OnSpawned(pl)
+		local ZKTHealthCalc = ( ( 50 + ( 50 * (GAMEMODE:GetWave() ) + (GetGlobalInt("ZombiesKilledTeam") or 0 ) ) ) )
+		pl:SetHealth(ZKTHealthCalc)
+	end
+
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
 		pl:SetAllowFullRotation(false)
 		local newZKT = GetGlobalInt("ZombiesKilledTeam") or 0
