@@ -4,13 +4,6 @@ function GM:IsClassUnlocked(classname)
 	local classtab = self.ZombieClasses[classname]
 	if not classtab then return false end
 
-	if classtab.Boss then return true end
-
-	if classtab.IsClassUnlocked then
-		local ret = classtab:IsClassUnlocked()
-		if ret ~= nil then return ret end
-	end
-
 	if classtab.Locked then return false end
 
 	return classtab.Unlocked
