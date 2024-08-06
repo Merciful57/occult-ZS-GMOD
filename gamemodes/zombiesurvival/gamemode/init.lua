@@ -2289,11 +2289,6 @@ function GM:CanRemoveOthersNail(pl, nailowner, ent)
 	if gamemode.Call("PlayerIsAdmin", pl) then return true end
 	if nailowner.ZSFriends[pl] then return true end
 
-	if pl:BarricadeExpertPrecedence(nailowner) == -1 then
-		pl:PrintTranslatedMessage(HUD_PRINTCENTER, "cant_remove_nails_of_superior_player")
-		return false
-	end
-
 	return true
 end
 
