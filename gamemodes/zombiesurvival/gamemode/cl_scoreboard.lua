@@ -49,7 +49,7 @@ function PANEL:Init()
 	self.m_TitleLabel = vgui.Create("DLabel", self)
 	self.m_TitleLabel.Font = "ZSScoreBoardTitle"
 	self.m_TitleLabel:SetFont(self.m_TitleLabel.Font)
-	self.m_TitleLabel:SetText(GAMEMODE.Name)
+	self.m_TitleLabel:SetText(game.GetMap())
 	self.m_TitleLabel:SetTextColor(COLOR_GRAY)
 	self.m_TitleLabel:SizeToContents()
 	self.m_TitleLabel:NoClipping(true)
