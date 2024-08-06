@@ -67,6 +67,7 @@ function ENT:Initialize()
 			object:SetOwner(owner)
 			object:SetCollisionGroup(COLLISION_GROUP_WEAPON)
 			object:SetRenderMode(RENDERMODE_TRANSALPHA)
+			object:SetCustomCollisionCheck(true)
 			object:SetAlpha(180)
 
 			self.StartX = owner.InputMouseX or 0
