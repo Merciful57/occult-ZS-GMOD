@@ -2678,7 +2678,7 @@ function GM:EntityTakeDamage(ent, dmginfo)
 						elseif myteam == TEAM_HUMAN and otherteam == TEAM_UNDEAD then
 							ent.DamagedBy[attacker] = (ent.DamagedBy[attacker] or 0) + damage
 							if time >= ent.m_LastWaveStartSpawn + 3 and time >= ent.m_LastGasHeal + 2 then
-								local points = damage / ent:GetMaxHealth() * ent:GetZombieClassTable().Points
+								local points = damage / 100
 								if POINTSMULTIPLIER then
 									points = points * POINTSMULTIPLIER
 								end
