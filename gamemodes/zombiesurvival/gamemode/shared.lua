@@ -5,25 +5,18 @@ GM.Website	=	"http://www.noxiousnet.com"
 
 -- No, adding a gun doesn't make your name worth being here.
 GM.Credits = {
-	{"William \"JetBoom\" Moodhe", "williammoodhe@gmail.com (www.noxiousnet.com)", "Creator / Programmer"},
-	{"11k", "tjd113@gmail.com", "Zombie view models"},
-	{"Eisiger", "k2deseve@gmail.com", "Zombie kill icons"},
-	{"Austin \"Little Nemo\" Killey", "austin_odyssey@yahoo.com", "Ambient music"},
-	{"Zombie Panic: Source", "http://www.zombiepanic.org/", "Melee weapon sounds"},
-	{"Samuel", "samuel_games@hotmail.com", "Board Kit models"},
-	{"Typhon", "lukas-tinel@hotmail.com", "Fear-o-meter textures"},
-	{"Benjy, The Darker One, Raox, Scott", "", "Code contributions"},
+	{"JetBoom", "https://steamcommunity.com/id/jetboom", "Gamemode Creator"},
+	{"Benjy", "https://steamcommunity.com/id/Benjy67k", "Gamemode Contributor"},
+	{"The Darker One", "https://steamcommunity.com/id/thedarkerone", "Gamemode Contributor"},
+	{"Scott", "https://steamcommunity.com/id/Scotty01", "Gamemode Contributor"},
 
-	{"Mr. Darkness", "", "Russian translation"},
-	{"honsal", "", "Korean translation"},
-	{"rui_troia", "", "Portuguese translation"},
-	{"Shinyshark", "", "Dutch translation"},
-	{"Kradar", "", "Italian translation"},
-	{"Raptor", "", "German translation"},
-	{"The Special Duckling", "", "Danish translation"},
-	{"ptown, Dr. Broly", "", "Spanish translation"},
+	{"Merciful", "https://steamcommunity.com/profiles/76561199564545623", "occult ZS Lead Developer"},
+	{"ChickenUSA", "https://steamcommunity.com/id/ChickenUSA/", "occult ZS Contributor"},
+	{"Evercroft", "https://steamcommunity.com/id/Evercroft", "occult ZS Contributor"},
+	{"Finna", "https://steamcommunity.com/id/skutscandinavia", "occult ZS Contributor"},
+	{"Obama", "https://steamcommunity.com/profiles/76561199229026993", "occult ZS Contributor"},
+	{"Vladioik", "https://steamcommunity.com/id/Vladioik/", "occult ZS Contributor"},
 
-	{"Anyone else on GitHub or who I've forgotten", "", "Various contributions"},
 }
 
 if file.Exists(GM.FolderName.."/gamemode/maps/"..game.GetMap()..".lua", "LUA") then
