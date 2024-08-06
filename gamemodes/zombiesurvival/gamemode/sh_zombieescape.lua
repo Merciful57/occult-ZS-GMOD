@@ -5,6 +5,7 @@ GM.WaveZeroLength = 90
 GM.EndGameTime = 35
 GM.ZE_FreezeTime = 20
 GM.ZE_TimeLimit = 60 * 16
+GM.RoundLimit = 1
 
 GM.DefaultZombieClass = GM.ZombieClasses["Super Zombie"].Index
 
