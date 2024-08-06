@@ -622,7 +622,7 @@ function GM:SetupSpawnPoints()
 	team.SetSpawnPoint(TEAM_HUMAN, htab)
 	team.SetSpawnPoint(TEAM_SPECTATOR, htab)
 
-	self.RedeemSpawnPoints = ents.FindByClass("info_player_redeemed")
+	self.RedeemSpawnPoints = ents.FindByClass("prop_obj_sigil")
 	self.BossSpawnPoints = table.Add(ents.FindByClass("info_player_zombie_boss"), ents.FindByClass("info_player_undead_boss"))
 end
 
