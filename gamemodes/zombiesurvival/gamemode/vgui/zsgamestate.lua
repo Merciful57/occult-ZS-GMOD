@@ -126,9 +126,9 @@ function PANEL:Text3Paint()
 		if MySelf:Team() == TEAM_UNDEAD then
 			local toredeem = GAMEMODE:GetRedeemBrains()
 			if toredeem > 0 then
-				draw.SimpleText(translate.Format("brains_eaten_x", MySelf:Frags().." / "..toredeem), self.Font, 0, 0, COLOR_SOFTRED)
+				draw.SimpleText("Silver: " ..MySelf:Frags().." Gold: "..LocalPlayer().PS2_Wallet.points, self.Font, 0, 0, COLOR_SOFTRED)
 			else
-				draw.SimpleText(translate.Format("brains_eaten_x", MySelf:Frags()), self.Font, 0, 0, COLOR_SOFTRED)
+				draw.SimpleText("Silver: " ..MySelf:Frags().." Gold: "..LocalPlayer().PS2_Wallet.points, self.Font, 0, 0, COLOR_SOFTRED)
 			end
 		elseif LocalPlayer().PS2_Wallet then
 			--draw.SimpleText(translate.Format("points_x", MySelf:GetPoints().." / "..MySelf:Frags()), self.Font, 0, 0, COLOR_DARKRED)
