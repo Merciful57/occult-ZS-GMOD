@@ -213,6 +213,8 @@ if SERVER then
 
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
 		pl:SetAllowFullRotation(false)
+		local newZKT = GetGlobalInt("ZombiesKilledTeam") or 0
+		SetGlobalInt("ZombiesKilledTeam", (newZKT + 1) )
 		if pl:Health() < -45 then
 			local amount = pl:OBBMaxs():Length()
 			local vel = pl:GetVelocity()
