@@ -1242,7 +1242,6 @@ function meta:Redeem(silent, noequip)
 
 	self:ChangeTeam(TEAM_HUMAN)
 	if not GAMEMODE.InitialVolunteers[self:UniqueID()] then
-		self:AddZSXP(50 * (GAMEMODE.ZombieXPMulti or 1))
 		self.RedeemBonus = true
 	end
 	if not noequip then self.m_PreRedeem = true end
