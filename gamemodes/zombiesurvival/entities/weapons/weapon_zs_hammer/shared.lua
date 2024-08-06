@@ -1,6 +1,6 @@
 SWEP.Base = "weapon_zs_basemelee"
 
-SWEP.PrintName = "Carpenter's Hammer"
+SWEP.PrintName = "Carpenter' Hammer"
 SWEP.Description = "A simple but extremely useful tool. Allows you to hammer in nails to make barricades.\nPress SECONDARY FIRE to hammer in nail. It will be attached to whatever is behind it.\nPress RELOAD to take a nail out.\nUse PRIMARY FIRE to bash zombie brains or to repair damaged nails.\nYou get a point bonus for repairing damaged nails but a point penalty for removing another player's nails."
 
 SWEP.DamageType = DMG_CLUB
@@ -21,7 +21,7 @@ SWEP.Secondary.Ammo = "dummy"
 
 --SWEP.MeleeDamage = 35 -- Reduced due to instant swing speed
 SWEP.MeleeDamage = 15
-SWEP.MeleeRange = 50
+SWEP.MeleeRange = 75
 SWEP.MeleeSize = 0.875
 
 SWEP.MaxStock = 5
