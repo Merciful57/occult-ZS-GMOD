@@ -130,9 +130,9 @@ function PANEL:Text3Paint()
 			else
 				draw.SimpleText(translate.Format("brains_eaten_x", MySelf:Frags()), self.Font, 0, 0, COLOR_SOFTRED)
 			end
-		else
+		elseif LocalPlayer().PS2_Wallet then
 			--draw.SimpleText(translate.Format("points_x", MySelf:GetPoints().." / "..MySelf:Frags()), self.Font, 0, 0, COLOR_DARKRED)
-			draw.SimpleText("Silver: "..MySelf:GetPoints().." Gold: "..LocalPlayer().PS2_Wallet.points, self.Font, 0, 0, COLOR_SOFTRED) -- functional but with script errors, fix this later, 
+			draw.SimpleText("Silver: "..MySelf:GetPoints().." Gold: "..LocalPlayer().PS2_Wallet.points, self.Font, 0, 0, COLOR_SOFTRED) 
 
 		end
 	end
