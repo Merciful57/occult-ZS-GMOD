@@ -12,7 +12,7 @@ CLASS.Order = 0
 
 CLASS.Health = 225
 CLASS.Speed = 175
-CLASS.Revives = true
+CLASS.Revives = false
 
 CLASS.CanTaunt = true
 
