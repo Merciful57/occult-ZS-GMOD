@@ -267,3 +267,7 @@ end
 GM.HonorableMentions[HM_NESTMASTER].GetPlayer = function(self)
 	return GetMostKey("NestSpawns")
 end
+
+GM.HonorableMentions[HM_BESTBARRICADE].GetPlayer = function(self)
+	return GetMostKey("RoundBarricaded")
+end
