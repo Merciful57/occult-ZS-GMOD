@@ -210,29 +210,32 @@ if SERVER then
 	function CLASS:SwitchedAway(pl)
 		pl:SetAllowFullRotation(false)
 	end
-
+	
 	function CLASS:OnSpawned(pl)
 		local ZKTHealthCalc = ( ( 50 + ( 50 * (GAMEMODE:GetWave() ) + (GetGlobalInt("ZombiesKilledTeam") or 0 ) ) ) )
 		pl:SetHealth(ZKTHealthCalc)
+		pl:SetMaxHealth(ZKTHealthCalc)
 	end
 
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
 		pl:SetAllowFullRotation(false)
-		local newZKT = GetGlobalInt("ZombiesKilledTeam") or 0
-		SetGlobalInt("ZombiesKilledTeam", (newZKT + 1) )
-		if pl:Health() < -45 then
+		
+		
+		if pl:Health() < -34 then
 			local amount = pl:OBBMaxs():Length()
 			local vel = pl:GetVelocity()
 			util.Blood(pl:LocalToWorld(pl:OBBCenter()), math.Rand(amount * 0.25, amount * 0.5), vel:GetNormalized(), vel:Length() * 0.75)
-
 			return true
 		elseif not pl.KnockedDown then
 			pl:CreateRagdoll()
 		end
 
-		pl:SetHealth(pl:GetMaxHealth())
+		pl:SetHealth(0)
 		pl:StripWeapons()
 		pl:Spectate(OBS_MODE_ROAMING)
+		if ( suicide ) then return end
+		local newZKT = GetGlobalInt("ZombiesKilledTeam") or 0
+		SetGlobalInt("ZombiesKilledTeam", (newZKT + 1) )
 	end
 end
 
