@@ -22,9 +22,7 @@ concommand.Add("zs_pointsshopbuy", function(sender, command, arguments)
 	id = tonumber(id) or id
 	local itemtab = FindItem(id)
 
-	if not itemtab or not itemtab.PointShop then return end
 	local itemcat = itemtab.Category
-	if usescrap and not (itemcat == ITEMCAT_TRINKETS or itemcat == ITEMCAT_AMMO) and not itemtab.CanMakeFromScrap then return end
 
 	local points = usescrap and sender:GetAmmoCount("scrap") or sender:GetPoints()
 	local cost = itemtab.Price
