@@ -31,7 +31,7 @@ function ENT:Initialize()
 
 	local object = self:GetObject()
 	if object:IsValid() then
-		object.IgnoreMeleeTeam = TEAM_HUMAN
+		object.IgnoreMeleeTeam = TEAM_HUMAN and TEAM_UNDEAD
 		object.IgnoreTraces = true
 		object.IgnoreBullets = true
 
