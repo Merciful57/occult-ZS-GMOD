@@ -1248,6 +1248,15 @@ function meta:Redeem(silent, noequip)
 
 	self:Spawn()
 
+	local sigils = GAMEMODE:GetSigils()
+	for _, sig in pairs(sigils) do
+		if sig and sig:IsValid() and not sig:GetSigilCorrupted() then
+			self:SetBarricadeGhosting(true)
+			self:SetPos(sig:GetPos())
+			break
+		end
+	end
+	
 	self.m_PreRedeem = nil
 	self:DoHulls()
 
