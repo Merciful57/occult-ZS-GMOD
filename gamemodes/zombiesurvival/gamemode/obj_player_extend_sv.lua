@@ -927,7 +927,7 @@ function meta:Resupply(owner, obj)
 	end
 
 	if not stowage then
-		self.NextResupplyUse = CurTime() + GAMEMODE.ResupplyBoxCooldown * (self.ResupplyDelayMul or 1) * (stockpiling and 2.12 or 1)
+		self.NextResupplyUse = CurTime() + GAMEMODE.ResupplyBoxCooldown * (self.ResupplyDelayMul or 1) * (stockpiling and 1.95 or 1)
 
 		net.Start("zs_nextresupplyuse")
 			net.WriteFloat(self.NextResupplyUse)
