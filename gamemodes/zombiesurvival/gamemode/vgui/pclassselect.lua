@@ -67,7 +67,7 @@ function PANEL:Init()
 
 			local ok
 			if bossmode then
-				ok = classtab.Boss
+				ok = classtab.Boss and classtab.Unlocked
 			else
 				ok = not classtab.Boss and
 					(not classtab.Hidden or classtab.CanUse and classtab:CanUse(MySelf)) and
