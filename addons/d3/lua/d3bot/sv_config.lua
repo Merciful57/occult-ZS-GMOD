@@ -30,13 +30,13 @@ D3bot.BotJumpAntichance = 25
 D3bot.BotDuckAntichance = 25
 D3bot.FaceTargetOffshootFactor = 0.2			-- Factor that reduces the offshoot when the target is within attack range. Increase value to prevent bots from "locking" onto target.
 
-D3bot.ZombiesPerPlayer = 0.3			-- Number of bot zombies per player.
-D3bot.ZombiesPerPlayerMax = 2.0			-- Limits amount of zombies to this zombie/player ratio. (Not including ZombiesCountAddition)
-D3bot.ZombiesPerPlayerWave = 0.20		-- Number of additional bot zombies every wave for every player on the server.
+D3bot.ZombiesPerPlayer = 0			-- Number of bot zombies per player.
+D3bot.ZombiesPerPlayerMax = 100			-- Limits amount of zombies to this zombie/player ratio. (Not including ZombiesCountAddition)
+D3bot.ZombiesPerPlayerWave = 0		-- Number of additional bot zombies every wave for every player on the server.
 D3bot.ZombiesPerMinute = 0				-- Number of additional bot zombies every minute.
-D3bot.ZombiesPerWave = 0.4				-- Number of additional bot zombies every wave.
-D3bot.ZombiesCountAddition = 0			-- Number of additional bot zombies.
-D3bot.SurvivorsPerPlayer = 0--1.2		-- Survivor bots per total player (non bot) amount. They will only spawn pre round.
+D3bot.ZombiesPerWave = 1				-- Number of additional bot zombies every wave.
+D3bot.ZombiesCountAddition = 5			-- Number of additional bot zombies.
+D3bot.SurvivorsPerPlayer = 0		-- Survivor bots per total player (non bot) amount. They will only spawn pre round.
 D3bot.SurvivorCountAddition = 0			-- BotMod for survivor bots.
 
 -- Survivor (human) bots are currently not production ready.
@@ -49,7 +49,7 @@ D3bot.StartBonus = nil					-- Number of additional points, that players get at t
 D3bot.DisableBotCrows = true			-- Disable crows from being controlled by the bot.
 
 -- Uncomment the name file you want to use. If you comment out all of the name files, standard names will be used. (Bot, Bot(2), Bot(3), ...)
-D3bot.BotNameFile = "fng_usernames"
+D3bot.BotNameFile = "bottish"
 --D3bot.BotNameFile = "bottish"
 
 D3bot.UseConsoleBots = false			-- If true, bots will be spawned "the old way". But this will disable custom names.
