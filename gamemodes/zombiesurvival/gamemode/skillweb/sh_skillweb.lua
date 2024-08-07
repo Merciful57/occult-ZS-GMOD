@@ -257,7 +257,7 @@ function meta:GetZSSPRemaining()
 end
 
 function meta:GetZSSPTotal()
-	return self:GetZSLevel() + self:GetZSRemortLevel()
+	return (5 + self:GetZSRemortLevel())
 end
 
 function meta:GetDesiredActiveSkills()
