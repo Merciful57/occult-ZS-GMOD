@@ -131,165 +131,45 @@ GM.AmmoCache["scrap"]						= 3
 GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "buckshot", "battery", "pulse", "impactmine", "chemical", "gaussenergy", "scrap"})
 
 -----------
--- Worth --
+-- Scrap --
 -----------
---[[
-GM:AddStartingItem("pshtr",				ITEMCAT_GUNS,			45,				"weapon_zs_peashooter")
-GM:AddStartingItem("btlax",				ITEMCAT_GUNS,			45,				"weapon_zs_battleaxe")
-GM:AddStartingItem("owens",				ITEMCAT_GUNS,			45,				"weapon_zs_owens")
-GM:AddStartingItem("blstr",				ITEMCAT_GUNS,			45,				"weapon_zs_blaster")
-GM:AddStartingItem("tossr",				ITEMCAT_GUNS,			45,				"weapon_zs_tosser")
-GM:AddStartingItem("stbbr",				ITEMCAT_GUNS,			45,				"weapon_zs_stubber")
-GM:AddStartingItem("crklr",				ITEMCAT_GUNS,			45,				"weapon_zs_crackler")
-GM:AddStartingItem("sling",				ITEMCAT_GUNS,			45,				"weapon_zs_slinger")
-GM:AddStartingItem("z9000",				ITEMCAT_GUNS,			45,				"weapon_zs_z9000")
-GM:AddStartingItem("minelayer",			ITEMCAT_GUNS,			60,				"weapon_zs_minelayer")
-
-GM:AddStartingItem("2pcp",				ITEMCAT_AMMO,			15,				nil,			"28 pistol ammo",				nil,		"ammo_pistol",			function(pl) pl:GiveAmmo(28, "pistol", true) end)
-GM:AddStartingItem("3pcp",				ITEMCAT_AMMO,			20,				nil,			"42 pistol ammo",				nil,		"ammo_pistol",			function(pl) pl:GiveAmmo(42, "pistol", true) end)
-GM:AddStartingItem("2sgcp",				ITEMCAT_AMMO,			15,				nil,			"24 shotgun ammo",				nil,		"ammo_shotgun",			function(pl) pl:GiveAmmo(24, "buckshot", true) end)
-GM:AddStartingItem("3sgcp",				ITEMCAT_AMMO,			20,				nil,			"36 shotgun ammo",				nil,		"ammo_shotgun",			function(pl) pl:GiveAmmo(36, "buckshot", true) end)
-GM:AddStartingItem("2smgcp",			ITEMCAT_AMMO,			15,				nil,			"72 SMG ammo",					nil,		"ammo_smg",				function(pl) pl:GiveAmmo(72, "smg1", true) end)
-GM:AddStartingItem("3smgcp",			ITEMCAT_AMMO,			20,				nil,			"108 SMG ammo",					nil,		"ammo_smg",				function(pl) pl:GiveAmmo(108, "smg1", true) end)
-GM:AddStartingItem("2arcp",				ITEMCAT_AMMO,			15,				nil,			"64 assault rifle ammo",		nil,		"ammo_assault",			function(pl) pl:GiveAmmo(64, "ar2", true) end)
-GM:AddStartingItem("3arcp",				ITEMCAT_AMMO,			20,				nil,			"96 assault rifle ammo",		nil,		"ammo_assault",			function(pl) pl:GiveAmmo(96, "ar2", true) end)
-GM:AddStartingItem("2rcp",				ITEMCAT_AMMO,			15,				nil,			"16 rifle ammo",				nil,		"ammo_rifle",			function(pl) pl:GiveAmmo(16, "357", true) end)
-GM:AddStartingItem("3rcp",				ITEMCAT_AMMO,			20,				nil,			"24 rifle ammo",				nil,		"ammo_rifle",			function(pl) pl:GiveAmmo(24, "357", true) end)
-GM:AddStartingItem("2pls",				ITEMCAT_AMMO,			15,				nil,			"60 pulse ammo",				nil,		"ammo_pulse",			function(pl) pl:GiveAmmo(60, "pulse", true) end)
-GM:AddStartingItem("3pls",				ITEMCAT_AMMO,			20,				nil,			"90 pulse ammo",				nil,		"ammo_pulse",			function(pl) pl:GiveAmmo(90, "pulse", true) end)
-GM:AddStartingItem("xbow1",				ITEMCAT_AMMO,			15,				nil,			"16 crossbow bolts",			nil,		"ammo_bolts",			function(pl) pl:GiveAmmo(16, "XBowBolt", true) end)
-GM:AddStartingItem("xbow2",				ITEMCAT_AMMO,			20,				nil,			"24 crossbow bolts",			nil,		"ammo_bolts",			function(pl) pl:GiveAmmo(24, "XBowBolt", true) end)
-GM:AddStartingItem("4mines",			ITEMCAT_AMMO,			15,				nil,			"6 explosives",					nil,		"ammo_explosive",		function(pl) pl:GiveAmmo(6, "impactmine", true) end)
-GM:AddStartingItem("6mines",			ITEMCAT_AMMO,			20,				nil,			"9 explosives",					nil,		"ammo_explosive",		function(pl) pl:GiveAmmo(9, "impactmine", true) end)
-GM:AddStartingItem("8nails",			ITEMCAT_AMMO,			15,				nil,			"8 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(8, "GaussEnergy", true) end)
-GM:AddStartingItem("12nails",			ITEMCAT_AMMO,			20,				nil,			"12 nails",						nil, 		"ammo_nail", 			function(pl) pl:GiveAmmo(12, "GaussEnergy", true) end)
-GM:AddStartingItem("60mkit",			ITEMCAT_AMMO,			15,				nil,			"60 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(60, "Battery", true) end)
-GM:AddStartingItem("90mkit",			ITEMCAT_AMMO,			25,				nil,			"90 medical power",				nil,		"ammo_medpower",		function(pl) pl:GiveAmmo(90, "Battery", true) end)
-
-GM:AddStartingItem("brassknuckles",		ITEMCAT_MELEE,			20,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
-GM:AddStartingItem("zpaxe",				ITEMCAT_MELEE,			40,				"weapon_zs_axe")
-GM:AddStartingItem("crwbar",			ITEMCAT_MELEE,			40,				"weapon_zs_crowbar")
-GM:AddStartingItem("stnbtn",			ITEMCAT_MELEE,			40,				"weapon_zs_stunbaton")
-GM:AddStartingItem("csknf",				ITEMCAT_MELEE,			20,				"weapon_zs_swissarmyknife")
-GM:AddStartingItem("zpplnk",			ITEMCAT_MELEE,			20,				"weapon_zs_plank")
-GM:AddStartingItem("zpfryp",			ITEMCAT_MELEE,			30,				"weapon_zs_fryingpan")
-GM:AddStartingItem("zpcpot",			ITEMCAT_MELEE,			30,				"weapon_zs_pot")
-GM:AddStartingItem("ladel",				ITEMCAT_MELEE,			30,				"weapon_zs_ladel")
-GM:AddStartingItem("pipe",				ITEMCAT_MELEE,			40,				"weapon_zs_pipe")
-GM:AddStartingItem("hook",				ITEMCAT_MELEE,			40,				"weapon_zs_hook")
-
-local item
-GM:AddStartingItem("medkit",			ITEMCAT_TOOLS,			60,				"weapon_zs_medicalkit")
-GM:AddStartingItem("medgun",			ITEMCAT_TOOLS,			55,				"weapon_zs_medicgun")
 item =
-GM:AddStartingItem("strengthshot",		ITEMCAT_TOOLS,			40,				"weapon_zs_strengthshot")
-item.SkillRequirement = SKILL_U_STRENGTHSHOT
+GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			64,				"weapon_zs_resupplybox")
+item.Countables = "prop_resupplybox"
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("antidoteshot",		ITEMCAT_TOOLS,			40,				"weapon_zs_antidoteshot")
-item.SkillRequirement = SKILL_U_ANTITODESHOT
-GM:AddStartingItem("arscrate",			ITEMCAT_DEPLOYABLES,			50,				"weapon_zs_arsenalcrate")
-.Countables = "prop_arsenalcrate"
-GM:AddStartingItem("resupplybox",		ITEMCAT_DEPLOYABLES,			50,				"weapon_zs_resupplybox")
-.Countables = "prop_resupplybox"
-GM:AddStartingItem("remantler",			ITEMCAT_DEPLOYABLES,			0,				"weapon_zs_remantler")
-.Countables = "prop_remantler"
+GM:AddStartingItem("pistolammo",		ITEMCAT_AMMO,			16,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("infturret",			ITEMCAT_DEPLOYABLES,			75,				"weapon_zs_gunturret",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret") pl:GiveAmmo(1, "thumper") pl:GiveAmmo(125, "smg1") end)
-item.Countables = "prop_gunturret"
-item.NoClassicMode = true
+GM:AddStartingItem("shotgunammo",		ITEMCAT_AMMO,			16,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("blastturret",		ITEMCAT_DEPLOYABLES,			75,				"weapon_zs_gunturret_buckshot",	nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_gunturret_buckshot") pl:GiveAmmo(1, "turret_buckshot") pl:GiveAmmo(30, "buckshot") end)
-item.Countables = "prop_gunturret_buckshot"
-item.NoClassicMode = true
-item.SkillRequirement = SKILL_U_BLASTTURRET
+GM:AddStartingItem("smgammo",			ITEMCAT_AMMO,			16,				nil,							"36 SMG ammo",					nil,									"ammo_smg",							function(pl) pl:GiveAmmo(36, "smg1", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("repairfield",		ITEMCAT_DEPLOYABLES,			60,				"weapon_zs_repairfield",		nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_repairfield") pl:GiveAmmo(1, "repairfield") pl:GiveAmmo(50, "pulse") end)
-item.Countables = "prop_repairfield"
-item.NoClassicMode = true
+GM:AddStartingItem("rifleammo",		ITEMCAT_AMMO,			16,				nil,							"8 rifle ammo",					nil,									"ammo_rifle",						function(pl) pl:GiveAmmo(8, "357", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("zapper",			ITEMCAT_DEPLOYABLES,			75,				"weapon_zs_zapper",				nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_zapper") pl:GiveAmmo(1, "zapper") pl:GiveAmmo(50, "pulse") end)
-item.Countables = "prop_zapper"
-item.NoClassicMode = true
-
-GM:AddStartingItem("manhack",			ITEMCAT_DEPLOYABLES,			50,				"weapon_zs_manhack").Countables = "prop_manhack"
+GM:AddStartingItem("crossbowammo",		ITEMCAT_AMMO,			16,				nil,							"8 crossbow bolts",				nil,									"ammo_bolts",						function(pl) pl:GiveAmmo(8,	"XBowBolt",	true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("drone",				ITEMCAT_DEPLOYABLES,			55,				"weapon_zs_drone",				nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_drone") pl:GiveAmmo(1, "drone") pl:GiveAmmo(60, "smg1") end)
-item.Countables = "prop_drone"
+GM:AddStartingItem("assaultrifleammo",	ITEMCAT_AMMO,			16,				nil,							"32 assault rifle ammo",		nil,									"ammo_assault",						function(pl) pl:GiveAmmo(32, "ar2", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("pulsedrone",		ITEMCAT_DEPLOYABLES,			55,				"weapon_zs_drone_pulse",		nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_drone_pulse") pl:GiveAmmo(1, "pulse_cutter") pl:GiveAmmo(60, "pulse") end)
-item.Countables = "prop_drone_pulse"
-item.SkillRequirement = SKILL_U_DRONE
+GM:AddStartingItem("pulseammo",		ITEMCAT_AMMO,			16,				nil,							"30 pulse ammo",				nil,									"ammo_pulse",						function(pl) pl:GiveAmmo(30, "pulse", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("hauldrone",			ITEMCAT_DEPLOYABLES,			25,				"weapon_zs_drone_hauler",		nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_drone_hauler") pl:GiveAmmo(1, "drone_hauler") end)
-item.Countables = "prop_drone_hauler"
-item.SkillRequirement = SKILL_HAULMODULE
+GM:AddStartingItem("impactmine",		ITEMCAT_AMMO,			16,				nil,							"3 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(3, "impactmine", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("rollermine",		ITEMCAT_DEPLOYABLES,			65,				"weapon_zs_rollermine",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_rollermine") pl:GiveAmmo(1, "rollermine") end)
-item.Countables = "prop_rollermine"
-item.SkillRequirement = SKILL_U_ROLLERMINE
-
-GM:AddStartingItem("wrench",			ITEMCAT_TOOLS,			20,				"weapon_zs_wrench").NoClassicMode = true
-GM:AddStartingItem("crphmr",			ITEMCAT_TOOLS,			40,				"weapon_zs_hammer").NoClassicMode = true
-GM:AddStartingItem("junkpack",			ITEMCAT_DEPLOYABLES,	30,				"weapon_zs_boardpack")
-GM:AddStartingItem("propanetank",		ITEMCAT_TOOLS,			30,				"comp_propanecan")
-GM:AddStartingItem("busthead",			ITEMCAT_TOOLS,			35,				"comp_busthead")
-GM:AddStartingItem("sawblade",			ITEMCAT_TOOLS,			35,				"comp_sawblade").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddStartingItem("cpuparts",			ITEMCAT_TOOLS,			35,				"comp_cpuparts").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddStartingItem("electrobattery",	ITEMCAT_TOOLS,			45,				"comp_electrobattery").SkillRequirement = SKILL_U_CRAFTINGPACK
-GM:AddStartingItem("msgbeacon",			ITEMCAT_DEPLOYABLES,			10,				"weapon_zs_messagebeacon").Countables = "prop_messagebeacon"
+GM:AddStartingItem("chemical",			ITEMCAT_AMMO,			16,				nil,							"20 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(20, "chemical", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("ffemitter",			ITEMCAT_DEPLOYABLES,			45,				"weapon_zs_ffemitter",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(50, "pulse") end)
-item.Countables = "prop_ffemitter"
-GM:AddStartingItem("barricadekit",		ITEMCAT_DEPLOYABLES,			80,				"weapon_zs_barricadekit")
-GM:AddStartingItem("camera",			ITEMCAT_DEPLOYABLES,			15,				"weapon_zs_camera").Countables = "prop_camera"
-GM:AddStartingItem("tv",				ITEMCAT_DEPLOYABLES,			35,				"weapon_zs_tv").Countables = "prop_tv"
-
-GM:AddStartingItem("oxtank",			ITEMCAT_TRINKETS,		5,				"trinket_oxygentank").SubCategory =				ITEMSUBCAT_TRINKETS_PERFORMANCE
-GM:AddStartingItem("boxingtraining",	ITEMCAT_TRINKETS,		10,				"trinket_boxingtraining").SubCategory =			ITEMSUBCAT_TRINKETS_MELEE
-GM:AddStartingItem("cutlery",			ITEMCAT_TRINKETS,		10,				"trinket_cutlery").SubCategory =				ITEMSUBCAT_TRINKETS_DEFENSIVE
-GM:AddStartingItem("portablehole",		ITEMCAT_TRINKETS,		10,				"trinket_portablehole").SubCategory =			ITEMSUBCAT_TRINKETS_PERFORMANCE
-GM:AddStartingItem("acrobatframe",		ITEMCAT_TRINKETS,		15,				"trinket_acrobatframe").SubCategory=			ITEMSUBCAT_TRINKETS_PERFORMANCE
-GM:AddStartingItem("nightvision",		ITEMCAT_TRINKETS,		15,				"trinket_nightvision").SubCategory =			ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("targetingvisi",		ITEMCAT_TRINKETS,		15,				"trinket_targetingvisori").SubCategory =		ITEMSUBCAT_TRINKETS_OFFENSIVE
-GM:AddStartingItem("pulseampi",			ITEMCAT_TRINKETS,		15,				"trinket_pulseampi").SubCategory =				ITEMSUBCAT_TRINKETS_OFFENSIVE
-GM:AddStartingItem("blueprintsi",		ITEMCAT_TRINKETS,		15,				"trinket_blueprintsi").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
-GM:AddStartingItem("loadingframe",		ITEMCAT_TRINKETS,		15,				"trinket_loadingex").SubCategory =				ITEMSUBCAT_TRINKETS_PERFORMANCE
-GM:AddStartingItem("kevlar",			ITEMCAT_TRINKETS,		15,				"trinket_kevlar").SubCategory =					ITEMSUBCAT_TRINKETS_DEFENSIVE
-GM:AddStartingItem("momentumsupsysii",	ITEMCAT_TRINKETS,		15,				"trinket_momentumsupsysii").SubCategory =		ITEMSUBCAT_TRINKETS_MELEE
-GM:AddStartingItem("hemoadrenali",		ITEMCAT_TRINKETS,		15,				"trinket_hemoadrenali").SubCategory =			ITEMSUBCAT_TRINKETS_MELEE
-GM:AddStartingItem("vitpackagei",		ITEMCAT_TRINKETS,		20,				"trinket_vitpackagei").SubCategory =			ITEMSUBCAT_TRINKETS_DEFENSIVE
-GM:AddStartingItem("processor",			ITEMCAT_TRINKETS,		20,				"trinket_processor").SubCategory =				ITEMSUBCAT_TRINKETS_SUPPORT
-GM:AddStartingItem("cardpackagei",		ITEMCAT_TRINKETS,		20,				"trinket_cardpackagei").SubCategory =			ITEMSUBCAT_TRINKETS_DEFENSIVE
-GM:AddStartingItem("bloodpack",			ITEMCAT_TRINKETS,		20,				"trinket_bloodpack").SubCategory =				ITEMSUBCAT_TRINKETS_DEFENSIVE
-GM:AddStartingItem("biocleanser",		ITEMCAT_TRINKETS,		20,				"trinket_biocleanser").SubCategory =			ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("reactiveflasher",	ITEMCAT_TRINKETS,		25,				"trinket_reactiveflasher").SubCategory =		ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("magnet",			ITEMCAT_TRINKETS,		25,				"trinket_magnet").SubCategory =					ITEMSUBCAT_TRINKETS_SPECIAL
-GM:AddStartingItem("arsenalpack",		ITEMCAT_TRINKETS,		55,				"trinket_arsenalpack").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
-GM:AddStartingItem("resupplypack",		ITEMCAT_TRINKETS,		55,				"trinket_resupplypack").SubCategory =			ITEMSUBCAT_TRINKETS_SUPPORT
-
-GM:AddStartingItem("stone",				ITEMCAT_OTHER,			10,				"weapon_zs_stone")
-GM:AddStartingItem("grenade",			ITEMCAT_OTHER,			30,				"weapon_zs_grenade")
-GM:AddStartingItem("flashbomb",			ITEMCAT_OTHER,			15,				"weapon_zs_flashbomb")
-GM:AddStartingItem("molotov",			ITEMCAT_OTHER,			30,				"weapon_zs_molotov")
-GM:AddStartingItem("betty",				ITEMCAT_OTHER,			30,				"weapon_zs_proxymine")
-GM:AddStartingItem("corgasgrenade",		ITEMCAT_OTHER,			40,				"weapon_zs_corgasgrenade")
-GM:AddStartingItem("crygasgrenade",		ITEMCAT_OTHER,			35,				"weapon_zs_crygasgrenade").SkillRequirement = SKILL_U_CRYGASGREN
-GM:AddStartingItem("detpck",			ITEMCAT_OTHER,			35,				"weapon_zs_detpack").Countables = "prop_detpack"
+GM:AddStartingItem("25mkit",			ITEMCAT_AMMO,			16,		nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
+item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("sigfragment",		ITEMCAT_OTHER,			25,				"weapon_zs_sigilfragment")
-item.NoClassicMode = true
-item =
-GM:AddStartingItem("corfragment",		ITEMCAT_OTHER,			35,				"weapon_zs_corruptedfragment")
-item.NoClassicMode = true
-item.SkillRequirement = SKILL_U_CORRUPTEDFRAGMENT
-item =
-GM:AddStartingItem("medcloud",			ITEMCAT_OTHER,			25,				"weapon_zs_mediccloudbomb")
-item.SkillRequirement = SKILL_U_MEDICCLOUD
-item =
-GM:AddStartingItem("nanitecloud",		ITEMCAT_OTHER,			25,				"weapon_zs_nanitecloudbomb")
-item.SkillRequirement = SKILL_U_NANITECLOUD
-GM:AddStartingItem("bloodshot",			ITEMCAT_OTHER,			35,				"weapon_zs_bloodshotbomb")
---]]
+GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just one nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(1, "GaussEnergy", true) end)
+item.CanMakeFromScrap = true=
 ------------
 -- Points --
 ------------
