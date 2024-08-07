@@ -673,7 +673,7 @@ function GM:OpenRemantlerMenu(remantler)
 			list:SetTall(ammoframe:GetTall() - 32)
 
 			for j, tab in ipairs(GAMEMODE.Items) do
-				if tab.PointShop and tab.Category == ITEMCAT_AMMO or tab.CanMakeFromScrap then
+				if tab.CanMakeFromScrap then
 					self:AddShopItem(list, j, tab, false, true)
 				end
 			end
