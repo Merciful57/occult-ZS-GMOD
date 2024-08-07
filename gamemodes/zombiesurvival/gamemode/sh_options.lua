@@ -169,7 +169,7 @@ GM:AddStartingItem("25mkit",			ITEMCAT_AMMO,			16,		nil,							"25 Medical Kit p
 item.CanMakeFromScrap = true
 item =
 GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just one nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(1, "GaussEnergy", true) end)
-item.CanMakeFromScrap = true=
+item.CanMakeFromScrap = true
 ------------
 -- Points --
 ------------
