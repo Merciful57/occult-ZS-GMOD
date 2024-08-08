@@ -33,7 +33,7 @@ SWEP.Primary.Delay = 0.9
 SWEP.ReloadDelay = 0.4
 
 SWEP.Primary.ClipSize = 5
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "357"
 SWEP.Primary.DefaultClip = 25
 
