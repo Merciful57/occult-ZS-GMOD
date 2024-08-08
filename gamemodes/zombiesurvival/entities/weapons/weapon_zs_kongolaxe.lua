@@ -53,7 +53,6 @@ SWEP.SwingHoldType = "melee"
 SWEP.HitDecal = "Manhackcut"
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 SWEP.AllowQualityWeapons = true
 
