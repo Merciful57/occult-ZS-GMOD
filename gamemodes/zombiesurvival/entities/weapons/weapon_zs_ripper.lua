@@ -54,18 +54,42 @@ SWEP.IronSightsPos = Vector(1, 1, 1)
 
 
 --Crotch Gun Fix
-SWEP.Offset = {
-Pos = {
-Up = 0,
-Right = 1,
-Forward = -3,
-},
-Ang = {
-Up = 0,
-Right = 0,
-Forward = 180,
-}
-}
+
+if CLIENT then
+local WorldModel = ClientsideModel(SWEP.WorldModel)
+
+-- Settings...
+WorldModel:SetSkin(1)
+WorldModel:SetNoDraw(true)
+
+function SWEP:DrawWorldModel()
+local _Owner = self:GetOwner()
+
+if (IsValid(_Owner)) then
+            -- Specify a good position
+local offsetVec = Vector(-.5, -1, -1)
+local offsetAng = Angle(0, 0, 180)
+
+local boneid = _Owner:LookupBone("ValveBiped.Bip01_R_Hand") -- Right Hand
+if !boneid then return end
+
+local matrix = _Owner:GetBoneMatrix(boneid)
+if !matrix then return end
+
+local newPos, newAng = LocalToWorld(offsetVec, offsetAng, matrix:GetTranslation(), matrix:GetAngles())
+
+WorldModel:SetPos(newPos)
+WorldModel:SetAngles(newAng)
+
+            WorldModel:SetupBones()
+else
+WorldModel:SetPos(self:GetPos())
+WorldModel:SetAngles(self:GetAngles())
+end
+
+WorldModel:DrawModel()
+end
+end
 
 local instbl = {}
 instbl["channel"] = "3"
