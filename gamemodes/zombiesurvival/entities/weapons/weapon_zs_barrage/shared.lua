@@ -25,7 +25,6 @@ SWEP.ConeMin = 7.5
 SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.05)
 
