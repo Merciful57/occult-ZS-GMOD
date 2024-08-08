@@ -460,6 +460,7 @@ function meta:DamageNails(attacker, inflictor, damage, dmginfo)
 				if ent:IsValid() then
 					ent:Spawn()
 					ent:AttachTo(self)
+					ent:Destroy()
 				end
 			end
 		end
