@@ -70,3 +70,13 @@ GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Disperser' Uzi", "Decreases the clip si
 		end
 	end
 end)
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 3))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2))
+	end
+end
+end 
