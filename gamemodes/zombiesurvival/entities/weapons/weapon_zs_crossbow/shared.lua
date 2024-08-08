@@ -25,7 +25,6 @@ SWEP.SecondaryDelay = 0.25
 SWEP.WalkSpeed = SPEED_SLOWER
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
 
 SWEP.ConeMax = 0
 SWEP.ConeMin = 0
