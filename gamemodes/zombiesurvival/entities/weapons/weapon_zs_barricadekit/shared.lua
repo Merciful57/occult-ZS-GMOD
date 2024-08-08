@@ -19,7 +19,6 @@ SWEP.Secondary.Automatic = false
 
 SWEP.UseHands = true
 
-SWEP.MaxStock = 5
 
 if CLIENT then
 	SWEP.ViewModelFOV = 60
