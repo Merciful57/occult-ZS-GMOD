@@ -94,7 +94,6 @@ SWEP.IronSightsAng = Vector(0, 0, 0)
 SWEP.WalkSpeed = SPEED_SLOWEST
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
 
 SWEP.FireAnimSpeed = 0.5
 
