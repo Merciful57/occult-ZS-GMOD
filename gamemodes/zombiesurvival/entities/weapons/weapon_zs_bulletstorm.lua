@@ -42,7 +42,6 @@ SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_SMG1
 SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 SWEP.IronSightsPos = Vector(-2, 6, 3)
 SWEP.IronSightsAng = Vector(0, 2, 0)
