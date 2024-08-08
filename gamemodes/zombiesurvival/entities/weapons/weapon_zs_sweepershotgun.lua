@@ -41,6 +41,5 @@ SWEP.FireAnimSpeed = 1.2
 SWEP.WalkSpeed = SPEED_SLOWER
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
