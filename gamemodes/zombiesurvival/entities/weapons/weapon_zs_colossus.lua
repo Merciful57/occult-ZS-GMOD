@@ -88,7 +88,6 @@ SWEP.TracerName = "tracer_colossus"
 SWEP.ReloadSpeed = 1
 SWEP.Tier = 5
 
-SWEP.MaxStock = 2
 SWEP.Pierces = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_RELOAD_SPEED, 0.032)
