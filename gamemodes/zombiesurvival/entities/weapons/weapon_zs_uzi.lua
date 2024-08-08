@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Sprayer' Uzi 9mm"
+SWEP.PrintName = "'Sprayer' SMG"
 SWEP.Description = "Quite inaccurate, but has good, cheap and reliable firepower potential."
 
 SWEP.Slot = 2
