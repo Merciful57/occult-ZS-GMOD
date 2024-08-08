@@ -219,17 +219,10 @@ if SERVER then
 
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
 		pl:SetAllowFullRotation(false)
-		
-		
-		if pl:Health() < -34 then
-			local amount = pl:OBBMaxs():Length()
-			local vel = pl:GetVelocity()
-			util.Blood(pl:LocalToWorld(pl:OBBCenter()), math.Rand(amount * 0.25, amount * 0.5), vel:GetNormalized(), vel:Length() * 0.75)
-			return true
-		elseif not pl.KnockedDown then
-			pl:CreateRagdoll()
-		end
-
+		local amount = pl:OBBMaxs():Length()
+		local vel = pl:GetVelocity()
+		util.Blood(pl:LocalToWorld(pl:OBBCenter()), math.Rand(amount * 0.25, amount * 0.5), vel:GetNormalized(), vel:Length() * 0.75)
+		pl:CreateRagdoll()
 		pl:SetHealth(0)
 		pl:StripWeapons()
 		pl:Spectate(OBS_MODE_ROAMING)
