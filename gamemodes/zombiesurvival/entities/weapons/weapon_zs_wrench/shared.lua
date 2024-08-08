@@ -17,7 +17,6 @@ SWEP.MeleeDamage = 28
 SWEP.MeleeRange = 50
 SWEP.MeleeSize = 0.875
 
-SWEP.MaxStock = 5
 
 SWEP.HitGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.MissGesture = SWEP.HitGesture
