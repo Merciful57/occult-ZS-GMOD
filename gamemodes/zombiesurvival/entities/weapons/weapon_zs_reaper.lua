@@ -45,7 +45,6 @@ SWEP.WalkSpeed = SPEED_NORMAL
 SWEP.ReloadSpeed = 1.05
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 SWEP.IronSightsPos = Vector(-5.3, -3, 4.4)
 SWEP.IronSightsAng = Vector(-1, 0.2, 2.55)
