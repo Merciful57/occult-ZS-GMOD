@@ -66,3 +66,13 @@ function SWEP:ShootBullets(dmg, numbul, cone)
 
 	BaseClass.ShootBullets(self, dmg, numbul, cone)
 end
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 3.7))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.7))
+	end
+end
+end 
