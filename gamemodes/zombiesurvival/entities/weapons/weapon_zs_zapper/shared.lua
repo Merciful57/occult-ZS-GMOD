@@ -20,7 +20,6 @@ SWEP.Secondary.Ammo = "dummy"
 
 SWEP.ModelScale = 0.75
 
-SWEP.MaxStock = 5
 
 SWEP.WalkSpeed = SPEED_NORMAL
 SWEP.FullWalkSpeed = SPEED_SLOWEST
