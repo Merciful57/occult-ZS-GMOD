@@ -46,7 +46,6 @@ SWEP.IronSightsAng = Vector(0, 0, 0)
 SWEP.WalkSpeed = SPEED_SLOW
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.05)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Mercurial' Birdshot Rifle", "Fires a spread of less accurate shots that deal more total damage", function(wept)
