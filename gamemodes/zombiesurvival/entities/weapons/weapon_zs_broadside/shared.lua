@@ -37,7 +37,6 @@ SWEP.WalkSpeed = SPEED_SLOWEST * 0.85
 SWEP.FireAnimSpeed = 0.75
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1, 1)
 GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Salvo' Micro-missile Launcher", "Rapidly fires miniature missiles that use 33% ammo", function(wept)
