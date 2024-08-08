@@ -26,7 +26,6 @@ SWEP.ConeMax = 0
 SWEP.ConeMin = 0
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 SWEP.HeatBuildShort = 0.10
 SWEP.HeatBuildLong = 0.045
