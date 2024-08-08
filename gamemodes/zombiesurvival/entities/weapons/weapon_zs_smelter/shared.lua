@@ -27,7 +27,6 @@ SWEP.Recoil = 7
 SWEP.WalkSpeed = SPEED_SLOWEST
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
 
 SWEP.ConeMax = 6.5
 SWEP.ConeMin = 5.75
