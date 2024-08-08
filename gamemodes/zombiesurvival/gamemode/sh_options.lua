@@ -354,7 +354,7 @@ GM:AddPointShopItem("sawblade",			ITEMCAT_TOOLS,			30,				"comp_sawblade").Skill
 GM:AddPointShopItem("cpuparts",			ITEMCAT_TOOLS,			30,				"comp_cpuparts").SkillRequirement = SKILL_U_CRAFTINGPACK
 GM:AddPointShopItem("electrobattery",	ITEMCAT_TOOLS,			40,				"comp_electrobattery").SkillRequirement = SKILL_U_CRAFTINGPACK
 GM:AddPointShopItem("barricadekit",		ITEMCAT_DEPLOYABLES,	85,				"weapon_zs_barricadekit")
-GM:AddPointShopItem("medkit",			ITEMCAT_TOOLS,			0,				"weapon_zs_medicalkit"nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_medicalkit") end)
+GM:AddPointShopItem("medkit",			ITEMCAT_TOOLS,			0,				"weapon_zs_medicalkit", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_medicalkit") end)
 GM:AddPointShopItem("medgun",			ITEMCAT_TOOLS,			30,				"weapon_zs_medicgun")
 GM:AddPointShopItem("strengthshot",		ITEMCAT_TOOLS,			30,				"weapon_zs_strengthshot")
 GM:AddPointShopItem("antidote",			ITEMCAT_TOOLS,			30,				"weapon_zs_antidoteshot")
