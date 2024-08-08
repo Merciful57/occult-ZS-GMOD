@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 --in memory of Gormaoife 1999-2016 rip
 
-SWEP.PrintName = "'Splinter' Sawed-Off Shotgun"
+SWEP.PrintName = "'Splinter' Shotgun"
 SWEP.Description = "Can fire both rounds at once for higher burst damage."
 
 SWEP.Slot = 3
