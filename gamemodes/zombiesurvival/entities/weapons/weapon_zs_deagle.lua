@@ -44,3 +44,13 @@ SWEP.FireAnimSpeed = 1.3
 SWEP.Tier = 3
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 2)
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.3))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 1.7))
+	end
+end
+end
