@@ -182,75 +182,119 @@ function ULib.getUsers( target, enable_keywords, ply )
 			if enable_keywords then
 				local tmpTargets = {}
 				local negate = false
-				if piece:sub( 1, 1 ) == "!" and piece:len() > 1 then
-					negate = true
-					piece = piece:sub( 2 )
-				end
-
-				if piece:sub( 1, 1 ) == "$" then
-					local player = ULib.getPlyByID( piece:sub( 2 ) )
-					if player then
-						table.insert( tmpTargets, player )
-					end
-				elseif piece == "*" then -- All!
-					table.Add( tmpTargets, players )
-				elseif piece == "^" then -- Self!
-					if ply then
-						if ply:IsValid() then
-							table.insert( tmpTargets, ply )
-						elseif not negate then
-							return false, "You cannot target yourself from console!"
+				local lower_p = string.lower(piece)
+				
+				if lower_p == "!h" then -- Human team!
+					table.Add( tmpTargets, team.GetPlayers(TEAM_HUMAN) )
+				elseif lower_p == "!hb" or lower_p == "!bh" then -- Human team bots!
+					for _, pl in pairs( team.GetPlayers(TEAM_HUMAN) ) do
+						if pl:IsBot() then
+							table.insert( tmpTargets, pl )
 						end
 					end
-				elseif piece:sub( 1, 1 ) == "@" then
-					if #piece == 1 then
-						if IsValid( ply ) then
-							local player = ULib.getPicker( ply )
-							if player then
+				elseif lower_p == "!z" then -- Zombie team!
+					table.Add( tmpTargets, team.GetPlayers(TEAM_UNDEAD) )
+				elseif lower_p == "!zb" or lower_p == "!bz" then -- Zombie team bots!
+					for _, pl in pairs( team.GetPlayers(TEAM_UNDEAD) ) do
+						if pl:IsBot() then
+							table.insert( tmpTargets, pl )
+						end
+					end
+				elseif lower_p == "!b" then -- All bots!
+					for _, pl in pairs(player.GetAll()) do
+						if pl:IsBot() then
+							table.insert(tmpTargets, pl)
+						end
+					end
+				elseif lower_p == "!n" then -- All non-bots!
+					for _, pl in pairs(player.GetAll()) do
+						if not pl:IsBot() then
+							table.insert(tmpTargets, pl)
+						end
+					end
+				elseif lower_p == "!zn" or lower_p == "!nz" then -- All zombie team non-bots!
+					for _, pl in pairs( team.GetPlayers(TEAM_UNDEAD) ) do
+						if not pl:IsBot() then
+							table.insert(tmpTargets, pl)
+						end
+					end
+				elseif lower_p == "!hn" or lower_p == "!hz" then -- All human team non-bots!
+					for _, pl in pairs( team.GetPlayers(TEAM_HUMAN) ) do
+						if not pl:IsBot() then
+							table.insert(tmpTargets, pl)
+						end
+					end
+				else
+					if piece:sub( 1, 1 ) == "!" and piece:len() > 1 then
+						negate = true
+						piece = piece:sub( 2 )
+					end
+
+					if piece:sub( 1, 1 ) == "$" then
+						local player = ULib.getPlyByID( piece:sub( 2 ) )
+						if player then
+							table.insert( tmpTargets, player )
+						end
+					elseif piece == "*" then -- All!
+						table.Add( tmpTargets, players )
+					elseif piece == "^" then -- Self!
+						if ply then
+							if ply:IsValid() then
+								table.insert( tmpTargets, ply )
+							elseif not negate then
+								return false, "You cannot target yourself from console!"
+							end
+						end
+					elseif piece:sub( 1, 1 ) == "@" then
+						if #piece == 1 then
+							if IsValid( ply ) then
+								local player = ULib.getPicker( ply )
+								if player then
+									table.insert( tmpTargets, player )
+								end
+							end
+						else
+							local teamNameOrId = piece:sub( 2 )
+							local teamId = tonumber( teamNameOrId )
+
+							if teamId then
+								for _, ply in ipairs( team.GetPlayers( teamId ) ) do
+									table.insert( tmpTargets, ply )
+								end
+							else
+								local teams = team.GetAllTeams()
+
+								-- This can't be ipairs, as it's indexed by ID, starts at 0 and may not be sequential.
+								for teamId, teamData in pairs( teams ) do
+									if teamData.Name == teamNameOrId then
+										for _, ply in ipairs( team.GetPlayers( teamId ) ) do
+											table.insert( tmpTargets, ply )
+										end
+
+										break
+									end
+								end
+							end
+						end
+					elseif piece:sub( 1, 1 ) == "#" and ULib.ucl.groups[ piece:sub( 2 ) ] then
+						local group = piece:sub( 2 )
+						for _, player in ipairs( players ) do
+							if player:GetUserGroup() == group then
+								table.insert( tmpTargets, player )
+							end
+						end
+					elseif piece:sub( 1, 1 ) == "%" and ULib.ucl.groups[ piece:sub( 2 ) ] then
+						local group = piece:sub( 2 )
+						for _, player in ipairs( players ) do
+							if player:CheckGroup( group ) then
 								table.insert( tmpTargets, player )
 							end
 						end
 					else
-						local teamNameOrId = piece:sub( 2 )
-						local teamId = tonumber( teamNameOrId )
-
-						if teamId then
-							for _, ply in ipairs( team.GetPlayers( teamId ) ) do
-								table.insert( tmpTargets, ply )
-							end
-						else
-							local teams = team.GetAllTeams()
-
-							-- This can't be ipairs, as it's indexed by ID, starts at 0 and may not be sequential.
-							for teamId, teamData in pairs( teams ) do
-								if teamData.Name == teamNameOrId then
-									for _, ply in ipairs( team.GetPlayers( teamId ) ) do
-										table.insert( tmpTargets, ply )
-									end
-
-									break
-								end
-							end
+						local tblForHook = hook.Run( ULib.HOOK_GETUSERS_CUSTOM_KEYWORD, piece, ply )
+						if tblForHook then
+							table.Add( tmpTargets, tblForHook )
 						end
-					end
-				elseif piece:sub( 1, 1 ) == "#" and ULib.ucl.groups[ piece:sub( 2 ) ] then
-					local group = piece:sub( 2 )
-					for _, player in ipairs( players ) do
-						if player:GetUserGroup() == group then
-							table.insert( tmpTargets, player )
-						end
-					end
-				elseif piece:sub( 1, 1 ) == "%" and ULib.ucl.groups[ piece:sub( 2 ) ] then
-					local group = piece:sub( 2 )
-					for _, player in ipairs( players ) do
-						if player:CheckGroup( group ) then
-							table.insert( tmpTargets, player )
-						end
-					end
-				else
-					local tblForHook = hook.Run( ULib.HOOK_GETUSERS_CUSTOM_KEYWORD, piece, ply )
-					if tblForHook then
-						table.Add( tmpTargets, tblForHook )
 					end
 				end
 
