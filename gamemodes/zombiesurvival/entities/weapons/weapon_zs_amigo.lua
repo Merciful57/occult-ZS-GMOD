@@ -218,3 +218,13 @@ end
 function SWEP:GetShotsLeft()
 	return self:GetDTInt(1)
 end
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.6))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 1.5))
+	end
+end
+end 
