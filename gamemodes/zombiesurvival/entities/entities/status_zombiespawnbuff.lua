@@ -8,11 +8,11 @@ function ENT:Initialize()
 
 	self.Seed = math.Rand(0, 10)
 
-	self:GetOwner().SpawnProtection = true
+	self:GetOwner().SpawnProtection = false
 end
 
 function ENT:PlayerSet(pl)
-	pl.SpawnProtection = true
+	pl.SpawnProtection = false
 end
 
 function ENT:OnRemove()
