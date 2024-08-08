@@ -52,7 +52,6 @@ SWEP.Primary.DefaultClip = 15
 SWEP.ReloadDelay = 3.5
 
 SWEP.Tier = 4
-SWEP.MaxStock = 3
 
 SWEP.ConeMax = 0
 SWEP.ConeMin = 0
