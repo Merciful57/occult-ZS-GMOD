@@ -57,7 +57,7 @@ SWEP.Primary.Delay = 0.8
 SWEP.FireAnimSpeed = 0.55
 
 SWEP.Primary.ClipSize = 7
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pulse"
 SWEP.Primary.DefaultClip = 30
 
