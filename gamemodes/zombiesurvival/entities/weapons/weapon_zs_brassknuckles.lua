@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_fists"
 
-SWEP.PrintName = "Brass Knuckles"
+SWEP.PrintName = "'Brass Knuckles' Blunt Melee"
 SWEP.Description = "A pair of brass knuckles used to concentrate strikes from one's fists, increasing the damage done, while keeping their movement speed up."
 
 if CLIENT then
