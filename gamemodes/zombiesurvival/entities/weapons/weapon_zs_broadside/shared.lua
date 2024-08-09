@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Broadside' Expolsive Launcher"
+SWEP.PrintName = "'Broadside' Explosive Launcher"
 SWEP.Description = "Launches explosive missiles that deal considerable AOE explosive damage. Right click remotely detonates them."
 
 SWEP.UseHands = false
