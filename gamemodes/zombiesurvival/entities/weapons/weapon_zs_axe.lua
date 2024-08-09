@@ -34,7 +34,7 @@ SWEP.NoDismantle = true
 
 SWEP.WalkSpeed = SPEED_FAST
 
-SWEP.SwingTime = 0.6
+SWEP.SwingTime = 1.6
 SWEP.SwingRotation = Angle(0, -20, -40)
 SWEP.SwingOffset = Vector(10, 0, 0)
 SWEP.SwingHoldType = "melee"
