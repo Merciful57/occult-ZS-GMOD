@@ -88,6 +88,8 @@ AddValidHands( "alyx",			"models/weapons/c_arms_citizen.mdl",		0, "0000000" )
 AddValidModel( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player.mdl" )
 AddValidHands( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player_hands.mdl", 0, "00000000" )
 
+AddValidModel( "revan",			"models/epangelmatikes/revan/revan.mdl" )
+AddValidHands( "revan",			"models/epangelmatikes/revan/revan_hands.mdl",		0, "0000000" )
 
 AddValidModel( "barney",		"models/player/barney.mdl" )
 AddValidHands( "barney",		"models/weapons/c_arms_combine.mdl",		0, "0000000" )
