@@ -144,3 +144,13 @@ instbl["sound"] = "razorswep/ripper/deploy.wav"
 instbl["name"] = "evo.draw"
 
 sound.Add(instbl)
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.3))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 1.7))
+	end
+end
+end 
