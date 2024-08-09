@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Barrage' Grenade Launcher"
+SWEP.PrintName = "'Barrage' Explosive Deployer"
 SWEP.Description = "Fires multiple grenades that detonate on impact with enemies or on the third bounce."
 
 SWEP.Base = "weapon_zs_baseproj"
