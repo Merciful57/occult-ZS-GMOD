@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Pollutor' Acid Rifle"
+SWEP.PrintName = "'Pollutor' Chemical SMG"
 SWEP.Description = "Launches acidic projectiles that have a chance to remove damage resistance"
 
 SWEP.Base = "weapon_zs_baseproj"
