@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Inferno' AUG"
+SWEP.PrintName = "'Inferno' Assault Rifle"
 SWEP.Description = "A very accurate assault rifle with great damage output and a high clip size."
 
 SWEP.Slot = 2
