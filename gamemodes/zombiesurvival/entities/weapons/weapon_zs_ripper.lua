@@ -36,7 +36,6 @@ SWEP.Primary.Delay = 0.065
 SWEP.Primary.ClipSize = 32
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
 
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "smg1"
