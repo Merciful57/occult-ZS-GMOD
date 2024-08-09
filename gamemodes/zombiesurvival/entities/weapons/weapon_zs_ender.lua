@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Ender' Automatic Shotgun"
+SWEP.PrintName = "'Ender' Shotgun"
 SWEP.Description = "Relatively accurate, clip loaded, automatic shotgun."
 
 SWEP.Slot = 3
