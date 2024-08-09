@@ -2,7 +2,7 @@ AddCSLuaFile()
 
 SWEP.Base = "weapon_zs_baseshotgun"
 
-SWEP.PrintName = "Boom Stick"
+SWEP.PrintName = "'Boom-Stick' Shotgun"
 SWEP.Description = "This shotgun allows you to load up to four shells in the chamber at once. Hold down reload for faster loading of each shell."
 
 if CLIENT then
