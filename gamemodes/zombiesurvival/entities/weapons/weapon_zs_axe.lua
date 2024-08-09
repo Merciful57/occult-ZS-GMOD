@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Axe"
+SWEP.PrintName = "'Axe' Sharp Melee"
 SWEP.Description = "A simple axe, with balanced stats across the board in terms of damage, range and swing speed."
 
 if CLIENT then
