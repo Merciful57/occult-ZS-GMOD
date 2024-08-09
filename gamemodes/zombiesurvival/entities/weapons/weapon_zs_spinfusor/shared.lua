@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Spinfusor' Pulse Disc Launcher"
+SWEP.PrintName = "'Spinfusor' Pulse Launcher"
 SWEP.Description = "Launches pulse projectiles that react on walls, sending energy back in the direction they travelled."
 
 SWEP.Slot = 3
