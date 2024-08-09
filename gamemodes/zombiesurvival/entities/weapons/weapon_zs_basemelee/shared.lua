@@ -3,7 +3,7 @@ SWEP.WorldModel = "models/weapons/w_axe.mdl"
 
 SWEP.Primary.ClipSize = -1
 SWEP.Primary.DefaultClip = -1
-SWEP.Primary.Automatic = true
+SWEP.Primary.Automatic = false
 SWEP.Primary.Ammo = "none"
 SWEP.Primary.Delay = 1
 
@@ -15,7 +15,7 @@ SWEP.MeleeKnockBack = 0
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
 SWEP.Secondary.Ammo = "dummy"
-SWEP.Secondary.Automatic = true
+SWEP.Secondary.Automatic = false
 
 SWEP.WalkSpeed = SPEED_FAST
 
