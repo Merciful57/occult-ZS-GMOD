@@ -1,7 +1,7 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Stalker' M4"
+SWEP.PrintName = "'Stalker' Assault Rifle"
 SWEP.Description = "Using this gun will severely reduce the distance in which zombies can see your aura."
 SWEP.Slot = 2
 SWEP.SlotPos = 0
