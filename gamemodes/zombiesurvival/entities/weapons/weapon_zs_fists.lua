@@ -332,3 +332,7 @@ function SWEP:GetViewModelPosition(pos, ang)
 
 	return pos, ang
 end
+
+
+SWEP.Secondary.Automatic = true
+SWEP.Primary.Automatic = true
