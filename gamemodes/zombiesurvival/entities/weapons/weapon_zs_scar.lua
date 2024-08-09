@@ -1,8 +1,8 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Terminus' SCAR-L"
-SWEP.Description = "A powerful assault rifle that gets more accurate for every shot that hits in a clip."
+SWEP.PrintName = "'Eye Cancer' Assault Rifle"
+SWEP.Description = "The longer the zombies have to look at this gun, the less will they will have to live."
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0
