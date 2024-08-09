@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Long Arm' Handgun"
-SWEP.Description = "A heavy handgun that consumes 2 pistol rounds that spread into shrapnel on walls."
+SWEP.PrintName = "'Long Arm' Revolver"
+SWEP.Description = "A heavy revolver that consumes 2 pistol rounds that spread into shrapnel on walls."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 
@@ -41,7 +41,7 @@ SWEP.Primary.NumShots = 1
 
 SWEP.Primary.ClipSize = 10
 SWEP.RequiredClip = 2
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 GAMEMODE:SetupDefaultClip(SWEP.Primary)

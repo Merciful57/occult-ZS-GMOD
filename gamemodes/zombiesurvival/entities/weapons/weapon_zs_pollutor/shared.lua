@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Pollutor' Acid Rifle"
+SWEP.PrintName = "'Pollutor' Chemical SMG"
 SWEP.Description = "Launches acidic projectiles that have a chance to remove damage resistance"
 
 SWEP.Base = "weapon_zs_baseproj"
@@ -68,3 +68,13 @@ function SWEP:EmitFireSound()
 	self:EmitSound("^weapons/mortar/mortar_fire1.wav", 70, math.random(88, 92), 0.65)
 	self:EmitSound("npc/barnacle/barnacle_gulp2.wav", 70, 70, 0.85, CHAN_AUTO + 20)
 end
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 3.3))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.3))
+	end
+end
+end 
