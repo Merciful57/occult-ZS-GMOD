@@ -29,7 +29,7 @@ SWEP.Primary.Delay = 1
 SWEP.Recoil = 7.5
 
 SWEP.Primary.ClipSize = 4
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true --lol
 SWEP.Primary.Ammo = "buckshot"
 SWEP.Primary.DefaultClip = 28
 
