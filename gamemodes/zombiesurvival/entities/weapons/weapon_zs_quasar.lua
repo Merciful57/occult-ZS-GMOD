@@ -73,7 +73,7 @@ SWEP.ReloadDelay = SWEP.Primary.Delay
 SWEP.RequiredClip = 4
 
 SWEP.Primary.ClipSize = 24
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pulse"
 SWEP.Primary.DefaultClip = 25
 
