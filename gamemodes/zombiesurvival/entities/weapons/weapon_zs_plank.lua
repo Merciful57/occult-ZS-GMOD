@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Plank"
+SWEP.PrintName = "'Plank' Blunt Melee"
 SWEP.Description = "A strip of wood of which repeated swings that connect with it build up momentum and overall damage output."
 
 if CLIENT then
