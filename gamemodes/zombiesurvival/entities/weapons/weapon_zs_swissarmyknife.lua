@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Knife"
+SWEP.PrintName = "'Knife' Sharp Melee"
 SWEP.Description = "A small bladed weapon that deals double damage to the back."
 
 if CLIENT then
