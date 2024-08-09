@@ -42,5 +42,8 @@ SWEP.NoDismantle = false
 SWEP.NoGlassWeapons = false
 
 SWEP.AllowQualityWeapons = true
+SWEP.Primary.Automatic = false
+SWEP.Secondary.Automatic = false
+
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.06)
