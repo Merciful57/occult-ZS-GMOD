@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Jackhammer' Drum Shotgun"
+SWEP.PrintName = "'Jackhammer' Shotgun"
 SWEP.Description = "An automatic drum shotgun with a large clip size."
 
 if CLIENT then
