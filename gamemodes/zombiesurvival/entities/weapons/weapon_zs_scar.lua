@@ -135,3 +135,13 @@ function SWEP.BulletCallback(attacker, tr, dmginfo)
 		end
 	end
 end
+
+function SWEP:ProcessReloadEndTime()
+	local reloadspeed = self.ReloadSpeed * self:GetReloadSpeedMultiplier()
+	if ( self:Clip1() < 1 ) then 
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 4))
+	else if ( self:Clip1() > 0 ) then
+		self:SetReloadFinish(CurTime() + (self.ReloadSpeed * 2.6))
+	end
+end
+end 
