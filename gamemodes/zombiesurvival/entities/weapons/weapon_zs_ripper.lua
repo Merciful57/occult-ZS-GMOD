@@ -1,7 +1,7 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "Ripper"
+SWEP.PrintName = "'Ripper' SMG/Assault Rifle"
 SWEP.Description = "A relatively simple SMG with a decent fire rate and reload speed."
 
 SWEP.Slot = 2
