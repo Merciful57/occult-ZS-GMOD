@@ -91,6 +91,9 @@ AddValidHands( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player
 AddValidModel( "revan",			"models/epangelmatikes/revan/revan.mdl" )
 AddValidHands( "revan",			"models/epangelmatikes/revan/revan_hands.mdl",		0, "0000000" )
 
+AddValidModel( "Gray Wolf",     "models/kemono_friends/gray_wolf/gray_wolf_player.mdl" )
+AddValidHands( "Gray Wolf",     "models/kemono_friends/gray_wolf/gray_wolf_arms.mdl", 0, "00000000" )
+
 AddValidModel( "barney",		"models/player/barney.mdl" )
 AddValidHands( "barney",		"models/weapons/c_arms_combine.mdl",		0, "0000000" )
 
