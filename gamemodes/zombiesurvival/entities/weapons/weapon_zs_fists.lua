@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Fists"
+SWEP.PrintName = "'Fists' Blunt Melee"
 
 SWEP.Base = "weapon_zs_basemelee"
 
