@@ -10,7 +10,7 @@ CLASS.Unlocked = true
 CLASS.IsDefault = true
 CLASS.Order = 0
 
-CLASS.Health = 225
+CLASS.Health = 67
 CLASS.Speed = 175
 CLASS.Revives = false
 
