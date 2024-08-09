@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Smelter' Flak Cannon"
+SWEP.PrintName = "'Smelter' Scrap Cannon"
 SWEP.Description = "Launches a spray of hot shards of scrap in a flak pattern."
 
 SWEP.Base = "weapon_zs_baseproj"
