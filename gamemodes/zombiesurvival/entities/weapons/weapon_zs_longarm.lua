@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Long Arm' Handgun"
-SWEP.Description = "A heavy handgun that consumes 2 pistol rounds that spread into shrapnel on walls."
+SWEP.PrintName = "'Long Arm' Revolver"
+SWEP.Description = "A heavy revolver that consumes 2 pistol rounds that spread into shrapnel on walls."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 
