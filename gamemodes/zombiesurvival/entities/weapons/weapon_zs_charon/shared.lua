@@ -1,4 +1,4 @@
-SWEP.PrintName = "'Charon' Repeating Crossbow"
+SWEP.PrintName = "'Charon' Crossbow"
 SWEP.Description = "A rapid firing crossbow with no other unique properties."
 
 SWEP.Base = "weapon_zs_baseproj"
