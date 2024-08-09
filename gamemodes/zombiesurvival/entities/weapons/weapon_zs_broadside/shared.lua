@@ -15,7 +15,7 @@ SWEP.WorldModel = "models/weapons/w_rocket_launcher.mdl"
 
 SWEP.Primary.Delay = 1.2
 SWEP.Primary.ClipSize = 3
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "impactmine"
 SWEP.Primary.DefaultClip = 3
 SWEP.Primary.Damage = 107
