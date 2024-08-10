@@ -11,7 +11,7 @@ MapVoteConfigDefault = {
     RTVPlayerCount = 3,
     MapPrefixes = {"zs_", "zm_", "zr_", "zps_", "zh_"}, 
     AutoGamemode = true,
-    VoteGamemode = true,
+    VoteGamemode = false,
     GamemodesWhitelist = true,
     GamemodesToVote = {
         "terrortown",
