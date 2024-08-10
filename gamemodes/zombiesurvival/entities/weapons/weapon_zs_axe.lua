@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Axe"
+SWEP.PrintName = "'Axe' Sharp Melee"
 SWEP.Description = "A simple axe, with balanced stats across the board in terms of damage, range and swing speed."
 
 if CLIENT then
@@ -25,8 +25,8 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 45
-SWEP.MeleeRange = 55
+SWEP.MeleeDamage = 64
+SWEP.MeleeRange = 64
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 125
 SWEP.NoDismantle = true
@@ -34,7 +34,7 @@ SWEP.NoDismantle = true
 
 SWEP.WalkSpeed = SPEED_FAST
 
-SWEP.SwingTime = 0.6
+SWEP.SwingTime = 1.6
 SWEP.SwingRotation = Angle(0, -20, -40)
 SWEP.SwingOffset = Vector(10, 0, 0)
 SWEP.SwingHoldType = "melee"
@@ -55,4 +55,14 @@ end
 
 function SWEP:PlayHitFleshSound()
 	self:EmitSound("physics/body/body_medium_break"..math.random(2, 4)..".wav")
+end
+
+function SWEP:OnMeleeHit(hitent)
+	if hitent:IsValid() and hitent:IsPlayer() then
+		local bleed = hitent:GiveStatus("bleed")
+		if bleed then
+			bleed:AddDamage(999)
+			bleed.Damager = self:GetOwner()
+		end
+	end
 end

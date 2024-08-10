@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Knife"
+SWEP.PrintName = "'Knife' Sharp Melee"
 SWEP.Description = "A small bladed weapon that deals double damage to the back."
 
 if CLIENT then
@@ -16,7 +16,7 @@ SWEP.ViewModel = "models/weapons/cstrike/c_knife_t.mdl"
 SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 SWEP.UseHands = true
 
-SWEP.MeleeDamage = 19
+SWEP.MeleeDamage = 12
 SWEP.MeleeRange = 52
 SWEP.MeleeSize = 0.875
 
@@ -52,6 +52,13 @@ function SWEP:PlayHitFleshSound()
 end
 
 function SWEP:OnMeleeHit(hitent, hitflesh, tr)
+	if hitent:IsValid() and hitent:IsPlayer() then
+		local bleed = hitent:GiveStatus("bleed")
+		if bleed then
+			bleed:AddDamage(999)
+			bleed.Damager = self:GetOwner()
+		end
+	end
 	if hitent:IsValid() and hitent:IsPlayer() and not self.m_BackStabbing and math.abs(hitent:GetForward():Angle().yaw - self:GetOwner():GetForward():Angle().yaw) <= 90 then
 		self.m_BackStabbing = true
 		self.MeleeDamage = self.MeleeDamage * 2

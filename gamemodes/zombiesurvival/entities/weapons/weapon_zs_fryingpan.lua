@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Frying Pan"
+SWEP.PrintName = "'Frying Pan' Blunt Melee"
 
 if CLIENT then
 	SWEP.ViewModelFlip = false
@@ -36,7 +36,7 @@ SWEP.HitGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.MissGesture = SWEP.HitGesture
 
 SWEP.SwingRotation = Angle(30, -30, -30)
-SWEP.SwingTime = 0.3
+SWEP.SwingTime = 1.3
 SWEP.SwingHoldType = "grenade"
 
 SWEP.AllowQualityWeapons = true
@@ -46,4 +46,10 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.1)
 
 function SWEP:PlayHitSound()
 	self:EmitSound("weapons/melee/frying_pan/pan_hit-0"..math.random(4)..".ogg")
+end
+
+function SWEP:OnMeleeHit(hitent)
+	if hitent:IsValid() and hitent:IsPlayer() then
+		hitent:GiveStatus("knockdown", 2.5)
+	end
 end
