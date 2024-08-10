@@ -151,7 +151,7 @@ GM.BarricadeHealthMin = 1
 GM.BarricadeHealthMax = 10000
 GM.BarricadeHealthMassFactor = 1
 GM.BarricadeHealthVolumeFactor = 6
-GM.BarricadeRepairCapacity = 1.25
+GM.BarricadeRepairCapacity = 1.8
 
 GM.BossZombiePlayersRequired = 8
 
