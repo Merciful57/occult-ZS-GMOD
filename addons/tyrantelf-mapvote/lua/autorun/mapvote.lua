@@ -14,13 +14,6 @@ MapVoteConfigDefault = {
     VoteGamemode = false,
     GamemodesWhitelist = true,
     GamemodesToVote = {
-        "terrortown",
-        "morbusgame",
-        "extremefootballthrowdown",
-        "stalker",
-        "ultimatechimerahunt",
-        "infectedwars",
-        "deathrun",
         "zombiesurvival"
     }
 }
