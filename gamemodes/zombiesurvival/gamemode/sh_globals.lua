@@ -149,7 +149,7 @@ MASK_HOVER = bit.bor(CONTENTS_SOLID, CONTENTS_WATER, CONTENTS_SLIME, CONTENTS_GR
 
 GM.BarricadeHealthMin = 1
 GM.BarricadeHealthMax = 10000
-GM.BarricadeHealthMassFactor = 3 * 0.85
+GM.BarricadeHealthMassFactor = 1
 GM.BarricadeHealthVolumeFactor = 4 * 0.85
 GM.BarricadeRepairCapacity = 1.25
 
