@@ -215,6 +215,7 @@ if SERVER then
 		local ZKTHealthCalc = ( ( 50 + ( 50 * (GAMEMODE:GetWave() ) + (GetGlobalInt("ZombiesKilledTeam") or 0 ) ) ) )
 		pl:SetHealth(ZKTHealthCalc)
 		pl:SetMaxHealth(ZKTHealthCalc)
+		pl:SetSpeed( (160 + (20 * GAMEMODE:GetWave()) ) )
 	end
 
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
