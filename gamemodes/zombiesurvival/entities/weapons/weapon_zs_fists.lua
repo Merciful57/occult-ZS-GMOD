@@ -19,6 +19,9 @@ SWEP.UppercutDamageMultiplier = 3
 SWEP.HitDistance = 40
 SWEP.MeleeKnockBack = 0
 
+SWEP.Secondary.Automatic = true
+SWEP.Primary.Automatic = true
+
 SWEP.ViewModelFOV = 52
 
 SWEP.AutoSwitchFrom = true
@@ -334,5 +337,4 @@ function SWEP:GetViewModelPosition(pos, ang)
 end
 
 
-SWEP.Secondary.Automatic = true
-SWEP.Primary.Automatic = true
+
