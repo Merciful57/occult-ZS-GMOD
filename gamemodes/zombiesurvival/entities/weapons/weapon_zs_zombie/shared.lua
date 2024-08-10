@@ -9,7 +9,7 @@ SWEP.WorldModel = ""
 SWEP.MeleeDelay = 0.74
 SWEP.MeleeReach = 48
 SWEP.MeleeSize = 4.5 --1.5
-SWEP.MeleeDamage = 35
+SWEP.MeleeDamage = 10
 SWEP.MeleeForceScale = 1
 SWEP.MeleeDamageType = DMG_SLASH
 
@@ -132,7 +132,7 @@ function SWEP:Swung()
 		self.PreHit = nil
 	end
 
-	local damage = self:GetDamage(self:GetTracesNumPlayers(traces))
+	local damage = (self:GetDamage(self:GetTracesNumPlayers(traces)) * GAMEMODE:GetWave() )
 	local effectdata = EffectData()
 	local ent
 
