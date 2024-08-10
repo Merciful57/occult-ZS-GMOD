@@ -3250,7 +3250,8 @@ function GM:HumanKilledZombie(pl, attacker, inflictor, dmginfo, headshot, suicid
 	end
 
 	attacker.ZombiesKilled = attacker.ZombiesKilled + 1
-
+	attacker:AddPoints(1)
+	
 	if mostdamager then
 		attacker:PointCashOut(pl, FM_LOCALKILLOTHERASSIST)
 		mostdamager:PointCashOut(pl, FM_LOCALASSISTOTHERKILL)
