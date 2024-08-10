@@ -11,7 +11,7 @@ local function GetRandomBonePos(pl)
 	return pl:GetShootPos()
 end
 
-function ENT:Draw()
+--[[function ENT:Draw()
 	local ent = self:GetOwner()
 	if not ent:IsValid() then return end
 	
@@ -40,4 +40,4 @@ function ENT:Draw()
 	end
 	
 	emitter:Finish()
-end
+end]]
