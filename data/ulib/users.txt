@@ -1,0 +1,11 @@
+"STEAM_0:1:802139947"	
+{
+	"name"	"occult | Merciful"
+	"deny"	
+	{
+	}
+	"allow"	
+	{
+	}
+	"group"	"admin"
+}
