@@ -47,3 +47,9 @@ GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.1)
 function SWEP:PlayHitSound()
 	self:EmitSound("weapons/melee/frying_pan/pan_hit-0"..math.random(4)..".ogg")
 end
+
+function SWEP:OnMeleeHit(hitent)
+	if hitent:IsValid() and hitent:IsPlayer() then
+		hitent:GiveStatus("knockdown", 2.5)
+	end
+end
