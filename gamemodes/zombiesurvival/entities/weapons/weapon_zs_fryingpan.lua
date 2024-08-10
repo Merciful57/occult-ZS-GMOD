@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Frying Pan"
+SWEP.PrintName = "'Frying Pan' Blunt Melee"
 
 if CLIENT then
 	SWEP.ViewModelFlip = false
