@@ -1,8 +1,8 @@
 AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
-SWEP.PrintName = "'Ripper' SMG/Assault Rifle"
-SWEP.Description = "A relatively simple SMG with a decent fire rate and reload speed."
+SWEP.PrintName = "'Ripper' Sub Machine Gun"
+SWEP.Description = "A high fire rate SMG with a decent mag."
 
 SWEP.Slot = 2
 SWEP.SlotPos = 0
@@ -30,29 +30,33 @@ SWEP.CSMuzzleFlashes = false
 
 SWEP.ReloadSound = Sound("Weapon_SMG1.Reload")
 SWEP.Primary.Sound = Sound("razorswep/ripper/fire.wav")
-SWEP.Primary.Damage = 22
+SWEP.Primary.Damage = 27
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.065
 SWEP.Primary.ClipSize = 32
 
-SWEP.Tier = 5
+SWEP.Tier = 6
 
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "smg1"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 
---SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
-
-SWEP.ReloadSpeed = 1.25
+SWEP.ReloadSpeed = 1.20
 SWEP.FireAnimSpeed = 0.55
 
-SWEP.ConeMax = 4.5
-SWEP.ConeMin = 2.5
+SWEP.ConeMax = 3.5
+SWEP.ConeMin = 2
+
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Ripper' Assault Rifle", "Ues assault rifle ammo shoots slower but deals more damage.", function(wept)
+	wept.Primary.Damage = wept.Primary.Damage * 1.3 
+	wept.Primary.Delay = 0.085
+	wept.Primary.Ammo = "ar2"
+	wept.ConeMax = 3.0
+	wept.ConeMin = 1.5
+end)
 
 SWEP.IronSightsPos = Vector(1, 1, 1)	
-
-
---Crotch Gun Fix
 
 if CLIENT then
 local WorldModel = ClientsideModel(SWEP.WorldModel)
