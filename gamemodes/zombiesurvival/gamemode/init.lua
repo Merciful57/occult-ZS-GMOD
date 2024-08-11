@@ -3251,7 +3251,7 @@ function GM:HumanKilledZombie(pl, attacker, inflictor, dmginfo, headshot, suicid
 
 	attacker.ZombiesKilled = attacker.ZombiesKilled + 1
 	attacker:AddPoints(1)
-	attacker:PS2_AddStandardPoints(1, "Killed a zombie")
+	attacker:PS2_AddStandardPoints(100, "Killed a zombie")
 
 	
 	if mostdamager then

@@ -65,7 +65,7 @@ function PANEL:Init( )
 	self.pointsMoneyPanel.label:SetFont( self:GetSkin( ).fontName )
 	self.pointsMoneyPanel.label:Dock( FILL )
 	function self.pointsMoneyPanel.label:Think( )
-		self:SetText( LocalPlayer().PS2_Wallet.points )
+		self:SetText( LocalPlayer().PS2_Wallet.points/100 )
 	end
 
 	self.contentsPanel = vgui.Create( "DPropertySheet", self )

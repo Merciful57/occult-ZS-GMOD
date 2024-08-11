@@ -62,7 +62,7 @@ function PANEL:Init( )
 
         pnl.label = vgui.Create( "DLabel", pnl )
         pnl.label:SetFont( itemDesc:GetSkin( ).fontName )
-        pnl.label:SetText( price )
+        pnl.label:SetText( price/100 )
         pnl.label:SetColor( color_white )
         pnl.label:SizeToContents( )
 
@@ -123,7 +123,7 @@ function PANEL:Init( )
 
             local price, currencyType = item:GetSellPrice( )
             if currencyType == "points" then
-                self:SetText( "Sell Item (" .. price .. " points)" )
+                self:SetText( "Sell Item (" .. price/100 .. " gold)" )
             elseif currencyType == "premiumPoints" then
                 self:SetText( "Sell Item (" .. price .. " premium points)")
             end
@@ -163,7 +163,7 @@ function PANEL:Init( )
             end
 
             if currencyType == "points" then
-                self:SetText( "Sell Stack (" .. table.Count( stack.items ) .. " items: " .. sellPrice .. " points)" )
+                self:SetText( "Sell Stack (" .. table.Count( stack.items ) .. " items: " .. sellPrice/100 .. " gold)" )
             elseif currencyType == "premiumPoints" then
                 self:SetText( "Sell Stack (" .. table.Count( stack.items ) .. " items: " .. sellPrice .. " premium points)" )
             end

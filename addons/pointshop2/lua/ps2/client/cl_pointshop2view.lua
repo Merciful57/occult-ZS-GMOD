@@ -629,6 +629,7 @@ function Pointshop2View:adminChangeWallet( kPlayerId, currencyType, newValue )
 end
 
 function Pointshop2View:addToPointFeed( message, points, small )
+	local points = points/100
     Pointshop2.PointFeed:AddPointNotification( message, points, small )
 end
 
