@@ -25,7 +25,7 @@ SWEP.UseHands = true
 
 SWEP.HoldType = "melee2"
 
-SWEP.MeleeDamage = 64
+SWEP.MeleeDamage = 48
 SWEP.MeleeRange = 64
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 125
@@ -57,11 +57,12 @@ function SWEP:PlayHitFleshSound()
 	self:EmitSound("physics/body/body_medium_break"..math.random(2, 4)..".wav")
 end
 
-function SWEP:OnMeleeHit(hitent)
+function SWEP:OnMeleeHit(hitent) 
 	if hitent:IsValid() and hitent:IsPlayer() then
 		local bleed = hitent:GiveStatus("bleed")
 		if bleed then
-			bleed:AddDamage(999)
+			bleed:AddDamage(96)
+			bleed.DamPerTick = 16
 			bleed.Damager = self:GetOwner()
 		end
 	end
