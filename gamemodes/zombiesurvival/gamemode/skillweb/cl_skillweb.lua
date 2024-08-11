@@ -1267,8 +1267,7 @@ function PANEL:Paint(w, h)
 
 	local sp = MySelf:GetZSSPRemaining()
 	if sp > 0 then
-		colFlash.a = 90 + math.abs(math.sin(RealTime() * 2)) * 160
-		draw_SimpleText(sp.." SP", "ZSHUDFontSmallest", w - 2, h / 2, colFlash, TEXT_ALIGN_RIGHT, TEXT_ALIGN_CENTER)
+		return
 	end
 end
 
