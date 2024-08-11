@@ -391,11 +391,11 @@ function GM:GetFogData()
 end
 
 function GM:ShouldDraw3DWeaponHUD()
-	return GAMEMODE.WeaponHUDMode ~= 1
+	return false
 end
 
 function GM:ShouldDraw2DWeaponHUD()
-	return GAMEMODE.WeaponHUDMode >= 1 or self:UseOverTheShoulder()
+	return true
 end
 
 local matAura = Material("models/debug/debugwhite")
