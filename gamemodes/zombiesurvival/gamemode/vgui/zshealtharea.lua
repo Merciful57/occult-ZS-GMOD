@@ -103,22 +103,4 @@ function PANEL:PerformLayout()
 	self:AlignBottom()
 end
 
-local matGradientLeft = CreateMaterial("gradient-l", "UnlitGeneric", {["$basetexture"] = "vgui/gradient-l", ["$vertexalpha"] = "1", ["$vertexcolor"] = "1", ["$ignorez"] = "1", ["$nomip"] = "1"})
-function PANEL:Paint(w, h)
-	local y = h * 0.6
-	h = h - y
-
-	surface.SetDrawColor(0, 0, 0, 180)
-	surface.DrawRect(0, y, w * 0.4, h + 1)
-	surface.SetMaterial(matGradientLeft)
-	surface.DrawTexturedRect(w * 0.4, y, w * 0.6, h + 1)
-
-	--surface.DrawLine(0, y, w, y)
-	surface.SetDrawColor(0, 0, 0, 250)
-	surface.SetMaterial(matGradientLeft)
-	surface.DrawTexturedRect(0, y, w, 1)
-
-	return true
-end
-
 vgui.Register("ZSHealthArea", PANEL, "Panel")
