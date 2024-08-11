@@ -2503,6 +2503,8 @@ function GM:EntityTakeDamage(ent, dmginfo)
 									points = points * ent.PointsMultiplier
 								end
 								attacker.PointQueue = attacker.PointQueue + points
+								attacker:PS2_AddStandardPoints(damage, "Damaged a zombie")
+
 
 								GAMEMODE.StatTracking:IncreaseElementKV(STATTRACK_TYPE_WEAPON, inflictor:GetClass(), "PointsEarned", points)
 								GAMEMODE.StatTracking:IncreaseElementKV(STATTRACK_TYPE_WEAPON, inflictor:GetClass(), "Damage", damage)
