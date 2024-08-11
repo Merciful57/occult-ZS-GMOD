@@ -1257,8 +1257,6 @@ end
 local matGradientLeft = CreateMaterial("gradient-l", "UnlitGeneric", {["$basetexture"] = "vgui/gradient-l", ["$vertexalpha"] = "1", ["$vertexcolor"] = "1", ["$ignorez"] = "1", ["$nomip"] = "1"})
 local colFlash = Color(255, 255, 255)
 function PANEL:Paint(w, h)
-	surface.SetDrawColor(0, 0, 0, 180)
-	surface.DrawRect(0, 0, w * 0.4, h)
 	surface.SetMaterial(matGradientLeft)
 	surface.DrawTexturedRect(w * 0.4, 0, w * 0.6, h)
 
