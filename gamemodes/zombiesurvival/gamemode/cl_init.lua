@@ -568,70 +568,7 @@ function GM:DrawFearMeter(power, screenscale)
 	end
 
 	if self:GetUseSigils() and self.MaxSigils > 0 then
-		local sigwid, sighei = screenscale * 18, screenscale * 36
-		local extrude = size * 0.25 + sighei / 2
-		local angle_current = -180
-		local angle_step = 180 / (self.MaxSigils - 1)
-		local rad, sigil, health, maxhealth, corrupt, damageflash, sigx, sigy, healthfrac
-
-		local sigils = GAMEMODE.CachedSigils
-		local corruptsigils = 0
-		for i=1, self.MaxSigils do
-			sigil = sigils[i]
-			health = 0
-			maxhealth = 0
-			corrupt = false
-			if sigil and sigil:IsValid() then
-				health = sigil:GetSigilHealth()
-				maxhealth = sigil:GetSigilMaxHealth()
-				corrupt = sigil:GetSigilCorrupted()
-				corruptsigils = corruptsigils + (corrupt and 1 or 0)
-			end
-
-			if health >= 0 then
-				rad = math.rad(angle_current)
-				sigx = mx + half_size + math.cos(rad) * extrude
-				sigy = my + half_size + math.sin(rad) * extrude
-
-				if sigil and sigil:IsValid() then
-					damageflash = math.min((CurTime() - sigil:GetSigilLastDamaged()) * 2, 1) * 255
-				else
-					damageflash = 255
-				end
-				healthfrac = health / maxhealth
-				if corrupt then
-					surface_SetDrawColor((255 - damageflash) * healthfrac, damageflash * healthfrac, 0, 220)
-				else
-					surface_SetDrawColor((255 - damageflash) * healthfrac, damageflash * healthfrac, 220, 220)
-				end
-
-				surface_SetMaterial(matSigil)
-				surface_DrawTexturedRectRotated(sigx, sigy, sigwid, sighei, angle_current + 90)
-
-				if corrupt then
-					surface_SetMaterial(matCrossout)
-					surface_SetDrawColor(220, 0, 0, 220)
-					surface_DrawTexturedRect(sigx - sigwid / 2, sigy - sighei / 2, sigwid, sighei)
-				end
-
-				angle_current = angle_current + angle_step
-			end
-		end
-
-		local des = corruptsigils / self.MaxSigils --self:GetSigilsDestroyed() / self.MaxSigils
-		if des >= 0.3333 then
-			surface_SetMaterial(matEyeGlow)
-
-			local eye_size = size * 0.125
-			local sy = my + size * 0.6953
-
-			if des >= 0.6666 then
-				DrawEyeFlash(mx + size * 0.459, sy, eye_size)
-				DrawEyeFlash(mx + size * 0.525, sy, eye_size, true)
-			else
-				DrawEyeFlash(mx + size * 0.459, sy, eye_size, true)
-			end
-		end
+		return
 	end
 end
 
