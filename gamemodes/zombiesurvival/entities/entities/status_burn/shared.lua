@@ -15,7 +15,7 @@ function ENT:AddDamage(damage)
 end
 
 function ENT:SetDamage(damage)
-	self:SetDTFloat(0, math.min(50, damage))
+	self:SetDTFloat(0, math.min(99999, damage))
 end
 
 function ENT:GetDamage()
