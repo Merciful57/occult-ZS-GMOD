@@ -439,6 +439,12 @@ function meta:DamageNails(attacker, inflictor, damage, dmginfo)
 	self:SetBarricadeHealth(self:GetBarricadeHealth() - damage)
 	for i, nail in ipairs(nails) do
 		nail:OnDamaged(damage, attacker, inflictor, dmginfo)
+	    local NailOwner = nail:GetOwner()
+		if NailOwner and NailOwner:IsValid() and NailOwner:IsPlayer() then
+			NailOwner.PointQueue = NailOwner.PointQueue + (damage/100)
+			NailOwner:PS2_AddStandardPoints(damage, "Building Barricades")
+			NailOwner.RoundBarricaded = (NailOwner.RoundBarricaded or 0) + (damage / #nails)
+		end
 	end
 
 	-- No points for repairing damage from fire, trigger_hurt, etc.
