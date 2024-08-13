@@ -697,23 +697,14 @@ function GM:CreateZombieGas()
 end
 
 function GM:PlayerShouldTakeNailRemovalPenalty(pl, nail, nailowner, prop)
-	if gamemode.Call("PlayerIsAdmin", pl) then return false end
 	if nailowner.ZSFriends[pl] then return false end
 
 	if not gamemode.Call("CanPlaceNail", nailowner) then return false end
-
-	if pl:BarricadeExpertPrecedence(nailowner) == 1 then -- If I'm better than they are.
-		return false
-	end
 
 	local firstnail = prop:GetFirstNail()
 	if firstnail and pl == firstnail:GetOwner() then
 		return false
 	end
-
-	-- just gonna consider this obsolete
-	--if nailowner:Frags() >= 75 or owner:Frags() < 75 then return true end
-
 	return true
 end
 
