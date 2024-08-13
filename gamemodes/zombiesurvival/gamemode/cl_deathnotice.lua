@@ -376,6 +376,7 @@ killicon.Add("weapon_zs_trinket", "zombiesurvival/killicons/weapon_zs_trinket")
 killicon.Add("weapon_zs_craftables", "zombiesurvival/killicons/weapon_zs_craftables")
 killicon.Add("weapon_zs_craftingpack", "zombiesurvival/killicons/weapon_zs_craftables")
 killicon.Add("weapon_zs_camera", "zombiesurvival/killicons/weapon_zs_camera")
+killicon.Add("weapon_zs_crookofosiris", "killicons/weapon_zs_crookofosiris")
 
 killicon.Add("status_bleed", "zombiesurvival/killicons/bleed", Color(255, 0, 0))
 killicon.Add("status_poison", "zombiesurvival/killicons/projectile_poisonflesh")
@@ -394,6 +395,7 @@ killicon.Add("ammo_assault", "zombiesurvival/killicons/assault_rifle_ammo_icon",
 killicon.Add("ammo_bolts", "zombiesurvival/killicons/bolts_ammo_icon_2", Color(230, 230, 100))
 killicon.Add("ammo_medpower", "zombiesurvival/killicons/medpower_ammo_icon")
 killicon.Add("ammo_nail", "zombiesurvival/killicons/nail_ammo_icon_2")
+
 
 net.Receive("zs_crow_kill_crow", function(length)
 	local victim = net.ReadString()
