@@ -1317,18 +1317,14 @@ function GM:ObjectPackedUp(pack, packer, owner)
 end
 
 function GM:PlayerRepairedObject(pl, other, health, wep)
-	health = health - other:RemoveUselessDamage(health)
 	if self:GetWave() == 0 or health <= 0 then return end
 
 	pl.RepairedThisRound = pl.RepairedThisRound + health
+	pl:PS2_AddStandardPoints(health, "Repairing Barricades")
+	pl:AddPoints(health/100)
 
-	local hpperpoint = self.RepairPointsPerHealth
-	if hpperpoint <= 0 then return end
-
-	local points = health / hpperpoint
-
-	pl:AddPoints(points)
-
+	
+	
 	net.Start("zs_repairobject")
 		net.WriteEntity(other)
 		net.WriteFloat(health)
