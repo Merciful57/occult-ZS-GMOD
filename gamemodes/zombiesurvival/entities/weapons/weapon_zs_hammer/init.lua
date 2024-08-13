@@ -1,6 +1,6 @@
 INC_SERVER()
 
-function SWEP:Reload()
+function SWEP:Reload(pl, nail, nailowner, prop)
 	if CurTime() < self:GetNextPrimaryFire() then return end
 
 	local owner = self:GetOwner()
@@ -22,12 +22,16 @@ function SWEP:Reload()
 			end
 		end
 	end
-
+	
 	if not ent or not gamemode.Call("CanRemoveNail", owner, ent) then return end
 
 	local nailowner = ent:GetOwner()
-	if nailowner:IsValid() and nailowner:IsPlayer() and nailowner ~= owner and nailowner:Team() == TEAM_HUMAN and not gamemode.Call("CanRemoveOthersNail", owner, nailowner, ent) then return end
-
+		if nailowner and nailowner:IsValid() and nailowner:IsPlayer() and nailowner ~= owner and nailowner:Team() == TEAM_HUMAN then
+			if gamemode.Call("PlayerShouldTakeNailRemovalPenalty", owner, ent, nailowner, trent) then 
+				owner:CenterNotify(COLOR_RED, "Must have the green heart to remove nails") return
+			end
+		end
+	
 	self:SetNextPrimaryFire(CurTime() + (#trent.Nails > 2 and 0.5 or 1))
 
 	ent.m_PryingOut = true -- Prevents infinite loops
@@ -41,21 +45,7 @@ function SWEP:Reload()
 
 	ent:GetParent():RemoveNail(ent, nil, self:GetOwner())
 	ent:GetParent():SetPhysicsAttacker(self:GetOwner())
-
-	if nailowner and nailowner:IsValid() and nailowner:IsPlayer() and nailowner ~= owner and nailowner:Team() == TEAM_HUMAN then
-		if gamemode.Call("PlayerShouldTakeNailRemovalPenalty", owner, ent, nailowner, trent) then
-			owner:GivePenalty(30)
-			owner:ReflectDamage(20)
-		end
-
-		if nailowner:NearestPoint(tr.HitPos):DistToSqr(tr.HitPos) <= 589824 and (nailowner:HasWeapon("weapon_zs_hammer") or nailowner:HasWeapon("weapon_zs_electrohammer")) then --768^2
-			nailowner:GiveAmmo(1, self.Primary.Ammo)
-		else
-			owner:GiveAmmo(1, self.Primary.Ammo)
-		end
-	else
-		owner:GiveAmmo(1, self.Primary.Ammo)
-	end
+	owner:GiveAmmo(1, self.Primary.Ammo)
 end
 
 function SWEP:OnMeleeHit(hitent, hitflesh, tr)
