@@ -2548,7 +2548,7 @@ function GM:EntityTakeDamage(ent, dmginfo)
 		if not ent.Heal then
 			local br = ent:BoundingRadius()
 
-			local health = br * 35
+			local health = 1
 			ent.Heal = health
 			ent.TotalHeal = health
 		end
@@ -2585,7 +2585,7 @@ function GM:EntityTakeDamage(ent, dmginfo)
 		if ent:GetKeyValues().damagefilter == "invul" or ent:HasSpawnFlags(2048) and ent:IsDoorLocked() or ent.Broken then return end
 
 		if not ent.Heal then
-			ent.Heal = ent:BoundingRadius() * 35
+			ent.Heal = 1
 			ent.TotalHeal = ent.Heal
 		end
 
