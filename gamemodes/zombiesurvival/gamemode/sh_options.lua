@@ -240,7 +240,8 @@ GM:AddPointShopItem("spinfusor",		ITEMCAT_GUNS,			200,			"weapon_zs_spinfusor")
 GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			200,			"weapon_zs_broadside")
 GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			200,			"weapon_zs_smelter")
 -- Legendary Weapon
-GM:AddPointShopItem("osiris",			ITEMCAT_LEGENDARY,			360,			"weapon_zs_crookofosiris")
+GM:AddPointShopItem("haloce",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_cepistol")
+GM:AddPointShopItem("osiris",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_crookofosiris")
 
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			4,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
 GM:AddPointShopItem("pistolammo10",		ITEMCAT_AMMO,			40,				nil,							"168 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(168, "pistol", true) end)
