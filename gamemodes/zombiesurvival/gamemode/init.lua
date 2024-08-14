@@ -2547,7 +2547,6 @@ function GM:EntityTakeDamage(ent, dmginfo)
 
 		if not ent.Heal then
 			local br = ent:BoundingRadius()
-			if br > 80 then return end -- Don't break these kinds of doors that are bigger than this.
 
 			local health = br * 35
 			ent.Heal = health
