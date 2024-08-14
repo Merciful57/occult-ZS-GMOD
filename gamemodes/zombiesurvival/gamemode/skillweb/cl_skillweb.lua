@@ -1230,13 +1230,14 @@ end
 function PANEL:PerformLayout()
 	local screenscale = BetterScreenScale()
 
-	self:SetSize(350 * screenscale, 36 * screenscale)
+	self:SetSize(600 * screenscale, 36 * screenscale)
 	if GAMEMODE.GameStatePanel and GAMEMODE.GameStatePanel:IsValid() then
-		self:MoveBelow(GAMEMODE.GameStatePanel, screenscale * 32)
+		self:AlignTop(35)
+		self:AlignLeft(715)
 	else
-		self:AlignTop(400)
+		self:AlignTop(35)
+		self:AlignLeft(715)
 	end
-	self:AlignLeft()
 end
 
 function PANEL:Think()
