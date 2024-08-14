@@ -124,12 +124,14 @@ end
 function PANEL:Text3Paint()
 	if MySelf:IsValid() then
 		if MySelf:Team() == TEAM_UNDEAD then
-			local goldcalc = math.floor(LocalPlayer().PS2_Wallet.points/100)
-			local toredeem = GAMEMODE:GetRedeemBrains()
-			if toredeem > 0 then
-				draw.SimpleText("Silver: " ..MySelf:Frags().." Gold: "..goldcalc, self.Font, 0, 0, COLOR_SOFTRED)
-			else
-				draw.SimpleText("Silver: " ..MySelf:Frags().." Gold: "..goldcalc, self.Font, 0, 0, COLOR_SOFTRED)
+			if LocalPlayer().PS2_Wallet then
+				local goldcalc = math.floor(LocalPlayer().PS2_Wallet.points/100)
+				local toredeem = GAMEMODE:GetRedeemBrains()
+				if toredeem > 0 then
+					draw.SimpleText("Silver: " ..MySelf:Frags().." Gold: "..goldcalc, self.Font, 0, 0, COLOR_SOFTRED)
+				else
+					draw.SimpleText("Silver: " ..MySelf:Frags().." Gold: "..goldcalc, self.Font, 0, 0, COLOR_SOFTRED)
+				end
 			end
 		elseif LocalPlayer().PS2_Wallet then
 			local goldcalc = math.floor(LocalPlayer().PS2_Wallet.points/100)
