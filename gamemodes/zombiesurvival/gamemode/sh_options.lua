@@ -266,6 +266,8 @@ GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			4,				nil,							"20 chemical 
 GM:AddPointShopItem("chemical10",			ITEMCAT_AMMO,			40,				nil,							"240 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(240, "chemical", true) end)
 GM:AddPointShopItem("25mkit",			ITEMCAT_AMMO,			4,				nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
 GM:AddPointShopItem("25mkit10",			ITEMCAT_AMMO,			40,				nil,							"300 Medical Kit power",			"300 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(300, "Battery", true) end)
+GM:AddPointShopItem("scrap",			ITEMCAT_AMMO,			4,				nil,							"8 Scrap",			nil,	"ammo_scrap",				function(pl) pl:GiveAmmo(8, "Scrap", true) end)
+GM:AddPointShopItem("scrap10",			ITEMCAT_AMMO,			40,				nil,							"80 Scrap",			nil,	"ammo_scrap",					function(pl) pl:GiveAmmo(80, "Scrap", true) end)
 -- Tier 1
 GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			0,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
 GM:AddPointShopItem("knife",			ITEMCAT_MELEE,			0,				"weapon_zs_swissarmyknife")
