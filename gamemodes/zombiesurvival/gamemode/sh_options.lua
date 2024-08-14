@@ -140,6 +140,9 @@ GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			64,				"weapon_zs_resupplybo
 item.Countables = "prop_resupplybox"
 item.CanMakeFromScrap = true
 item =
+GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nail"s,							"It's just 10 nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
+item.CanMakeFromScrap = true
+item =
 GM:AddStartingItem("pistolammo",		ITEMCAT_AMMO,			16,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
 item.CanMakeFromScrap = true
 item =
@@ -169,9 +172,7 @@ item.CanMakeFromScrap = true
 item =
 GM:AddStartingItem("25mkit",			ITEMCAT_AMMO,			16,		nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
 item.CanMakeFromScrap = true
-item =
-GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"Nail",							"It's just one nail.",					"ammo_nail",						function(pl) pl:GiveAmmo(1, "GaussEnergy", true) end)
-item.CanMakeFromScrap = true
+
 ------------
 -- Points --
 ------------
@@ -243,6 +244,8 @@ GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			200,			"weapon_zs_smelter")
 GM:AddPointShopItem("haloce",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_cepistol")
 GM:AddPointShopItem("osiris",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_crookofosiris")
 
+GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nails",							"It's just nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
+GM:AddPointShopItem("nail10",				ITEMCAT_AMMO,			40,				nil,							"120 Nails",							"It's just nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(120, "GaussEnergy", true) end)
 GM:AddPointShopItem("pistolammo",		ITEMCAT_AMMO,			4,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
 GM:AddPointShopItem("pistolammo10",		ITEMCAT_AMMO,			40,				nil,							"168 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(168, "pistol", true) end)
 GM:AddPointShopItem("shotgunammo",		ITEMCAT_AMMO,			4,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)
@@ -263,8 +266,6 @@ GM:AddPointShopItem("chemical",			ITEMCAT_AMMO,			4,				nil,							"20 chemical 
 GM:AddPointShopItem("chemical10",			ITEMCAT_AMMO,			40,				nil,							"240 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(240, "chemical", true) end)
 GM:AddPointShopItem("25mkit",			ITEMCAT_AMMO,			4,				nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
 GM:AddPointShopItem("25mkit10",			ITEMCAT_AMMO,			40,				nil,							"300 Medical Kit power",			"300 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(300, "Battery", true) end)
-GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nails",							"It's just nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
-GM:AddPointShopItem("nail10",				ITEMCAT_AMMO,			40,				nil,							"120 Nails",							"It's just nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(120, "GaussEnergy", true) end)
 -- Tier 1
 GM:AddPointShopItem("brassknuckles",	ITEMCAT_MELEE,			0,				"weapon_zs_brassknuckles").Model = "models/props_c17/utilityconnecter005.mdl"
 GM:AddPointShopItem("knife",			ITEMCAT_MELEE,			0,				"weapon_zs_swissarmyknife")
