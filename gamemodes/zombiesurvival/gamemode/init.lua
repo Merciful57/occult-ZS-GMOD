@@ -3810,7 +3810,6 @@ function GM:PlayerSpawn(pl)
 						pl:Give(class)
 					end
 				else
-					pl:Give("weapon_zs_redeemers")
 					pl:Give("weapon_zs_swissarmyknife")
 				end
 			end
