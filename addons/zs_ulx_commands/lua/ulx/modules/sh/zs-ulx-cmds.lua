@@ -13,6 +13,42 @@ local function SavePlayerPositon( player )
 	end
 end
 
+function ulx.human( caller )
+
+	local sigils = GAMEMODE:GetSigils()
+	local validSig = false
+	for _, sig in pairs(sigils) do
+		if sig and sig:IsValid() and not sig:GetSigilCorrupted() then
+			validSig = true
+			break
+		end
+	end
+
+	if not validSig then
+		ULib.tsayError(caller, "The sigil of immortality is corrupted.  ", true )
+		return
+	end
+
+	local lastSpawned = caller.selfRedeemTime
+	
+	if caller:Team() == TEAM_UNDEAD then
+		
+		local restorePos = SavePlayerPositon( caller )
+		
+		caller.selfRedeemTime = CurTime()
+
+		caller:Redeem()
+
+	else
+		ULib.tsayError(caller, " Only zombies can use this command.", true )
+	end
+end
+
+local human = ulx.command( category, "ulx human", ulx.human, "!human" )
+human:addParam{ type = ULib.cmds.PlayersArg,  ULib.cmds.optional  }
+human:addParam{ type = ULib.cmds.BoolArg, default = false, hint = "respawn in place", ULib.cmds.optional }
+human:defaultAccess( ULib.ACCESS_ADMIN )
+human:help( "Redeem target(s)" )
 
 function ulx.redeem( caller, targets, inPlace )
 	local affected = {}
