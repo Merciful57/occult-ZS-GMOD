@@ -1,3 +1,13 @@
+"member"	
+{
+	"allow"	
+	{
+		"ulx vote"
+		"ulx votekick"
+		"ulx voteban"	"* :2h"
+	}
+	"inherit_from"	"user"
+}
 "admin"	
 {
 	"allow"	
@@ -264,6 +274,27 @@
 	"can_target"	"!%admin"
 	"inherit_from"	"user"
 }
+"advisor"	
+{
+	"allow"	
+	{
+		"d3bot savemesh"
+		"ulx freeze"
+		"ulx unfreeze"
+		"ulx unzlist"
+		"ulx zlist"
+		"ulx zspawn"
+		"d3bot viewpath"	"$^"
+		"d3bot hidemesh"	"$^"
+		"ulx spectate"	"$*"
+		"d3bot viewmesh"	"$^"
+		"d3bot editmesh"	"$^"
+		"d3bot uncontrol"	"$^"
+		"d3bot control"	"$^"
+		"ulx voteban"	"* 0:16h"
+	}
+	"inherit_from"	"member"
+}
 "user"	
 {
 	"allow"	
@@ -272,11 +303,13 @@
 		"ulx help"
 		"ulx human"
 		"ulx motd"
-		"ulx psay"
 		"ulx thetime"
-		"ulx usermanagementhelp"
 		"ulx version"
-		"ulx votemap"
 		"ulx who"
+		"d3bot viewmesh"	"^"
+		"d3bot viewpath"	"^"
+		"d3bot uncontrol"	"^"
+		"d3bot control"	"^"
+		"d3bot hidemesh"	"^"
 	}
 }

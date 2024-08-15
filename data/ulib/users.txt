@@ -1,11 +1,62 @@
-"STEAM_0:1:802139947"	
+"STEAM_0:1:99196516"	
 {
-	"name"	"occult | Merciful"
+	"name"	"[HG] ChickenUSA"
 	"deny"	
 	{
 	}
 	"allow"	
 	{
 	}
+	"group"	"member"
+}
+"STEAM_0:0:19767437"	
+{
+	"deny"	
+	{
+	}
+	"allow"	
+	{
+	}
+	"group"	"advisor"
+}
+"STEAM_0:1:634380632"	
+{
+	"deny"	
+	{
+	}
+	"allow"	
+	{
+	}
+	"group"	"advisor"
+}
+"STEAM_0:1:40687078"	
+{
+	"deny"	
+	{
+	}
+	"allow"	
+	{
+	}
+	"group"	"member"
+}
+"STEAM_0:1:802139947"	
+{
+	"deny"	
+	{
+	}
+	"allow"	
+	{
+	}
+	"name"	"occult | Merciful"
 	"group"	"admin"
+}
+"STEAM_0:0:86011016"	
+{
+	"deny"	
+	{
+	}
+	"allow"	
+	{
+	}
+	"group"	"advisor"
 }
