@@ -33,6 +33,12 @@ function ulx.human( caller )
 	
 	if caller:Team() == TEAM_UNDEAD then
 		
+		if caller.TimesRedeemed then
+			caller.TimesRedeemed = caller.TimesRedeemed + 1
+		else
+			caller.TimesRedeemed = 1
+		end
+		
 		local restorePos = SavePlayerPositon( caller )
 		
 		caller.selfRedeemTime = CurTime()

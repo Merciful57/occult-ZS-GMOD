@@ -3800,8 +3800,11 @@ function GM:PlayerSpawn(pl)
 			end
 
 			pl:Give("weapon_zs_fists")
-			pl:GiveAmmo(50, "scrap")
-
+				if pl.TimesRedeemed and pl.TimesRedeemed < 1 then
+					pl:GiveAmmo(50, "scrap")
+				elseif not pl.TimesRedeemed then
+					pl:GiveAmmo(50, "scrap")
+				end
 			if self.StartingLoadout then
 				self:GiveStartingLoadout(pl)
 			elseif pl.m_PreRedeem then
