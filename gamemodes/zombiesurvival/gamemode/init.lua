@@ -2952,14 +2952,6 @@ function GM:SetClosestsToZombie()
 	if #zombies > desiredzombies then
 		local toswap = #zombies - desiredzombies
 		for _, pl in pairs(zombies) do
-			if pl.DiedDuringWave0 and pl:GetInfo("zs_alwaysvolunteer") ~= "1" and not pl.IsZSBot then
-				pl:ChangeTeam(TEAM_HUMAN)
-				pl:UnSpectateAndSpawn()
-				toswap = toswap - 1
-				if toswap <= 0 then
-					break
-				end
-			end
 		end
 	end
 
