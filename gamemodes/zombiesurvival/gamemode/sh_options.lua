@@ -184,6 +184,7 @@ GM:AddPointShopItem("owens",			ITEMCAT_GUNS,			0,				"weapon_zs_owens", nil, nil
 GM:AddPointShopItem("blstr",			ITEMCAT_GUNS,			0,				"weapon_zs_blaster", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_blaster") end)
 GM:AddPointShopItem("tossr",			ITEMCAT_GUNS,			0,				"weapon_zs_tosser", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_tosser") end)
 GM:AddPointShopItem("stbbr",			ITEMCAT_GUNS,			0,				"weapon_zs_stubber", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_stubber") end)
+GM:AddPointShopItem("chief",			ITEMCAT_GUNS,			0,				"weapon_zs_ma5c", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_ma5c") end)
 GM:AddPointShopItem("crklr",			ITEMCAT_GUNS,			0,				"weapon_zs_crackler", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_crackler") end)
 GM:AddPointShopItem("sling",			ITEMCAT_GUNS,			0,				"weapon_zs_slinger", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_slinger") end)
 GM:AddPointShopItem("z9000",			ITEMCAT_GUNS,			0,				"weapon_zs_z9000", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_z9000") end)
