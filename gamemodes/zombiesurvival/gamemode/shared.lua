@@ -14,6 +14,7 @@ GM.Credits = {
 	{"ChickenUSA", "https://steamcommunity.com/id/ChickenUSA/", "occult ZS Contributor"},
 	{"Evercroft", "https://steamcommunity.com/id/Evercroft", "occult ZS Contributor"},
 	{"Finna", "https://steamcommunity.com/id/skutscandinavia", "occult ZS Contributor"},
+	{"JarJarBinks", "https://steamcommunity.com/id/puremindless", "occult ZS Contributor"},
 	{"Obama", "https://steamcommunity.com/profiles/76561199229026993", "occult ZS Contributor"},
 	{"Vladioik", "https://steamcommunity.com/id/Vladioik/", "occult ZS Contributor"},
 
