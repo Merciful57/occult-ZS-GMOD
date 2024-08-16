@@ -140,7 +140,7 @@ GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			64,				"weapon_zs_resupplybo
 item.Countables = "prop_resupplybox"
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nail"s,							"It's just 10 nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
+GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nails",							"It's just 10 nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
 item.CanMakeFromScrap = true
 item =
 GM:AddStartingItem("pistolammo",		ITEMCAT_AMMO,			16,				nil,							"14 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(14, "pistol", true) end)
