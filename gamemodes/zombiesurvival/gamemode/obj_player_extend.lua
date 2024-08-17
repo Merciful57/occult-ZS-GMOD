@@ -933,16 +933,15 @@ end
 function meta:NearestRemantler()
 	local pos = self:EyePos()
 
-	local remantlers = ents.FindByClass("prop_remantler")
+	local remantlers = ents.FindByClass("prop_obj_sigil")
 	local min, remantler = 99999
 
 	for _, ent in pairs(remantlers) do
 		local nearpoint = ent:NearestPoint(pos)
 		local trmatch = self:TraceLine(100).Entity == ent
 		local dist = trmatch and 0 or pos:DistToSqr(nearpoint)
-		if pos:DistToSqr(nearpoint) <= 10000 and dist < min then
-			remantler = ent
-		end
+		remantler = ent
+		
 	end
 
 	return remantler
