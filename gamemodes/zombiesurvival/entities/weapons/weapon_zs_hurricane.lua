@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Hurricane' Pulse SMG"
+SWEP.PrintName = "'Fusion' Pulse SMG"
 SWEP.Description = "Fires rapid pulse shots that slow targets."
 
 if CLIENT then
@@ -15,18 +15,22 @@ if CLIENT then
 	SWEP.ViewModelFOV = 60
 
 	SWEP.VElements = {
-		["base"] = { type = "Model", model = "models/props_combine/combine_train02a.mdl", bone = "ValveBiped.base", rel = "", pos = Vector(0, -0.301, 4.731), angle = Angle(0, 180, 90), size = Vector(0.025, 0.025, 0.014), color = Color(255, 228, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["base+++"] = { type = "Model", model = "models/props_c17/light_domelight01_off.mdl", bone = "ValveBiped.base", rel = "", pos = Vector(0.559, -1.04, -3.651), angle = Angle(-90, -164.752, 0), size = Vector(0.043, 0.037, 0.052), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/error/new light1", skin = 0, bodygroup = {} },
-		["base+"] = { type = "Model", model = "models/props_combine/eli_pod_inner.mdl", bone = "ValveBiped.base", rel = "", pos = Vector(0.079, -2.368, -6.355), angle = Angle(-0.703, -90.113, 0), size = Vector(0.12, 0.075, 0.116), color = Color(255, 204, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["base++"] = { type = "Model", model = "models/props_combine/combine_teleportplatform.mdl", bone = "ValveBiped.base", rel = "", pos = Vector(-0.002, -0.489, -8.968), angle = Angle(0, -90, -0), size = Vector(0.056, 0.019, 0.052), color = Color(255, 209, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["fence1++"] = { type = "Model", model = "models/props_combine/combine_fence01a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(8.831, 2.2, -4.65), angle = Angle(83.9, 170, 180), size = Vector(0.07, 0.07, 0.07), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["extra++++"] = { type = "Model", model = "models/props_lab/powerbox02a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-2.597, 0.23, -4.276), angle = Angle(0, 171.817, 180), size = Vector(0.046, 0.046, 0.046), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["extra+++"] = { type = "Model", model = "models/props_lab/teleportgate.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-2.54, -0.219, -4.2), angle = Angle(180, -31.559, 87.662), size = Vector(0.037, 0.037, 0.037), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["extra"] = { type = "Model", model = "models/props_combine/combinethumper002.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(3.635, 1.299, -2.597), angle = Angle(-3.507, -104.027, 5.843), size = Vector(0.041, 0.041, 0.021), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["extra++"] = { type = "Model", model = "models/props_lab/labpart.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-1.558, 1.1, -5.715), angle = Angle(-57.273, 97.013, -87.663), size = Vector(0.037, 0.037, 0.037), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["extra+"] = { type = "Model", model = "models/props_lab/teleportgate.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-2.54, 0.699, -4.2), angle = Angle(-180, 31.558, -87.663), size = Vector(0.037, 0.037, 0.037), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["battery"] = { type = "Model", model = "models/props_combine/combine_window001.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(4.675, 2.596, -3.636), angle = Angle(0, 92.337, 85.324), size = Vector(0.029, 0.029, 0.029), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["battery+"] = { type = "Model", model = "models/items/battery.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-1.558, 0.758, -4.137), angle = Angle(-1.17, -99.351, -85.325), size = Vector(0.291, 0.591, 0.49), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["fence1+"] = { type = "Model", model = "models/props_combine/combine_fence01b.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(8.831, 2.2, -4.65), angle = Angle(83.9, 170, 180), size = Vector(0.07, 0.07, 0.07), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 
 	SWEP.WElements = {
-		["base+++"] = { type = "Model", model = "models/props_c17/light_domelight01_off.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(2.773, 2.071, -5.448), angle = Angle(0, 0, -80.556), size = Vector(0.043, 0.037, 0.052), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/error/new light1", skin = 0, bodygroup = {} },
-		["base++++"] = { type = "Model", model = "models/props_c17/light_domelight01_off.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(2.69, 0.799, -5.528), angle = Angle(0, 0, 80.789), size = Vector(0.043, 0.037, 0.052), color = Color(255, 255, 255, 255), surpresslightning = true, material = "models/error/new light1", skin = 0, bodygroup = {} },
-		["base++"] = { type = "Model", model = "models/props_combine/combine_teleportplatform.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-1.594, 1.468, -3.698), angle = Angle(103.306, 180, 0), size = Vector(0.056, 0.019, 0.052), color = Color(255, 209, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["base"] = { type = "Model", model = "models/props_combine/combine_train02a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(10.47, 1.462, -6.394), angle = Angle(-175.984, -88.995, 11.291), size = Vector(0.025, 0.019, 0.014), color = Color(255, 228, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
-		["base+"] = { type = "Model", model = "models/props_combine/eli_pod_inner.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(-0.541, 1.491, -6.099), angle = Angle(98.305, 179.197, 0), size = Vector(0.12, 0.075, 0.116), color = Color(255, 204, 0, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
+		["fence1++"] = { type = "Model", model = "models/props_combine/combine_fence01a.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(9.869, 1.557, -7.792), angle = Angle(80.649, 0, 0), size = Vector(0.07, 0.07, 0.07), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["extra"] = { type = "Model", model = "models/props_combine/combinethumper002.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(2.596, 1.597, -2.597), angle = Angle(-3.507, 87.662, 0), size = Vector(0.052, 0.052, 0.032), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["battery"] = { type = "Model", model = "models/props_combine/combine_window001.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(7.791, 1.557, -5.715), angle = Angle(0, -104.027, -99.351), size = Vector(0.029, 0.029, 0.029), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} },
+		["fence1+"] = { type = "Model", model = "models/props_combine/combine_fence01b.mdl", bone = "ValveBiped.Bip01_R_Hand", rel = "", pos = Vector(9.869, 1.557, -7.792), angle = Angle(80.649, 0, 0), size = Vector(0.07, 0.07, 0.07), color = Color(255, 255, 255, 255), surpresslightning = false, material = "", skin = 0, bodygroup = {} }
 	}
 end
 
@@ -83,7 +87,7 @@ SWEP.IronSightsPos = Vector(-6.425, 5, 1.02)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MAX_SPREAD, -0.5375, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MIN_SPREAD, -0.3125, 1)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1, 1)
-GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Typhoon' Pulse SMG", "Less damage, more accuracy, and gains damage if spooled", function(wept)
+GAMEMODE:AddNewRemantleBranch(SWEP, 1, "'Typhusion' Pulse SMG", "Less damage, more accuracy, and gains damage if spooled", function(wept)
 	wept.Primary.Damage = wept.Primary.Damage * 0.82
 	wept.Primary.Delay = wept.Primary.Delay * 2.3
 	wept.ConeMax = wept.ConeMax * 0.5
