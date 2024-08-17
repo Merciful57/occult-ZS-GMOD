@@ -1199,8 +1199,6 @@ function GM:DrawSigilIndicators()
 				surface_DrawTexturedRectUV(-64, -128, 128, 256 * missinghealthfrac, 0, 0, 1, missinghealthfrac)
 			end
 
-			draw_SimpleTextBlurry(string.char(64 + i), "ZS3D2DFont2Big", 0, 128, COLOR_GRAY, TEXT_ALIGN_CENTER)
-
 			render_FogMode(oldfogmode)
 			cam_End3D2D()
 			cam_IgnoreZ(false)
