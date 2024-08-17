@@ -681,6 +681,16 @@ function GM:OpenArsenalMenu()
 		GAMEMODE.ArsenalInterface:Close()
 	end
 
+	local RemMenu = EasyButton(topspace, "Remantler", 8, 4)
+	RemMenu:SetFont("ZSHUDFontSmaller")
+	RemMenu:SizeToContents()
+	RemMenu:AlignLeft(8)
+	RemMenu:AlignTop(8)
+	RemMenu.DoClick = function()
+		GAMEMODE:OpenRemantlerMenu(MySelf:NearestRemantler())
+		GAMEMODE.ArsenalInterface:Close()
+	end
+	
 	local bottomspace = vgui.Create("DPanel", frame)
 	bottomspace:SetWide(topspace:GetWide())
 
