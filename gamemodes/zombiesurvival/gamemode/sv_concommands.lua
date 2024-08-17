@@ -221,11 +221,6 @@ end)
 concommand.Add("zs_upgrade", function(sender, command, arguments)
 	if not (sender:IsValid() and sender:IsConnected() and sender:IsValidLivingHuman()) then return end
 
-	if not sender:NearRemantler() then
-		GAMEMODE:ConCommandErrorMessage(sender, translate.ClientGet(sender, "need_to_be_near_remantler"))
-		return
-	end
-
 	local nearest = sender:NearestRemantler()
 	local contents = sender:GetActiveWeapon():GetClass()
 	local contentstbl = weapons.Get(contents)
