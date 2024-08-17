@@ -15,6 +15,7 @@ SWEP.Primary.Ammo = "GaussEnergy"
 SWEP.Primary.Delay = 1
 SWEP.Primary.DefaultClip = 16
 
+SWEP.Secondary.Automatic = true
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
 SWEP.Secondary.Ammo = "dummy"
