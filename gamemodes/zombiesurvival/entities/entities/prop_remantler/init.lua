@@ -15,7 +15,6 @@ function ENT:Initialize()
 	self.NextUse = {}
 
 	self:SetModel("models/props_lab/powerbox01a.mdl")
-	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetUseType(SIMPLE_USE)
 
 	self:CollisionRulesChanged()
