@@ -105,10 +105,10 @@ function GM:DrawSigilTargetHint(ent, fade)
 	colTemp.a = fade * 128
 	util.ColorCopy(color_white, colTemp)
 
-	draw.SimpleTextBlur("Sigil", "ZSHUDFontSmaller", x, y, colTemp, TEXT_ALIGN_CENTER)
+	draw.SimpleTextBlur("Sigil of Immortality", "ZSHUDFontSmaller", x, y, colTemp, TEXT_ALIGN_CENTER)
 	y = y + draw.GetFontHeight("ZSHUDFontSmaller") + 0
 
-	draw.SimpleTextBlur("Press E to teleport", "ZSHUDFontTiny", x, y, colTemp, TEXT_ALIGN_CENTER)
+	draw.SimpleTextBlur("Defend this to win", "ZSHUDFontTiny", x, y, colTemp, TEXT_ALIGN_CENTER)
 end
 
 GM.TraceTarget = NULL
