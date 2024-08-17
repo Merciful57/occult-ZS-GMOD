@@ -39,3 +39,21 @@ end
 function ENT:ClearObjectOwner()
 	self:SetObjectOwner(NULL)
 end
+
+function ENT:ShouldNotCollide(ent)
+    if ent:IsProjectile() then
+        local owner = ent:GetOwner()
+        if owner:IsValid() then
+            if owner:IsHuman() then return true end
+        end
+    end
+
+    if ent:IsValid() and ent:IsPlayer() and ent:Team() == TEAM_UNDEAD then return end
+
+    local colgroup = ent:GetCollisionGroup()
+    if colgroup == COLLISION_GROUP_PLAYER or colgroup == COLLISION_GROUP_WEAPON or colgroup == COLLISION_GROUP_NONE then
+        return true
+    end
+
+    return false
+end
