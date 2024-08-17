@@ -381,6 +381,7 @@ killicon.Add("weapon_zs_crookofosiris", "killicons/weapon_zs_crookofosiris")
 killicon.Add("weapon_zs_cepistol", "killicons/weapon_zs_cepistol")
 killicon.Add("weapon_zs_c96", "killicons/weapon_zs_c96")
 killicon.Add("weapon_zs_m9a1", "killicons/weapon_zs_m9a1")
+killicon.Add("weapon_zs_norinco", "killicons/weapon_zs_norinco")
 
 killicon.Add("status_bleed", "zombiesurvival/killicons/bleed", Color(255, 0, 0))
 killicon.Add("status_poison", "zombiesurvival/killicons/projectile_poisonflesh")
