@@ -205,6 +205,7 @@ GM:AddPointShopItem("norinco",			ITEMCAT_GUNS,			35,				"weapon_zs_norinco")
 GM:AddPointShopItem("hurricane",		ITEMCAT_GUNS,			35,				"weapon_zs_hurricane")
 -- Tier 3
 GM:AddPointShopItem("deagle",			ITEMCAT_GUNS,			70,				"weapon_zs_deagle")
+GM:AddPointShopItem("holdou",			ITEMCAT_GUNS,			70,				"weapon_zs_holdout")
 GM:AddPointShopItem("tempest",			ITEMCAT_GUNS,			70,				"weapon_zs_tempest")
 GM:AddPointShopItem("ender",			ITEMCAT_GUNS,			70,				"weapon_zs_ender")
 GM:AddPointShopItem("shredder",			ITEMCAT_GUNS,			70,				"weapon_zs_smg")

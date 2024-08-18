@@ -385,6 +385,7 @@ killicon.Add("weapon_zs_norinco", "killicons/weapon_zs_norinco")
 killicon.Add("weapon_zs_slavianka", "killicons/weapon_zs_slavianka")
 killicon.Add("weapon_zs_peacemaker", "killicons/weapon_zs_peacemaker")
 killicon.Add("weapon_zs_blunderbuss", "killicons/weapon_zs_blunderbuss")
+killicon.Add("weapon_zs_holdout", "killicons/weapon_zs_holdout")
 
 killicon.Add("status_bleed", "zombiesurvival/killicons/bleed", Color(255, 0, 0))
 killicon.Add("status_poison", "zombiesurvival/killicons/projectile_poisonflesh")
