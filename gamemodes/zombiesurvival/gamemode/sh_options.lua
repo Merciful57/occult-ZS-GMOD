@@ -180,6 +180,7 @@ item.CanMakeFromScrap = true
 -- Tier 1
 GM:AddPointShopItem("pshtr",			ITEMCAT_GUNS,			0,				"weapon_zs_peashooter", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_peashooter") end)
 GM:AddPointShopItem("btlax",			ITEMCAT_GUNS,			0,				"weapon_zs_battleaxe", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_battleaxe") end)
+GM:AddPointShopItem("SAA",			ITEMCAT_GUNS,			0,				"weapon_zs_peacemaker", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_peacemaker") end)
 GM:AddPointShopItem("owens",			ITEMCAT_GUNS,			0,				"weapon_zs_owens", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_owens") end)
 GM:AddPointShopItem("blstr",			ITEMCAT_GUNS,			0,				"weapon_zs_blaster", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_blaster") end)
 GM:AddPointShopItem("tossr",			ITEMCAT_GUNS,			0,				"weapon_zs_tosser", nil, nil, nil, function(pl) pl:GiveEmptyWeapon("weapon_zs_tosser") end)
