@@ -307,6 +307,7 @@ AddValidModel( "Orangutan","models/vedatys/orangutan.mdl" )
 AddValidHands( "Orangutan", "models/vedatys/c_arms.mdl", 0, "00000000" )
 AddValidModel( "Barney (HL1)", 					"models/player/hl1/Barney.mdl" )
 AddValidModel( "Gman (HL1)", 					"models/player/hl1/Gman.mdl" )
+AddValidModel( "Black-OPS Female (HL1)", 			"models/player/hl1/hassassin.mdl" )
 
 
 
