@@ -27,7 +27,7 @@ SWEP.ReloadSound = Sound("assault_rifle/reload_ar.wav")
 SWEP.Primary.Sound = Sound("assault_rifle/ar_fire_1.wav")
 SWEP.Primary.Damage = 13
 SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.1
+SWEP.Primary.Delay = 0.05
 SWEP.NoDismantle = true
 
 SWEP.Primary.ClipSize = 32
