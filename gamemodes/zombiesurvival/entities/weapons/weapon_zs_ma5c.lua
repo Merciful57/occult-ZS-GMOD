@@ -20,7 +20,7 @@ SWEP.Base = "weapon_zs_base"
 SWEP.HoldType = "ar2"
 
 SWEP.ViewModel = "models/weapons/halo_3_ar_rifle.mdl"
-SWEP.WorldModel = "/models/halo3/w_assaultrifle.mdl"
+SWEP.WorldModel = "models/halo3/w_assaultrifle.mdl"
 SWEP.UseHands = true
 
 SWEP.ReloadSound = Sound("assault_rifle/reload_ar.wav")
