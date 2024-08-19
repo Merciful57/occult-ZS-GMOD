@@ -303,7 +303,8 @@ AddValidModel( "dod_american",	"models/player/dod_american.mdl" )
 AddValidHands( "dod_american",	"models/weapons/c_arms_dod.mdl", 1, "10000000" )
 AddValidModel( "Snake (MGS2)", 		"models/ats/mgs2snake/mgs2snake.mdl" )
 AddValidHands( "Snake (MGS2)", 	"models/ats/mgs2snake/mgs2snakearms.mdl", 0, "00000000" )
-
+AddValidModel( "Orangutan","models/vedatys/orangutan.mdl" )
+AddValidHands( "Orangutan", "models/vedatys/c_arms.mdl", 0, "00000000" )
 
 --
 -- Player Class Stuff
