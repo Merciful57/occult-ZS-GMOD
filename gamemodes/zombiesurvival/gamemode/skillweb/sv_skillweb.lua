@@ -58,6 +58,8 @@ net.Receive("zs_skill_is_unlocked", function(length, pl)
 
 		if activate then
 			pl:SetSkillDesired(skillid, true)
+			pl:PS2_AddStandardPoints(5000000, "Prestiging")
+
 		end
 	end
 end)
