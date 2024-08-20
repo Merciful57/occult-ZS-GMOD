@@ -24,6 +24,7 @@ SWEP.Secondary.Ammo = "dummy"
 SWEP.MeleeDamage = 15
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 0.875
+SWEP.NoDismantle = true
 
 SWEP.UseMelee1 = true
 
