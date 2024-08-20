@@ -201,7 +201,7 @@ end
 
 local hoveredskill
 
-local REMORT_SKILL = {Name = "Prestige", Description = "Gain x Gold and 1 skill point, \nin exchange for all of your xp."}
+local REMORT_SKILL = {Name = "Prestige", Description = "Gain 50,000 Gold and 1 skill point, \nin exchange for all of your xp."}
 
 local PANEL = {}
 
