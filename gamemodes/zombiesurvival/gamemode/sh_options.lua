@@ -250,6 +250,7 @@ GM:AddPointShopItem("broadside",		ITEMCAT_GUNS,			200,			"weapon_zs_broadside")
 GM:AddPointShopItem("smelter",			ITEMCAT_GUNS,			200,			"weapon_zs_smelter")
 -- Legendary Weapon
 GM:AddPointShopItem("haloce",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_cepistol")
+GM:AddPointShopItem("ripper",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_ripper")
 GM:AddPointShopItem("osiris",		ITEMCAT_LEGENDARY,		360,			"weapon_zs_crookofosiris")
 
 GM:AddPointShopItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nails",							"It's just nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
