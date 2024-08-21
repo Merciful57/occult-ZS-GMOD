@@ -53,8 +53,8 @@ function ENT:Explode(hitpos, hitnormal)
 	util.Effect("hit_glass", effectdata)
 
 	if owner:IsValidHuman() then
-		for ent, dmg in pairs(util.BlastDamageExAlloc(self, owner, hitpos, 128, 60, DMG_SLASH)) do
-			if ent:IsValidLivingPlayer() and (ent:Team() == TEAM_UNDEAD or ent == owner) then
+		for ent, dmg in pairs(util.BlastDamageExAlloc(self, owner, hitpos, 128, 0, DMG_SLASH)) do
+			if ent:IsValidLivingPlayer() and (ent:Team() == TEAM_UNDEAD) then
 				ent:Ignite(dmg / 7)
 				for __, fire in pairs(ents.FindByClass("entityflame")) do
 					if fire:IsValid() and fire:GetParent() == ent then
