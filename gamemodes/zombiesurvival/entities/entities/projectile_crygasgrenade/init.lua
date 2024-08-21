@@ -20,7 +20,7 @@ function ENT:AcceptInput(name, activator, caller, arg)
 	end
 
 	for _, ent in pairs(ents.FindInSphere(vPos, self.Radius)) do
-		if ent and (ent:IsValidLivingPlayer() and (ent:Team() == TEAM_UNDEAD or ent == owner)) and WorldVisible(vPos, ent:NearestPoint(vPos)) then
+		if ent and (ent:IsValidLivingPlayer() and (ent:Team() == TEAM_UNDEAD)) and WorldVisible(vPos, ent:NearestPoint(vPos)) then
 			if owner:IsValidLivingHuman() then
 				ent:EmitSound("physics/glass/glass_impact_bullet"..math.random(4)..".wav", 70, 85)
 				ent:TakeSpecialDamage(self.Damage, DMG_DROWN, owner, self)
