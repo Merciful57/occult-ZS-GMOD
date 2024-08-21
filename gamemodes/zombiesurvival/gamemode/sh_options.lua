@@ -136,7 +136,7 @@ GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "bu
 -- Scrap --
 -----------
 item =
-GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			64,				"weapon_zs_resupplybox")
+GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			60,				"weapon_zs_resupplybox")
 item.Countables = "prop_resupplybox"
 item.CanMakeFromScrap = true
 item =
