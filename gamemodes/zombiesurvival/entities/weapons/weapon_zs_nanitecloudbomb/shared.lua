@@ -11,4 +11,3 @@ SWEP.ShowWorldModel = false
 
 SWEP.Primary.Ammo = "nanitecloudbomb"
 
-SWEP.MaxStock = 4
