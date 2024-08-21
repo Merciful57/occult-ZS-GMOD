@@ -287,5 +287,5 @@ function GM:GetUpgradeScrap(wtbl, qualitychoice)
 end
 
 function GM:PointsToScrap(points)
-	return points / (70 / 32)
+	return points / 2
 end
