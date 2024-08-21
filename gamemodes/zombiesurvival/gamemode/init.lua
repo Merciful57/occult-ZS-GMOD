@@ -372,7 +372,6 @@ end
 function GM:ShowSpare1(pl)
 	if pl:Team() == TEAM_UNDEAD then
 		pl:SendLua("GAMEMODE:ToggleSkillWeb()")
-		end
 	elseif pl:Team() == TEAM_HUMAN then
 		pl:SendLua("GAMEMODE:ToggleSkillWeb()")
 	end
