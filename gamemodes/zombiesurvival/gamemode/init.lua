@@ -371,10 +371,7 @@ end
 
 function GM:ShowSpare1(pl)
 	if pl:Team() == TEAM_UNDEAD then
-		if self:ShouldUseAlternateDynamicSpawn() then
-			pl:CenterNotify(COLOR_RED, translate.ClientGet(pl, "no_class_switch_in_this_mode"))
-		else
-			pl:SendLua("GAMEMODE:OpenClassSelect()")
+		pl:SendLua("GAMEMODE:ToggleSkillWeb()")
 		end
 	elseif pl:Team() == TEAM_HUMAN then
 		pl:SendLua("GAMEMODE:ToggleSkillWeb()")
