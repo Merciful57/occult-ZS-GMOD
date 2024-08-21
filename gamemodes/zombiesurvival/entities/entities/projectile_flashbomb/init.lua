@@ -41,7 +41,7 @@ function ENT:Explode()
 	local pos = self:GetPos()
 
 	for _, ent in pairs(ents.FindInSphere(pos, self.Radius)) do
-		if ent:IsValid() and ent:IsPlayer() and ent:Alive() and (ent:Team() == TEAM_UNDEAD or ent == owner) then
+		if ent:IsValid() and ent:IsPlayer() and ent:Alive() and (ent:Team() == TEAM_UNDEAD) then
 			local eyepos = ent:EyePos()
 			if TrueVisibleFilters(pos, eyepos, self, ent) then
 				local eyevec = ent:GetAimVector()
