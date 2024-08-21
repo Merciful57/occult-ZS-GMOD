@@ -8,4 +8,3 @@ SWEP.ShowWorldModel = false
 
 SWEP.Primary.Ammo = "betty"
 
-SWEP.MaxStock = 8
