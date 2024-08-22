@@ -1,16 +1,20 @@
 SWEP.Base = "weapon_zs_zombie"
 
-SWEP.PrintName = "Flesh Creeper"
+SWEP.PrintName = "Build Spawn"
 
 SWEP.MeleeDelay = 0.5
-SWEP.MeleeReach = 52
-SWEP.MeleeDamage = 15
+SWEP.MeleeReach = 115
+SWEP.MeleeDamage = 1
 SWEP.MeleeForceScale = 1.25
 SWEP.MeleeSize = 4.5 --3
 SWEP.MeleeDamageType = DMG_SLASH
-SWEP.Primary.Delay = 0.75
+SWEP.Primary.Delay = 1.75
+SWEP.Tier = 1
+SWEP.Slot = 1
+SWEP.SlotPos = 0
 
-SWEP.Secondary.Automatic = false
+
+SWEP.Secondary.Automatic = true
 
 AccessorFuncDT(SWEP, "RightClickStart", "Float", 2)
 AccessorFuncDT(SWEP, "AttackAnimTime", "Float", 3)
@@ -80,7 +84,7 @@ end
 
 function SWEP:ApplyMeleeDamage(ent, trace, damage)
 	if ent.ZombieConstruction then
-		damage = damage * 3
+		damage = damage * 15
 	end
 
 	self.BaseClass.ApplyMeleeDamage(self, ent, trace, damage)
