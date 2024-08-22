@@ -1,7 +1,7 @@
 SWEP.ZombieOnly = true
 SWEP.IsMelee = true
 
-SWEP.PrintName = "Zombie"
+SWEP.PrintName = "Swing"
 
 SWEP.ViewModel = Model("models/Weapons/v_zombiearms.mdl")
 SWEP.WorldModel = ""
@@ -12,6 +12,9 @@ SWEP.MeleeSize = 4.5 --1.5
 SWEP.MeleeDamage = 10
 SWEP.MeleeForceScale = 1
 SWEP.MeleeDamageType = DMG_SLASH
+SWEP.Tier = 6
+SWEP.Slot = 0
+SWEP.SlotPos = 0
 
 SWEP.AlertDelay = 2.5
 
