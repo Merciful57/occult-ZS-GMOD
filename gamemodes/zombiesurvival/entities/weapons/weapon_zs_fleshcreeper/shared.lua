@@ -14,7 +14,7 @@ SWEP.Slot = 1
 SWEP.SlotPos = 0
 
 
-SWEP.Secondary.Automatic = true
+SWEP.Secondary.Automatic = false
 
 AccessorFuncDT(SWEP, "RightClickStart", "Float", 2)
 AccessorFuncDT(SWEP, "AttackAnimTime", "Float", 3)
