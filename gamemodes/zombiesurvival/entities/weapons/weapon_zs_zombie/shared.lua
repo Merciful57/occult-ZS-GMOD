@@ -405,6 +405,7 @@ function SWEP:OnRemove()
 	if IsValid(self:GetOwner()) then
 		self:StopMoaning()
 	end
+	return true
 end
 SWEP.Holster = SWEP.OnRemove
 
