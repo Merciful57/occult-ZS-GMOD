@@ -360,9 +360,9 @@ item.NoClassicMode = true
 item =
 GM:AddPointShopItem("ffemitter",		ITEMCAT_DEPLOYABLES,			40,				"weapon_zs_ffemitter",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(30, "pulse") end)
 item.Countables = "prop_ffemitter"
-GM:AddStartingItem("cans",			ITEMCAT_TOOLS,			25,				"weapon_zs_can_small")
-GM:AddStartingItem("canm",			ITEMCAT_TOOLS,			125,				"weapon_zs_can_medium")
-GM:AddStartingItem("canl",			ITEMCAT_TOOLS,			175,				"weapon_zs_can_large")
+GM:AddPointShopItem("cans",			ITEMCAT_TOOLS,			25,				"weapon_zs_can_small")
+GM:AddPointShopItem("canm",			ITEMCAT_TOOLS,			125,				"weapon_zs_can_medium")
+GM:AddPointShopItem("canl",			ITEMCAT_TOOLS,			175,				"weapon_zs_can_large")
 GM:AddPointShopItem("propanetank",		ITEMCAT_TOOLS,			15,				"comp_propanecan")
 GM:AddPointShopItem("busthead",			ITEMCAT_TOOLS,			25,				"comp_busthead")
 GM:AddPointShopItem("sawblade",			ITEMCAT_TOOLS,			30,				"comp_sawblade").SkillRequirement = SKILL_U_CRAFTINGPACK
