@@ -3,7 +3,7 @@ SWEP.WorldModel = "models/weapons/w_axe.mdl"
 
 SWEP.Primary.ClipSize = -1
 SWEP.Primary.DefaultClip = -1
-SWEP.Primary.Automatic = false
+SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "none"
 SWEP.Primary.Delay = 1
 
@@ -46,6 +46,9 @@ local MAT_BLOODYFLESH = MAT_BLOODYFLESH
 local MAT_ANTLION = MAT_ANTLION
 local MAT_ALIENFLESH = MAT_ALIENFLESH
 
+SWEP.MaxFatigue = 45*22 --30 seconds times 22 tickrate
+
+
 function SWEP:Initialize()
 	GAMEMODE:DoChangeDeploySpeed(self)
 	self:SetWeaponHoldType(self.HoldType)
@@ -81,9 +84,41 @@ function SWEP:Think()
 		self:SendWeaponAnim(ACT_VM_IDLE)
 	end
 
+	if self:CanPrimaryAttack() then
+		self:SetFatigue(math.max(0,self:GetFatigue()-25))
+	else
+		self:SetFatigue(math.min(self.MaxFatigue, self:GetFatigue()+1))
+	end
+
 	if self:IsSwinging() and self:GetSwingEnd() <= CurTime() then
 		self:StopSwinging()
 		self:MeleeSwing()
+	end
+	
+	if self:GetFatigue() == 15*44 then
+		(self:GetOwner()):PrintMessage(4, "You begin to lose your balance, stop attacking to regain it.")
+		self:GetOwner():GiveStatus("frightened", 4)
+		
+	elseif self:GetFatigue() == 20*44 then
+		(self:GetOwner()):PrintMessage(4, "You lost your balance")
+		self:GetOwner():GiveStatus("knockdown", 4)
+		
+	end
+
+end
+
+function SWEP:CalcFatigue()
+	local fatigue = self:GetFatigue()
+	local timeswinging = fatigue/44
+	local owner = self:GetOwner()
+	
+	if timeswinging > 20 then
+		owner:ConCommand("-attack")
+		return 10
+	elseif timeswinging > 15 then
+		return 1/(1 - math.Remap(timeswinging, 15, 20, 0, .9))
+	else
+		return 1
 	end
 end
 
@@ -129,7 +164,7 @@ end
 function SWEP:SetNextAttack()
 	local owner = self:GetOwner()
 	local armdelay = owner:GetMeleeSpeedMul()
-	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay * armdelay)
+	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay * armdelay * self:CalcFatigue())
 end
 
 function SWEP:Holster()
@@ -359,6 +394,14 @@ end
 
 function SWEP:GetSwingEnd()
 	return self:GetDTFloat(0)
+end
+
+function SWEP:SetFatigue(fatigue)
+	self:SetDTFloat(1, fatigue)
+end
+
+function SWEP:GetFatigue()
+	return self:GetDTFloat(1)
 end
 
 local ActIndex = {
