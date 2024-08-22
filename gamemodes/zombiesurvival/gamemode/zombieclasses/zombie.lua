@@ -216,6 +216,12 @@ if SERVER then
 		pl:SetHealth(ZKTHealthCalc)
 		pl:SetMaxHealth(ZKTHealthCalc)
 		pl:SetSpeed( (160 + (20 * GAMEMODE:GetWave()) ) )
+
+		if GAMEMODE:GetWave() > 1 then
+			pl:StripWeapons()
+			pl:Give("weapon_zs_fleshcreeper")
+			pl:Give("weapon_zs_zombie")
+		end
 	end
 
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
