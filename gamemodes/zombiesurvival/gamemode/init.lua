@@ -3527,9 +3527,7 @@ end
 function GM:PlayerCanPickupWeapon(pl, ent)
 	if pl:IsSpectator() then return false end
 
-	if pl:Team() == TEAM_UNDEAD then return ent:GetClass() == pl:GetZombieClassTable().SWEP end
-
-	return not ent.ZombieOnly
+	return true
 end
 
 function GM:PlayerCanPickupItem(pl, ent)
