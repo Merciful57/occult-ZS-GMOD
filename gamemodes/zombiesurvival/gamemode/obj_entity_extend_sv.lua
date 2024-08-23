@@ -352,6 +352,10 @@ function meta:ResetLastBarricadeAttacker(attacker, dmginfo)
 
 		if self:HumanNearby() then
 			local dmg = math.ceil(dmginfo:GetDamage())
+			attacker:AddPoints((dmg/100))
+			if not attacker:IsBot() then
+				attacker:PS2_AddStandardPoints(dmg, "Destroying Barricades")
+			end
 			attacker.BarricadeDamage = attacker.BarricadeDamage + dmg
 			if attacker.LifeBarricadeDamage ~= nil then
 				attacker:AddLifeBarricadeDamage(dmg)
