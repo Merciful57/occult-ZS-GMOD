@@ -97,7 +97,7 @@ include("mapeditor.lua")
 include("sv_playerspawnentities.lua")
 include("sv_profiling.lua")
 include("sv_sigils.lua")
-include("sv_concommands.lua")
+include("sv_cons.lua")
 
 include("itemstocks/sv_stock.lua")
 
@@ -234,9 +234,9 @@ function GM:Initialize()
 
 	self:RefreshMapIsObjective()
 
-	game.ConsoleCommand("fire_dmgscale 1\n")
-	game.ConsoleCommand("mp_flashlight 1\n")
-	game.ConsoleCommand("sv_gravity 600\n")
+	game.Console("fire_dmgscale 1\n")
+	game.Console("mp_flashlight 1\n")
+	game.Console("sv_gravity 600\n")
 end
 
 function GM:AddNetworkStrings()
@@ -479,13 +479,13 @@ function GM:InitPostEntity()
 
 	gamemode.Call("InitPostEntityMap")
 
-	RunConsoleCommand("mapcyclefile", "mapcycle_zombiesurvival.txt")
+	RunConsole("mapcyclefile", "mapcycle_zombiesurvival.txt")
 
 	if string.find(string.lower(GetConVar("hostname"):GetString()), "hellsgamers", 1, true) then
 		self.Think = function() end
 		self.DoPlayerDeath = self.Think
 		self.SetWave = self.Think
-		timer.Simple(20, function() RunConsoleCommand("quit") end)
+		timer.Simple(20, function() RunConsole("quit") end)
 
 		ErrorNoHalt("You are literally not allowed to host this version. See license.txt")
 	end
@@ -1374,7 +1374,7 @@ end
 function GM:LoadNextMap()
 	-- Just in case.
 	timer.Simple(10, game.LoadNextMap)
-	timer.Simple(15, function() RunConsoleCommand("changelevel", game.GetMap()) end)
+	timer.Simple(15, function() RunConsole("changelevel", game.GetMap()) end)
 
 	if file.Exists(GetConVar("mapcyclefile"):GetString(), "GAME") then
 		game.LoadNextMap()
@@ -3580,6 +3580,8 @@ VoiceSetTranslate["models/player/dewobedil/vocaloid/haku/bikini_p.mdl"] = VOICES
 VoiceSetTranslate["models/player/dewobedil/touhou/junko/default_p.mdl"] = VOICESET_FEMALE
 function GM:PlayerSpawn(pl)
 	pl:ConCommand("zs_noironsights 1")
+	pl:ConCommand("zs_weaponhudmode 1.00")
+	
 	pl:StripWeapons()
 	pl:WipePlayerInventory()
 	pl:GiveAmmo(1, "dummy", true) -- Fixes empty weapon deploy bug.
