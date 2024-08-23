@@ -82,11 +82,6 @@ function MakepOptions()
 	check:SizeToContents()
 	list:AddItem(check)
 
-	check = vgui.Create("DCheckBoxLabel", Window)
-	check:SetText("Disable iron sights view model translation")
-	check:SetConVar("zs_noironsights")
-	check:SizeToContents()
-	list:AddItem(check)
 
 	check = vgui.Create("DCheckBoxLabel", Window)
 	check:SetText("Disable crosshair rotate")
