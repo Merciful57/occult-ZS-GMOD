@@ -206,6 +206,11 @@ function ENT:Think()
 		return
 	end
 
+	if owner.zlisted then
+		self:Remove()
+		return
+	end
+	
 	local shootpos = owner:GetShootPos()
 	local nearestpoint = object:NearestPoint(shootpos)
 
