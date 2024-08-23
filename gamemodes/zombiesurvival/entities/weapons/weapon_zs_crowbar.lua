@@ -23,6 +23,7 @@ SWEP.MeleeRange = 55
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 110
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.Primary.Delay = 0.7
 
