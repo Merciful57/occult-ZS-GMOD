@@ -37,13 +37,13 @@ SWEP.Unarmed = false
 
 SWEP.Undroppable = false
 SWEP.NoPickupNotification = false
-SWEP.NoDismantle = false
+SWEP.NoDismantle = true
 
 SWEP.NoGlassWeapons = false
 
-SWEP.AllowQualityWeapons = true
-SWEP.Primary.Automatic = false
-SWEP.Secondary.Automatic = false
+SWEP.AllowQualityWeapons = false
+SWEP.Primary.Automatic = true
+SWEP.Secondary.Automatic = true
 
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.06)
