@@ -40,7 +40,7 @@ SWEP.SwingHoldType = "grenade"
 
 SWEP.NoGlassWeapons = true
 
-SWEP.AllowQualityWeapons = true
+SWEP.AllowQualityWeapons = false
 SWEP.Weaken = false
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_IMPACT_DELAY, -0.1)
