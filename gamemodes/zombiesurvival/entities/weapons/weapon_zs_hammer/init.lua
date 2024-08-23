@@ -90,6 +90,10 @@ end
 function SWEP:SecondaryAttack()
 	if self:GetPrimaryAmmoCount() <= 0 or CurTime() < self:GetNextPrimaryFire() then return end
 
+	if owner.zlisted then
+		return
+	end
+	
 	local owner = self:GetOwner()
 
 	if GAMEMODE:IsClassicMode() then
