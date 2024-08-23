@@ -97,7 +97,7 @@ include("mapeditor.lua")
 include("sv_playerspawnentities.lua")
 include("sv_profiling.lua")
 include("sv_sigils.lua")
-include("sv_cons.lua")
+include("sv_concommands.lua")
 
 include("itemstocks/sv_stock.lua")
 
