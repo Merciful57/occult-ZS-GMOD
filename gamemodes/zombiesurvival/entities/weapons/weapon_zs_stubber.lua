@@ -36,6 +36,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "357"
 SWEP.Primary.DefaultClip = 25
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
