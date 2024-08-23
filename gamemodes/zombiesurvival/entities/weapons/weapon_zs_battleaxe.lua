@@ -22,6 +22,8 @@ SWEP.HoldType = "pistol"
 SWEP.ViewModel = "models/weapons/cstrike/c_pist_usp.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
 SWEP.UseHands = true
+SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.Primary.Sound = Sound("Weapon_USP.Single")
 SWEP.Primary.Damage = 26
