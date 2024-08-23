@@ -31,6 +31,7 @@ SWEP.Primary.Damage = 37
 SWEP.Primary.NumShots = 1
 SWEP.ReloadDelay = 0.7
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.Automatic = true
