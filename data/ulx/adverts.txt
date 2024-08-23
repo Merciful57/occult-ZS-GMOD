@@ -22,3 +22,17 @@
 ;     }
 ; }
 
+{
+	"text" "Contribute to the server code https://github.com/Merciful57/occult-ZS-GMOD"
+	"red" "38"
+	"green" "255"
+	"blue" "0"
+	"time" "630"
+}
+{
+	"text" "Join our discord https://discord.com/invite/2VKpscRe9n"
+	"red" "255"
+	"green" "0"
+	"blue" "255"
+	"time" "900"
+}
