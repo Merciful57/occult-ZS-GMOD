@@ -23,10 +23,7 @@ ulx meChatEnabled 2 ; Allow players to use '/me' in chat. 0 = Disabled, 1 = Sand
 
 ; This is what the players will see when they join, set it to "" to disable.
 ; You can use %host% and %curmap% in your text and have it automagically parsed for you
-ulx welcomemessage  
-
-
-ulx logFile 1 ; Log to file (Can still echo if off). This is a global setting, nothing will be logged to file with this off.
+ulx welcomemessage "Welcome to occult ZS, press f1 and read the rules, there aren't many." ; Log to file (Can still echo if off). This is a global setting, nothing will be logged to file with this off.
 ulx logEvents 1 ; Log events (player connect, disconnect, death)
 ulx logChat 1 ; Log player chat
 ulx logSpawns 1 ; Log when players spawn objects (props, effects, etc)
