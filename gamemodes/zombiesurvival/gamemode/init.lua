@@ -2421,6 +2421,12 @@ function GM:EntityTakeDamage(ent, dmginfo)
 		return
 	end
 
+	if string.sub(ent:GetClass(), 1, 12) == "prop_physics" and attacker.zlisted and attacker:Team() == TEAM_HUMAN then
+		dmginfo:SetDamage(0)
+		dmginfo:SetDamageType(DMG_ALWAYSGIB)
+		return
+	end
+	
 	-- We need to stop explosive chains team killing.
 	if inflictor:IsValid() then
 		local dmgtype = dmginfo:GetDamageType()
