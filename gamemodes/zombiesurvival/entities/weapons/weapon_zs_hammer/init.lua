@@ -3,9 +3,9 @@ INC_SERVER()
 function SWEP:Reload(pl, nail, nailowner, prop)
 	if CurTime() < self:GetNextPrimaryFire() then return end
 
-	if owner.zlisted then
+	--[[if owner.zlisted then
 		return
-	end
+	end]]
 	
 	local owner = self:GetOwner()
 	if owner:GetBarricadeGhosting() then return end
@@ -90,9 +90,9 @@ end
 function SWEP:SecondaryAttack()
 	if self:GetPrimaryAmmoCount() <= 0 or CurTime() < self:GetNextPrimaryFire() then return end
 
-	if owner.zlisted then
+	--[[if owner.zlisted then
 		return
-	end
+	end]]
 	
 	local owner = self:GetOwner()
 
