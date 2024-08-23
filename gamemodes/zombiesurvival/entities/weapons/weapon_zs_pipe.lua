@@ -42,7 +42,7 @@ SWEP.SwingRotation = Angle(30, -30, -30)
 SWEP.SwingTime = 0.4
 SWEP.SwingHoldType = "grenade"
 
-SWEP.AllowQualityWeapons = true
+SWEP.AllowQualityWeapons = false
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.12)
 
