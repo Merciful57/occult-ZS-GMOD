@@ -432,29 +432,33 @@ LANGUAGE.controls_howler							= "> PRIMARY: Claws\n> SECONDARY: Howl\n> RELOAD:
 LANGUAGE.controls_extinctioncrab					= "> PRIMARY: Leap Attack\n> SECONDARY: Extinction Spore"
 
 -- The help file... Quite big! I wouldn't blame you if you didn't translate this part.
-LANGUAGE.help_cat_introduction						= "Introduction"
+LANGUAGE.help_cat_introduction						= "Rules"
 LANGUAGE.help_cat_survival							= "Survival"
 LANGUAGE.help_cat_barricading						= "Barricading"
 LANGUAGE.help_cat_upgrades							= "Upgrades"
 LANGUAGE.help_cat_being_a_zombie					= "Being a Zombie"
-LANGUAGE.help_cont_introduction						= [[<p>    Welcome to Zombie Survival, the (zombie) survival simulator. ZS allows you to fight zombie attacks, create barricades, and even be part of the undead horde.</p>
+LANGUAGE.help_cont_introduction						= [[<p>    The rules here are pretty simple and lenient compared to other servers. </p>
+<p> You are required to have fun at all times. </p>
 
-<p>There are two teams: the survivors and the zombies. The humans win if they survive every wave. Some levels have special objectives to be completed, which may be optional or required to win.
-If a human is killed then they'll come back as a zombie, which makes it even more difficult for the remaining humans.</p>
+<p> Don't violate Facepunch's(the creators of GMOD) rules. https://wiki.facepunch.com/gmod/Server_Operator_Rules </p>
 
-<p>The goal for the zombies is to kill all of the humans, making them all zombies and causing everyone to lose the round.
-Alternatively, a zombie can kill four humans to be redeemed. This allows them a second chance at survival and victory.
-Remember, the only way to win a round is to be a human when the round ends. Zombies can't technically win the game; zombies can only make everyone else lose!</p>
+<p> Don't violate US law, or post illegal content. </p>
 
-<p>A certain amount of people are chosen (or volunteer) for being the starting zombies. This amount is displayed at the bottom of your screen before the round starts.</p>
+<p> Don't Dox anyone, revealing personal information about them. </p>
 
-<p><b>Use the buttons up top to get help on more specific things.</b></p>
+<p> Don't troll with game mechanics. Don't exploit or gain an unfair advantage with game mechanics. Don't meta game. </p>
 
-<p>Tips for this section:
-<ul><li>If you leave the game as a human then you'll rejoin as a zombie.</li>
-<li>After a certain amount of time has gone by, even new players will spawn as zombies.</li>
-<li>Use TEAM CHAT when needed. The default key is U and allows you to speak to only your team.</li>
-</ul></p>
+<p> Don't intentionally disadvantage your team</p>
+
+<p> Don't cade (short for barricading, nailing props) over other people without their permission. </p>
+
+<p> Having someone nail hearted will be interpreted as you giving them permission to cade over or with you. </p>
+
+
+
+
+
+
 ]]
 LANGUAGE.help_cont_survival							= [[<p>Tips for this section:
 <ul><li>Holding the ZOOM key (default: Z) allows you to move freely through barricades while walking extremely slow.</li>
