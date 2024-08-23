@@ -85,18 +85,6 @@ end
 AddValidModel( "alyx",			"models/player/alyx.mdl" )
 AddValidHands( "alyx",			"models/weapons/c_arms_citizen.mdl",		0, "0000000" )
 
-AddValidModel( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player.mdl" )
-AddValidHands( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player_hands.mdl", 0, "00000000" )
-
-AddValidModel("Darth Vader", "models/konnie/starwars/darthvader.mdl")
-AddValidHands("Darth Vader", "models/player/darth_vader_hands.mdl", 0, "0000000" )
-
-AddValidModel( "revan",			"models/epangelmatikes/revan/revan.mdl" )
-AddValidHands( "revan",			"models/epangelmatikes/revan/revan_hands.mdl",		0, "0000000" )
-
-AddValidModel( "Gray Wolf",     "models/kemono_friends/gray_wolf/gray_wolf_player.mdl" )
-AddValidHands( "Gray Wolf",     "models/kemono_friends/gray_wolf/gray_wolf_arms.mdl", 0, "00000000" )
-
 AddValidModel( "barney",		"models/player/barney.mdl" )
 AddValidHands( "barney",		"models/weapons/c_arms_combine.mdl",		0, "0000000" )
 
@@ -297,17 +285,75 @@ AddValidHands( "css_swat",		"models/weapons/c_arms_cstrike.mdl", 0, "10000000" )
 AddValidModel( "css_urban",		"models/player/urban.mdl" )
 AddValidHands( "css_urban",		"models/weapons/c_arms_cstrike.mdl", 7, "10000000" )
 
+ --occult playermodels
+
 AddValidModel( "dod_german",	"models/player/dod_german.mdl" )
+
 AddValidHands( "dod_german",	"models/weapons/c_arms_dod.mdl", 0, "10000000" )
+
 AddValidModel( "dod_american",	"models/player/dod_american.mdl" )
+
 AddValidHands( "dod_american",	"models/weapons/c_arms_dod.mdl", 1, "10000000" )
+
 AddValidModel( "Snake (MGS2)", 		"models/ats/mgs2snake/mgs2snake.mdl" )
+
 AddValidHands( "Snake (MGS2)", 	"models/ats/mgs2snake/mgs2snakearms.mdl", 0, "00000000" )
+
 AddValidModel( "Orangutan","models/vedatys/orangutan.mdl" )
+
 AddValidHands( "Orangutan", "models/vedatys/c_arms.mdl", 0, "00000000" )
+
 AddValidModel( "Barney (HL1)", 					"models/player/hl1/Barney.mdl" )
+
 AddValidModel( "Gman (HL1)", 					"models/player/hl1/Gman.mdl" )
+
 AddValidModel( "Black-OPS Female (HL1)", 			"models/player/hl1/hassassin.mdl" )
+
+AddValidModel( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player.mdl" )
+AddValidHands( "Link", 		"models/auditor/botw/femininelookinboi/botw_link_player_hands.mdl", 0, "00000000" )
+
+AddValidModel("Darth Vader", "models/konnie/starwars/darthvader.mdl")
+AddValidHands("Darth Vader", "models/player/darth_vader_hands.mdl", 0, "0000000" )
+
+AddValidModel( "revan",			"models/epangelmatikes/revan/revan.mdl" )
+AddValidHands( "revan",			"models/epangelmatikes/revan/revan_hands.mdl",		0, "0000000" )
+
+AddValidModel( "Gray Wolf",     "models/kemono_friends/gray_wolf/gray_wolf_player.mdl" )
+AddValidHands( "Gray Wolf",     "models/kemono_friends/gray_wolf/gray_wolf_arms.mdl", 0, "00000000" )
+
+AddValidModel( "Human Assault (HL1)",			"models/player/hl1/hassault.mdl" )
+
+AddValidModel( "Full HEV (HL1)", 					"models/player/hl1/Helmet.mdl" )
+
+AddValidModel( "Hgrunt (HL1)", 					"models/player/hl1/Hgrunt.mdl" )
+
+AddValidModel( "Hgrunt (black)(HL1)", 			"models/player/hl1/Hgrunt_black.mdl" )
+
+AddValidModel( "Hgrunt (cigar)(HL1)", 			"models/player/hl1/Hgrunt_cigar.mdl" )
+
+AddValidModel( "Commander(HL1)", 		"models/player/hl1/Hgrunt_commander.mdl" )
+
+AddValidModel( "shotgun(HL1)", 			"models/player/hl1/Hgrunt_shotgun.mdl" )
+
+AddValidModel( "shotgun (black)(HL1)",	"models/player/hl1/Hgrunt_shotgun_black.mdl" )
+
+AddValidModel( "Holo (HL1", 					"models/player/hl1/Holo.mdl" )
+
+AddValidModel( "Player (HL1)", 					"models/player/hl1/player.mdl" )
+
+AddValidModel( "Rgrunt (HL1)", 					"models/player/hl1/rgrunt.mdl" )
+
+AddValidModel( "Einstien(HL1)", 		"models/player/hl1/Scientist_einstien.mdl" )
+
+AddValidModel( "Luther(HL1)", 		"models/player/hl1/Scientist_luther.mdl" )
+
+AddValidModel( "Slick(HL1)", 		"models/player/hl1/Scientist_slick.mdl" )
+
+AddValidModel( "Walter(HL1)", 		"models/player/hl1/Scientist_walter.mdl" )
+
+AddValidModel( "Skeleton (HL1)", 				"models/player/hl1/Skeleton.mdl" )
+
+AddValidModel( "Zombie (HL1)", 					"models/player/hl1/zombie.mdl" )
 
 
 
