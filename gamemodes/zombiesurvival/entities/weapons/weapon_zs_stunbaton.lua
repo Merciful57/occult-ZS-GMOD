@@ -29,7 +29,7 @@ SWEP.SwingHoldType = "grenade"
 
 SWEP.PointsMultiplier = GAMEMODE.PulsePointsMultiplier
 
-SWEP.AllowQualityWeapons = true
+SWEP.AllowQualityWeapons = false
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.09)
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_LEG_DAMAGE, 2)
