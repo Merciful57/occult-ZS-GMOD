@@ -41,6 +41,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pulse"
 SWEP.Primary.DefaultClip = 50
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.ConeMax = 2
 SWEP.ConeMin = 0.01
