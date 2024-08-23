@@ -3,6 +3,10 @@ INC_SERVER()
 function SWEP:Reload(pl, nail, nailowner, prop)
 	if CurTime() < self:GetNextPrimaryFire() then return end
 
+	if owner.zlisted then
+		return
+	end
+	
 	local owner = self:GetOwner()
 	if owner:GetBarricadeGhosting() then return end
 
