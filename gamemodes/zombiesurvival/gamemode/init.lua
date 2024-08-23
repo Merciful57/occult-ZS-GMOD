@@ -3579,6 +3579,7 @@ VoiceSetTranslate["models/jazzmcfly/kantai/yuudachi/yuudachi.mdl"] = VOICESET_FE
 VoiceSetTranslate["models/player/dewobedil/vocaloid/haku/bikini_p.mdl"] = VOICESET_FEMALE
 VoiceSetTranslate["models/player/dewobedil/touhou/junko/default_p.mdl"] = VOICESET_FEMALE
 function GM:PlayerSpawn(pl)
+	pl:ConCommand("zs_noironsights 1")
 	pl:StripWeapons()
 	pl:WipePlayerInventory()
 	pl:GiveAmmo(1, "dummy", true) -- Fixes empty weapon deploy bug.
