@@ -37,6 +37,7 @@ SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.ClipMultiplier = 12/10
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.ReloadSpeed = 0.7
 
