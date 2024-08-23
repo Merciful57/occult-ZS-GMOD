@@ -364,3 +364,49 @@ hook.Add( "Initialize", "zs_ulx_cmds",
 		giveammo:help( "Give target(s) ammo" )
 	end
 )
+
+function ulx.zlist( calling_ply, target_plys )
+	local affected_plys = {}
+
+	for i=1, #target_plys do
+		local v = target_plys[ i ]
+
+		if ulx.getExclusive( v, calling_ply ) then
+			ULib.tsayError( calling_ply, ulx.getExclusive( v, calling_ply ), true )
+		elseif v.zlisted then
+			ULib.tsayError( calling_ply, v:Nick() .. " is already zlisted!", true )
+		else
+			v.zlisted = true
+			table.insert( affected_plys, v )
+		end
+	end
+
+	ulx.fancyLogAdmin( calling_ply, "#A zlisted #T", affected_plys )
+end
+local zlist = ulx.command( CATEGORY_NAME, "ulx zlist", ulx.zlist, "!zlist" )
+zlist:addParam{ type=ULib.cmds.PlayersArg }
+zlist:defaultAccess( ULib.ACCESS_ADMIN )
+zlist:help( "Zlists target(s)." )
+
+function ulx.unzlist( calling_ply, target_plys )
+	local affected_plys = {}
+
+	for i=1, #target_plys do
+		local v = target_plys[ i ]
+
+		if ulx.getExclusive( v, calling_ply ) then
+			ULib.tsayError( calling_ply, ulx.getExclusive( v, calling_ply ), true )
+		elseif not v.zlisted then
+			ULib.tsayError( calling_ply, v:Nick() .. " is not zlisted!", true )
+		else
+			v.zlisted = false
+			table.insert( affected_plys, v )
+		end
+	end
+
+	ulx.fancyLogAdmin( calling_ply, "#A unzlisted #T", affected_plys )
+end
+local unzlist = ulx.command( CATEGORY_NAME, "ulx unzlist", ulx.unzlist, "!unzlist" )
+unzlist:addParam{ type=ULib.cmds.PlayersArg }
+unzlist:defaultAccess( ULib.ACCESS_ADMIN )
+unzlist:help( "UnZlists target(s)." )
