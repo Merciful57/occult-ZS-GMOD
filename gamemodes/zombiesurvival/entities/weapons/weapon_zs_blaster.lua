@@ -32,6 +32,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "buckshot"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 SWEP.ConeMax = 8.75
 SWEP.ConeMin = 5
