@@ -30,6 +30,7 @@ SWEP.MeleeRange = 64
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 125
 SWEP.NoDismantle = true
+SWEP.AllowQualityWeapons = false
 
 
 SWEP.WalkSpeed = SPEED_FAST
