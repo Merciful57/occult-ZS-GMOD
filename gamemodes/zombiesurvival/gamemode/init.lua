@@ -1293,6 +1293,8 @@ function GM:PlayerHealedTeamMember(pl, other, health, wep, pointmul, nobymsg, fl
 		local points = health / hpperpoint * pointmul
 
 		pl:AddPoints(points)
+		pl:PS2_AddStandardPoints((points * 100), "Healing Humans")		
+
 	end
 
 	net.Start("zs_healother")
