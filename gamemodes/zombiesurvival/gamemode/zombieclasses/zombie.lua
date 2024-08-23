@@ -221,6 +221,7 @@ if SERVER then
 			pl:StripWeapons()
 			pl:Give("weapon_zs_fleshcreeper")
 			pl:Give("weapon_zs_zombie")
+			pl:SelectWeapon("weapon_zs_zombie")
 		end
 	end
 
