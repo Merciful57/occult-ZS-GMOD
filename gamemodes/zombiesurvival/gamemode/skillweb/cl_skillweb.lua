@@ -1188,8 +1188,8 @@ function GM:DrawXPBar(x, y, w, h, xpw, barwm, hm, level)
 	local progress = GAMEMODE:ProgressForXP(xp)
 	local rlevel = MySelf:GetZSRemortLevel()
 	local append = ""
-	if rlevel > 0 then
-		append = " // R.Level "..rlevel
+	if rlevel > 0 and level < 50 then
+		append = "	Prestige "..rlevel
 	end
 
 	surface.SetDrawColor(0, 0, 0, 220)
@@ -1201,7 +1201,7 @@ function GM:DrawXPBar(x, y, w, h, xpw, barwm, hm, level)
 	surface.DrawRect(x, y + 2, barw * progress, 2)
 
 	if level == GAMEMODE.MaxLevel then
-		draw_SimpleText("Level MAX"..append, "ZSXPBar", xpw / 2, h / 2 + y, COLOR_GREEN, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+		draw_SimpleText("Press F3 and click prestige to continue leveling up!"..append, "ZSXPBar", xpw / 2, h / 2 + y, COLOR_GREEN, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
 	else
 		if progress > 0 then
 			local lx = x + barw * progress - 1
