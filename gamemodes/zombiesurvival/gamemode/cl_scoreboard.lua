@@ -74,7 +74,7 @@ function PANEL:Init()
 	self.m_ZombieHeading:SetTeam(TEAM_UNDEAD)
 
 	self.m_PointsLabel = EasyLabel(self, "Score", "ZSScoreBoardPlayer", COLOR_GRAY)
-	self.m_RemortCLabel = EasyLabel(self, "R.LVL", "ZSScoreBoardPlayer", COLOR_GRAY)
+	self.m_RemortCLabel = EasyLabel(self, "", "ZSScoreBoardPlayer", COLOR_GRAY)
 
 	self.m_BrainsLabel = EasyLabel(self, "Score", "ZSScoreBoardPlayer", COLOR_GRAY)
 	self.m_RemortCZLabel = EasyLabel(self, "", "ZSScoreBoardPlayer", COLOR_GRAY)
