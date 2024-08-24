@@ -20,7 +20,7 @@ SWEP.Secondary.Ammo = "dummy"
 SWEP.ModelScale = 0.55
 
 SWEP.Repair = 8
-SWEP.MaxDistance = 75
+SWEP.MaxDistance = 750
 
 SWEP.WalkSpeed = SPEED_NORMAL
 SWEP.FullWalkSpeed = SPEED_SLOWEST
