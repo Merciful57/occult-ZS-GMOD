@@ -406,7 +406,7 @@ function GM:AddShopItem(list, i, tab, issub, nopointshop)
 		if nopointshop then
 			price = tostring(math.ceil(self:PointsToScrap(tab.Price)))
 		end
-		pricelabel:SetText(price..(nopointshop and " Scrap" or " Points"))
+		pricelabel:SetText(price..(nopointshop and " Scrap" or " Silver"))
 	end
 	pricelabel:SizeToContents()
 	pricelabel:AlignRight(alignri)
