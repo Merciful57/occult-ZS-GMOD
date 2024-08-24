@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Pot"
+SWEP.PrintName = "'Pot' Blunt Melee"
 
 if CLIENT then
 	SWEP.ViewModelFlip = false
@@ -26,7 +26,7 @@ SWEP.WorldModel = "models/props_interiors/pot02a.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 40
-SWEP.MeleeRange = 50
+SWEP.MeleeRange = 65
 SWEP.MeleeSize = 1.15
 SWEP.NoDismantle = true
 SWEP.AllowQualityWeapons = false
@@ -37,7 +37,7 @@ SWEP.HitGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.MissGesture = SWEP.HitGesture
 
 SWEP.SwingRotation = Angle(30, -30, -30)
-SWEP.SwingTime = 0.3
+SWEP.SwingTime = 0.1
 SWEP.SwingHoldType = "grenade"
 
 SWEP.AllowQualityWeapons = true
