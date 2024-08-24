@@ -96,13 +96,13 @@ end
 
 -- How much ammo is considered one 'clip' of ammo? For use with setting up weapon defaults. Works directly with zs_survivalclips
 GM.AmmoCache = {}
-GM.AmmoCache["ar2"]							= 32		-- Assault rifles.
+GM.AmmoCache["ar2"]							= 48		-- Assault rifles.
 GM.AmmoCache["alyxgun"]						= 24		-- Not used.
-GM.AmmoCache["pistol"]						= 14		-- Pistols.
-GM.AmmoCache["smg1"]						= 36		-- SMG's and some rifles.
-GM.AmmoCache["357"]							= 8			-- Rifles, especially of the sniper variety.
-GM.AmmoCache["xbowbolt"]					= 8			-- Crossbows
-GM.AmmoCache["buckshot"]					= 12		-- Shotguns
+GM.AmmoCache["pistol"]						= 36		-- Pistols.
+GM.AmmoCache["smg1"]						= 48		-- SMG's and some rifles.
+GM.AmmoCache["357"]							= 12			-- Rifles, especially of the sniper variety.
+GM.AmmoCache["xbowbolt"]					= 12			-- Crossbows
+GM.AmmoCache["buckshot"]					= 16		-- Shotguns
 GM.AmmoCache["ar2altfire"]					= 1			-- Not used.
 GM.AmmoCache["slam"]						= 1			-- Force Field Emitters.
 GM.AmmoCache["rpg_round"]					= 1			-- Not used. Rockets?
@@ -112,8 +112,8 @@ GM.AmmoCache["sniperpenetratedround"]		= 1			-- Remote Det pack.
 GM.AmmoCache["grenade"]						= 1			-- Grenades.
 GM.AmmoCache["thumper"]						= 1			-- Gun turret.
 GM.AmmoCache["gravity"]						= 1			-- Unused.
-GM.AmmoCache["battery"]						= 23		-- Used with the Medical Kit.
-GM.AmmoCache["gaussenergy"]					= 2			-- Nails used with the Carpenter's Hammer.
+GM.AmmoCache["battery"]						= 32		-- Used with the Medical Kit.
+GM.AmmoCache["gaussenergy"]					= 10			-- Nails used with the Carpenter's Hammer.
 GM.AmmoCache["combinecannon"]				= 1			-- Not used.
 GM.AmmoCache["airboatgun"]					= 1			-- Arsenal crates.
 GM.AmmoCache["striderminigun"]				= 1			-- Message beacons.
@@ -128,7 +128,7 @@ GM.AmmoCache["chemical"]					= 20
 GM.AmmoCache["flashbomb"]					= 1
 GM.AmmoCache["turret_buckshot"]				= 1
 GM.AmmoCache["turret_assault"]				= 1
-GM.AmmoCache["scrap"]						= 3
+GM.AmmoCache["scrap"]						= 8
 
 GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "buckshot", "battery", "pulse", "impactmine", "chemical", "gaussenergy", "scrap"})
 
