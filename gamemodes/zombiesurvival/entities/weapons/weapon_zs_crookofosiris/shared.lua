@@ -34,7 +34,7 @@ SWEP.MeleeRange = 160
 SWEP.MeleeSize = 3.0
 SWEP.MeleeKnockBack = 0
 
-SWEP.Primary.Delay = 0.4
+SWEP.Primary.Delay = 0.6
 
 SWEP.WalkSpeed = SPEED_SLOWER
 
@@ -48,7 +48,7 @@ SWEP.MaxStock = 1
 
 SWEP.AllowQualityWeapons = true
 
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.12)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.01)
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/osiris/axe_swing_miss"..math.random(1, 2)..".wav", 90, 135)
