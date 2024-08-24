@@ -19,8 +19,6 @@ SWEP.Secondary.Ammo = "dummy"
 
 SWEP.ModelScale = 0.55
 
-SWEP.MaxStock = 5
-
 SWEP.Repair = 8
 SWEP.MaxDistance = 75
 
