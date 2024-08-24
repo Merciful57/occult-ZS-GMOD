@@ -309,6 +309,7 @@ GM:AddPointShopItem("powerfists",		ITEMCAT_MELEE,			125,			"weapon_zs_powerfists
 GM:AddPointShopItem("frotchet",			ITEMCAT_MELEE,			200,			"weapon_zs_frotchet")
 
 GM:AddPointShopItem("crphmr",			ITEMCAT_TOOLS,			0,				"weapon_zs_hammer",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_hammer") pl:GiveAmmo(0, "GaussEnergy") end)
+GM:AddPointShopItem("lectro",			ITEMCAT_TOOLS,			35,				"weapon_zs_electrohammer")
 GM:AddPointShopItem("wrench",			ITEMCAT_TOOLS,			0,				"weapon_zs_wrench").NoClassicMode = true
 --GM:AddPointShopItem("arsenalcrate",		ITEMCAT_DEPLOYABLES,			40,				"weapon_zs_arsenalcrate").Countables = "prop_arsenalcrate"
 GM:AddPointShopItem("resupplybox",		ITEMCAT_DEPLOYABLES,			15,				"weapon_zs_resupplybox").Countables = "prop_resupplybox"
