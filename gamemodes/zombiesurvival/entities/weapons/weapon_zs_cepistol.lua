@@ -23,7 +23,7 @@ SWEP.Tier = 6
 SWEP.MaxStock = 1
 
 SWEP.Primary.Sound = Sound("magnum/fire"..math.random(1,3)..".wav")
-SWEP.Primary.Damage = 128
+SWEP.Primary.Damage = 256
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.65
 SWEP.ReloadSound = Sound("magnum/magnum_reload1.wav")
