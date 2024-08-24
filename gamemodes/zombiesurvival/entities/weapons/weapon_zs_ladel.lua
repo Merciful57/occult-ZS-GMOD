@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Ladle"
+SWEP.PrintName = "'Ladle' Blunt Melee"
 
 if CLIENT then
 	SWEP.ViewModelFlip = false
@@ -25,9 +25,10 @@ SWEP.DamageType = DMG_CLUB
 SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
+SWEP.Tier = 5
 
-SWEP.MeleeDamage = 34
-SWEP.MeleeRange = 58
+SWEP.MeleeDamage = 340
+SWEP.MeleeRange = 60
 SWEP.MeleeSize = 1.15
 SWEP.NoDismantle = true
 SWEP.AllowQualityWeapons = false
