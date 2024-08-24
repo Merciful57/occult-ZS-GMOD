@@ -16,7 +16,7 @@ SWEP.OldWalkSpeed = 0
 SWEP.MeleeDamage = 15
 SWEP.DamageType = DMG_CLUB
 SWEP.UppercutDamageMultiplier = 3
-SWEP.HitDistance = 40
+SWEP.HitDistance = 60
 SWEP.MeleeKnockBack = 0
 
 SWEP.Secondary.Automatic = true
