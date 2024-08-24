@@ -19,6 +19,7 @@ SWEP.Secondary.Automatic = true
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
 SWEP.Secondary.Ammo = "dummy"
+SWEP.AreaEnabled = false
 
 --SWEP.MeleeDamage = 35 -- Reduced due to instant swing speed
 SWEP.MeleeDamage = 15
