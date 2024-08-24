@@ -2,7 +2,7 @@ AddCSLuaFile()
 DEFINE_BASECLASS("weapon_zs_base")
 
 SWEP.PrintName = "'Peacemaker' Revolver"
-SWEP.Description = "The official State Firearm of Arizona."
+SWEP.Description = "The official Sidearm of the Wild West."
 SWEP.Slot = 1
 SWEP.SlotPos = 0
 
@@ -79,7 +79,7 @@ function SWEP:StartReloading()
 		self:ProcessReloadAnim()
 	end
 	
-	if CLIENT and self:GetOwner() == MySelf then
+	if CLIENT and self:GetOwner() == MySelf and not self:GetOwner():KeyDown(IN_ATTACK) then
 		self:EmitSound("weapons/tfa_tannenberg_mosin_nagant_1891/mosin_boltback.wav", 65, 100, 0.4, CHAN_AUTO)
 	end
 	
@@ -91,7 +91,7 @@ function SWEP:StopReloading()
 	self:SetNextPrimaryFire(CurTime() + self.Primary.Delay * 0.75)
 	self:SendWeaponAnim(ACT_VM_IDLE)
 	
-	if CLIENT and self:GetOwner() == MySelf then
+	if CLIENT and self:GetOwner() == MySelf and not self:GetOwner():KeyDown(IN_ATTACK) then
 		self:EmitSound("weapons/tfa_tannenberg_mosin_nagant_1891/mosin_boltforward.wav", 65, 100, 0.4, CHAN_AUTO)
 	end
 	
@@ -106,7 +106,7 @@ function SWEP:DoReload()
 	local delay = self:GetReloadDelay()
 	if self.ReloadActivity then
 	end
-	if self.ReloadSound then
+	if self.ReloadSound and not self:GetOwner():KeyDown(IN_ATTACK) then
 		self:EmitSound(self.ReloadSound)
 	end
 	self:SendWeaponAnim(ACT_VM_RELOAD)
@@ -147,7 +147,11 @@ function SWEP:CanPrimaryAttack()
 	if self:GetOwner():IsHolding() or self:GetOwner():GetBarricadeGhosting() then return false end
 
 	if self:Clip1() < self.RequiredClip then
-		self:EmitSound("Weapon_Shotgun.Empty")
+		if not self:GetOwner():KeyDown(IN_ATTACK) then
+			if CLIENT and self:GetOwner() then 
+				self:EmitSound("Weapon_Shotgun.Empty")
+			end
+		end
 		self:SetNextPrimaryFire(CurTime() + 0.25)
 
 		return false
