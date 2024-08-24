@@ -360,9 +360,6 @@ item.NoClassicMode = true
 item =
 GM:AddPointShopItem("ffemitter",		ITEMCAT_DEPLOYABLES,			40,				"weapon_zs_ffemitter",			nil,							nil,									nil,											function(pl) pl:GiveEmptyWeapon("weapon_zs_ffemitter") pl:GiveAmmo(1, "slam") pl:GiveAmmo(30, "pulse") end)
 item.Countables = "prop_ffemitter"
-GM:AddPointShopItem("cans",			ITEMCAT_TOOLS,			16,				"weapon_zs_can_small")
-GM:AddPointShopItem("canm",			ITEMCAT_TOOLS,			64,				"weapon_zs_can_medium")
-GM:AddPointShopItem("canl",			ITEMCAT_TOOLS,			92	,				"weapon_zs_can_large")
 GM:AddPointShopItem("propanetank",		ITEMCAT_TOOLS,			15,				"comp_propanecan")
 GM:AddPointShopItem("busthead",			ITEMCAT_TOOLS,			25,				"comp_busthead")
 GM:AddPointShopItem("sawblade",			ITEMCAT_TOOLS,			30,				"comp_sawblade").SkillRequirement = SKILL_U_CRAFTINGPACK
@@ -447,6 +444,9 @@ GM:AddPointShopItem("opsmatrix",		ITEMCAT_TRINKETS,		50,				"trinket_opsmatrix")
 GM:AddPointShopItem("supasm",			ITEMCAT_TRINKETS,		70,				"trinket_supasm").SubCategory =									ITEMSUBCAT_TRINKETS_OFFENSIVE
 GM:AddPointShopItem("pulseimpedance",	ITEMCAT_TRINKETS,		70,				"trinket_pulseimpedance").SubCategory =							ITEMSUBCAT_TRINKETS_OFFENSIVE
 
+GM:AddPointShopItem("cans",			ITEMCAT_OTHER,			16,				"weapon_zs_can_small")
+GM:AddPointShopItem("canm",			ITEMCAT_OTHER,			64,				"weapon_zs_can_medium")
+GM:AddPointShopItem("canl",			ITEMCAT_OTHER,			92	,				"weapon_zs_can_large")
 GM:AddPointShopItem("flashbomb",		ITEMCAT_OTHER,			5,				"weapon_zs_flashbomb")
 GM:AddPointShopItem("molotov",			ITEMCAT_OTHER,			15,				"weapon_zs_molotov")
 GM:AddPointShopItem("grenade",			ITEMCAT_OTHER,			15,				"weapon_zs_grenade")
