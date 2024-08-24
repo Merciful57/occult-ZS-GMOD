@@ -61,13 +61,33 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 		return
 	end
 
+	if self.AreaEnabled and hitent:IsNailed() then 
+		for _, ent in pairs(ents.FindInSphere(hitent:GetPos(), 64)) do
+			if ent:IsValid() and ent ~= attacker then
+				local nearest = ent:NearestPoint(hitent:GetPos())
+				--ent:TakeSpecialDamage(((radius - nearest:Distance(epicenter)) / radius) * basedmg, damagetype, attacker, inflictor, nearest)
+				if ent:IsNailed() then
+
+					local healstrength = self.HealStrength * GAMEMODE.NailHealthPerRepair * (owner.RepairRateMul or 1) * 0.5
+					local oldhealth = ent:GetBarricadeHealth()
+					if oldhealth <= 0 or oldhealth >= ent:GetMaxBarricadeHealth() or ent:GetBarricadeRepairs() <= 0.01 then continue end
+
+					ent:SetBarricadeHealth(math.min(ent:GetMaxBarricadeHealth(), ent:GetBarricadeHealth() + math.min(ent:GetBarricadeRepairs(), healstrength)))
+					local healed = ent:GetBarricadeHealth() - oldhealth
+					ent:SetBarricadeRepairs(math.max(ent:GetBarricadeRepairs() - healed, 0))
+					gamemode.Call("PlayerRepairedObject", owner, ent, healed, self)
+				end
+			end
+		end
+	end
+
 	if hitent:IsNailed() then
 		if owner:IsSkillActive(SKILL_BARRICADEEXPERT) then
 			hitent.ReinforceEnd = CurTime() + 2
 			hitent.ReinforceApplier = owner
 		end
 
-		local healstrength = self.HealStrength * GAMEMODE.NailHealthPerRepair * (owner.RepairRateMul or 1)
+		local healstrength = self.HealStrength * GAMEMODE.NailHealthPerRepair * (owner.RepairRateMul or 1) * ((self.AreaEnabled and 0.8) or 1)
 		local oldhealth = hitent:GetBarricadeHealth()
 		if oldhealth <= 0 or oldhealth >= hitent:GetMaxBarricadeHealth() or hitent:GetBarricadeRepairs() <= 0.01 then return end
 
