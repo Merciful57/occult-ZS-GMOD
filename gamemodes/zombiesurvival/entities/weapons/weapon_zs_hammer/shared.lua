@@ -34,7 +34,7 @@ SWEP.NoPropThrowing = true
 SWEP.HitGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.MissGesture = SWEP.HitGesture
 
-SWEP.HealStrength = 1.5
+SWEP.HealStrength = 2.5
 
 SWEP.NoHolsterOnCarry = true
 
