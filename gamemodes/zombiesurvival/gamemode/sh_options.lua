@@ -447,18 +447,18 @@ GM:AddPointShopItem("opsmatrix",		ITEMCAT_TRINKETS,		50,				"trinket_opsmatrix")
 GM:AddPointShopItem("supasm",			ITEMCAT_TRINKETS,		70,				"trinket_supasm").SubCategory =									ITEMSUBCAT_TRINKETS_OFFENSIVE
 GM:AddPointShopItem("pulseimpedance",	ITEMCAT_TRINKETS,		70,				"trinket_pulseimpedance").SubCategory =							ITEMSUBCAT_TRINKETS_OFFENSIVE
 
-GM:AddPointShopItem("flashbomb",		ITEMCAT_OTHER,			25,				"weapon_zs_flashbomb")
-GM:AddPointShopItem("molotov",			ITEMCAT_OTHER,			30,				"weapon_zs_molotov")
-GM:AddPointShopItem("grenade",			ITEMCAT_OTHER,			35,				"weapon_zs_grenade")
-GM:AddPointShopItem("betty",			ITEMCAT_OTHER,			35,				"weapon_zs_proxymine")
-GM:AddPointShopItem("detpck",			ITEMCAT_OTHER,			40,				"weapon_zs_detpack")
-GM:AddPointShopItem("crygasgrenade",	ITEMCAT_OTHER,			40,				"weapon_zs_crygasgrenade")
-GM:AddPointShopItem("corgasgrenade",	ITEMCAT_OTHER,			45,				"weapon_zs_corgasgrenade")
-GM:AddPointShopItem("sigfragment",		ITEMCAT_OTHER,			30,				"weapon_zs_sigilfragment")
-GM:AddPointShopItem("bloodshot",		ITEMCAT_OTHER,			45,				"weapon_zs_bloodshotbomb")
-GM:AddPointShopItem("corruptedfragment",ITEMCAT_OTHER,			55,				"weapon_zs_corruptedfragment")
-GM:AddPointShopItem("medcloud",			ITEMCAT_OTHER,			40,				"weapon_zs_mediccloudbomb")
-GM:AddPointShopItem("nanitecloud",		ITEMCAT_OTHER,			40,				"weapon_zs_nanitecloudbomb")
+GM:AddPointShopItem("flashbomb",		ITEMCAT_OTHER,			5,				"weapon_zs_flashbomb")
+GM:AddPointShopItem("molotov",			ITEMCAT_OTHER,			15,				"weapon_zs_molotov")
+GM:AddPointShopItem("grenade",			ITEMCAT_OTHER,			15,				"weapon_zs_grenade")
+GM:AddPointShopItem("betty",			ITEMCAT_OTHER,			10,				"weapon_zs_proxymine")
+GM:AddPointShopItem("detpck",			ITEMCAT_OTHER,			5,				"weapon_zs_detpack")
+GM:AddPointShopItem("crygasgrenade",	ITEMCAT_OTHER,			5,				"weapon_zs_crygasgrenade")
+GM:AddPointShopItem("corgasgrenade",	ITEMCAT_OTHER,			5,				"weapon_zs_corgasgrenade")
+GM:AddPointShopItem("sigfragment",		ITEMCAT_OTHER,			100,				"weapon_zs_sigilfragment")
+GM:AddPointShopItem("bloodshot",		ITEMCAT_OTHER,			10,				"weapon_zs_bloodshotbomb")
+GM:AddPointShopItem("corruptedfragment",ITEMCAT_OTHER,			1000,				"weapon_zs_corruptedfragment")
+GM:AddPointShopItem("medcloud",			ITEMCAT_OTHER,			15,				"weapon_zs_mediccloudbomb")
+GM:AddPointShopItem("nanitecloud",		ITEMCAT_OTHER,			15,				"weapon_zs_nanitecloudbomb")
 -- These are the honorable mentions that come at the end of the round.
 
 local function genericcallback(pl, magnitude) return pl:Name(), magnitude end
