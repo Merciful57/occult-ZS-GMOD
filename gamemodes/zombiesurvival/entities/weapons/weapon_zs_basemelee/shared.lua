@@ -15,7 +15,7 @@ SWEP.MeleeKnockBack = 0
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.DefaultClip = 1
 SWEP.Secondary.Ammo = "dummy"
-SWEP.Secondary.Automatic = false
+SWEP.Secondary.Automatic = true
 
 SWEP.WalkSpeed = SPEED_FAST
 
