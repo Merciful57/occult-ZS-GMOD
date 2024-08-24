@@ -30,8 +30,8 @@ SWEP.Tier = 5
 SWEP.MeleeDamage = 340
 SWEP.MeleeRange = 60
 SWEP.MeleeSize = 1.15
-SWEP.NoDismantle = true
-SWEP.AllowQualityWeapons = false
+SWEP.NoDismantle = false
+SWEP.AllowQualityWeapons = true
 
 SWEP.Primary.Delay = 0.9
 
