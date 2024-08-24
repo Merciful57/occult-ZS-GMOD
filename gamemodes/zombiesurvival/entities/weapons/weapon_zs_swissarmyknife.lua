@@ -17,7 +17,7 @@ SWEP.WorldModel = "models/weapons/w_knife_t.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 12
-SWEP.MeleeRange = 52
+SWEP.MeleeRange = 65
 SWEP.MeleeSize = 0.875
 
 SWEP.WalkSpeed = SPEED_FASTEST
