@@ -4,7 +4,7 @@ SWEP.PrintName = "Small canned prop"
 SWEP.Description = " A small randomly assorted prop compressed into a can with neutron technology./n Hard to get back in once opened.  "
 
 SWEP.ViewModel = "models/weapons/c_grenade.mdl"
-SWEP.WorldModel = "models/nseven/popcan01a.mdl"
+SWEP.WorldModel = "models/props_junk/popcan01a.mdl"
 SWEP.UseHands = true
 
 SWEP.AmmoIfHas = true
