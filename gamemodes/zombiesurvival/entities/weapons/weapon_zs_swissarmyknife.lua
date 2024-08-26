@@ -55,7 +55,7 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 	if hitent:IsValid() and hitent:IsPlayer() then
 		local bleed = hitent:GiveStatus("bleed")
 		if bleed then
-			bleed:AddDamage(999)
+			bleed:AddDamage(99)
 			bleed.DamPerTick = 12
 			bleed.Damager = self:GetOwner()
 		end
