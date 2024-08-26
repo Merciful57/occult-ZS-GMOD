@@ -28,10 +28,8 @@ SWEP.HoldType = "melee2"
 SWEP.MeleeDamage = 48
 SWEP.MeleeRange = 75
 SWEP.MeleeSize = 1.5
-SWEP.MeleeKnockBack = 125
 SWEP.NoDismantle = true
 SWEP.AllowQualityWeapons = false
-
 
 SWEP.WalkSpeed = SPEED_FAST
 
