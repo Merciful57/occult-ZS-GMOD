@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Crowbar"
+SWEP.PrintName = "'Crowbar' Blunt Melee"
 SWEP.Description = "An effective and fast swinging melee weapon, the crowbar also has the ability to instantly kill headcrabs."
 
 if CLIENT then
