@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 SWEP.PrintName = "'Broom' Blunt Melee"
-SWEP.Description = "BrooooooooooOOOOOOOOOOOOOM!"
+SWEP.Description = "Clean it up janny."
 
 if CLIENT then
 	SWEP.ViewModelFOV = 70
