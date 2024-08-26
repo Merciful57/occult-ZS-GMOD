@@ -42,8 +42,6 @@ SWEP.UseMelee1 = true
 SWEP.HitGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.MissGesture = SWEP.HitGesture
 
-SWEP.AllowQualityWeapons = true
-
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 4)
 
 function SWEP:PlaySwingSound()
