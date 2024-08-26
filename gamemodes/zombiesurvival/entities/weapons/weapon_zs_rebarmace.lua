@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Rebar Mace"
+SWEP.PrintName = "'Rebar Mace' Blunt Melee"
 SWEP.Description = "Disorients zombies hit."
 
 if CLIENT then
