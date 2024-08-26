@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Butcher Knife"
+SWEP.PrintName = "'Butcher Knife' Sharp Melee"
 SWEP.Description = "A very fast swinging butcher knife, capable of mincing zombies very quickly up close."
 
 if CLIENT then
