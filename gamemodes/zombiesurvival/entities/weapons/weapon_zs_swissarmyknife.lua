@@ -36,7 +36,6 @@ SWEP.AllowQualityWeapons = false
 
 SWEP.NoHitSoundFlesh = true
 
-SWEP.AllowQualityWeapons = true
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.085)
 
