@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Meat Tenderizer"
+SWEP.PrintName = "'Tenderizer' Blunt Melee"
 SWEP.Description = "A slow swinging meat tenderizer with not much special about it apart from the fact it's a culinary tool."
 
 if CLIENT then
