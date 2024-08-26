@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Harpoon"
+SWEP.PrintName = "'Harpoon' Sharp Melee"
 SWEP.Description = "The harpoon has a very long range for a melee weapon. The harpoon can be thrown to impale into zombies, dealing damage over time."
 
 if CLIENT then
@@ -28,7 +28,7 @@ SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 45
-SWEP.MeleeRange = 94
+SWEP.MeleeRange = 125
 SWEP.MeleeSize = 0.8
 
 SWEP.Primary.Delay = 1.65
