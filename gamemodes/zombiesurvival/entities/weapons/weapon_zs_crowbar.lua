@@ -19,7 +19,7 @@ SWEP.DamageType = DMG_CLUB
 
 SWEP.MeleeDamage = 55
 SWEP.OriginalMeleeDamage = SWEP.MeleeDamage
-SWEP.MeleeRange = 55
+SWEP.MeleeRange = 115
 SWEP.MeleeSize = 1.5
 SWEP.NoDismantle = true
 SWEP.AllowQualityWeapons = false
