@@ -9,9 +9,15 @@ function SWEP:Deploy()
 end
 
 function SWEP:OnMeleeHit(hitent, hitflesh, tr)
+	
 	if self:GetOwner().GraveShovelDamage then
 		self.MeleeDamage = self.MeleeDamage + self:GetOwner().GraveShovelDamage
 	end
+	
+	if hitent:IsValid() and hitent:IsPlayer() then
+		hitent:GiveStatus("knockdown", 4)
+	end
+	
 end
 
 function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
