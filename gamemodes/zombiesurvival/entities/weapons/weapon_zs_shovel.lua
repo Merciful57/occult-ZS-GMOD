@@ -28,7 +28,7 @@ SWEP.WorldModel = "models/props_junk/shovel01a.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 50
-SWEP.MeleeRange = 68
+SWEP.MeleeRange = 145
 SWEP.MeleeSize = 1.5
 SWEP.MeleeKnockBack = 230
 
