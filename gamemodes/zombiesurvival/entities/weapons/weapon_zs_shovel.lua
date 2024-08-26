@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Shovel"
+SWEP.PrintName = "'Shovel' Blunt Melee"
 SWEP.Description = "A shovel instantly kills zombies that are knocked down, and it's an effective melee weapon even otherwise."
 
 if CLIENT then
