@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "'Executioner' Axe"
-SWEP.Description = "Instantly kills zombies brought bellow 10% of their max health."
+SWEP.PrintName = "'Executioner' Sharp Melee"
+SWEP.Description = "Causes a zombie to bleed, a lot."
 
 if CLIENT then
 	SWEP.ViewModelFOV = 55
