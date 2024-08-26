@@ -1,4 +1,4 @@
-SWEP.PrintName = "Grave Shovel"
+SWEP.PrintName = "'Grave Shovel' Blunt Melee"
 SWEP.Description = "The Grave Digger's shovel. Instantly kills knocked down zombies and permanently gains damage when doing so."
 
 SWEP.Base = "weapon_zs_basemelee"
