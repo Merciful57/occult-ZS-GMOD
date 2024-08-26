@@ -63,12 +63,13 @@ function SWEP:PlayHitFleshSound()
 	self:EmitSound("physics/body/body_medium_break"..math.random(2, 4)..".wav")
 end
 
-function SWEP:PostOnMeleeHit(hitent, hitflesh, tr)
-	if hitent:IsValid() and hitent:IsPlayer() and hitent:Alive() and hitent:Health() <= hitent:GetMaxHealthEx() * 0.1 and gamemode.Call("PlayerShouldTakeDamage", hitent, self:GetOwner()) then
-		if SERVER then
-			hitent:SetWasHitInHead()
+function SWEP:OnMeleeHit(hitent) 
+	if hitent:IsValid() and hitent:IsPlayer() then
+		local bleed = hitent:GiveStatus("bleed")
+		if bleed then
+			bleed:AddDamage(999)
+			bleed.DamPerTick = 33
+			bleed.Damager = self:GetOwner()
 		end
-		hitent:TakeSpecialDamage(hitent:Health(), DMG_DIRECT, self:GetOwner(), self, tr.HitPos)
-		hitent:EmitSound("npc/roller/blade_out.wav", 80, 75)
 	end
 end
