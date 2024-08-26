@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Type XIIIa Longsword"
+SWEP.PrintName = "'Type XIIIa' Sharp Melee"
 SWEP.Description = "Can cleave through multiple zombies in one swing."
 
 if CLIENT then
