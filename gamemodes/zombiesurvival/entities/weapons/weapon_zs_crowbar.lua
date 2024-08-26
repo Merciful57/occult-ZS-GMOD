@@ -31,8 +31,6 @@ SWEP.SwingTime = 0.4
 SWEP.SwingRotation = Angle(30, -30, -30)
 SWEP.SwingHoldType = "grenade"
 
-SWEP.AllowQualityWeapons = true
-
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 3)
 
 function SWEP:PlaySwingSound()
