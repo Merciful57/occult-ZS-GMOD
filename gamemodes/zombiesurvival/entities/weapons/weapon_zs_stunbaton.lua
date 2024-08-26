@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Stun Baton"
+SWEP.PrintName = "'Stun Baton' Blunt Melee"
 SWEP.Description = "This baton has the ability to slow zombies with pulse slowing technology and it gains +25% extra points."
 
 if CLIENT then
