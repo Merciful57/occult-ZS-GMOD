@@ -14,7 +14,6 @@ SWEP.UseHands = true
 SWEP.MeleeDamage = 230
 SWEP.MeleeRange = 128
 SWEP.MeleeSize = 1.5
-SWEP.MeleeKnockBack = 220
 
 SWEP.Primary.Delay = 1.2
 
