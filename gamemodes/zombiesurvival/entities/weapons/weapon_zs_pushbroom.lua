@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Push Broom"
+SWEP.PrintName = "'Broom' Blunt Melee"
 SWEP.Description = "BrooooooooooOOOOOOOOOOOOOM!"
 
 if CLIENT then
