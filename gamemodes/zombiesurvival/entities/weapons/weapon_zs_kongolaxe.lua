@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Kongol Axe"
+SWEP.PrintName = "'Kongol' Sharp Melee"
 SWEP.Description = "A very heavy greataxe with no other special properties other than sheer damage output."
 
 if CLIENT then
