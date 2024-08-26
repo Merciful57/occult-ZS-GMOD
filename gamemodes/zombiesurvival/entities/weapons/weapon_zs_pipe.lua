@@ -27,7 +27,7 @@ SWEP.WorldModel = "models/props_canal/mattpipe.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 85
-SWEP.MeleeRange = 53
+SWEP.MeleeRange = 75
 SWEP.MeleeSize = 1.15
 SWEP.NoDismantle = true
 
