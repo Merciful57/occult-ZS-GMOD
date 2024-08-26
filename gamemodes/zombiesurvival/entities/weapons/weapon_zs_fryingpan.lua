@@ -37,7 +37,7 @@ SWEP.HitGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE
 SWEP.MissGesture = SWEP.HitGesture
 
 SWEP.SwingRotation = Angle(30, -30, -30)
-SWEP.SwingTime = 1.3
+SWEP.SwingTime = 0.9
 SWEP.SwingHoldType = "grenade"
 
 SWEP.Culinary = true
