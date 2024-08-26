@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Sledgehammer"
+SWEP.PrintName = "'Sledgehammer' Blunt Melee"
 SWEP.Description = "A heavy, but powerful melee weapon. A target struck by the force of it will receive considerable knockback."
 
 if CLIENT then
