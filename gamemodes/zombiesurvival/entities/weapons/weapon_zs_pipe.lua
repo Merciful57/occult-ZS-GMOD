@@ -1,6 +1,6 @@
 AddCSLuaFile()
 
-SWEP.PrintName = "Lead Pipe"
+SWEP.PrintName = "'Lead Pipe' Blunt Melee"
 SWEP.Description = "The weight of a lead pipe carries enough force to shock a target's focus but has a lower swing speed than other melee weapons."
 
 if CLIENT then
