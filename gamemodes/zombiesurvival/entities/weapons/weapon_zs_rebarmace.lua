@@ -73,24 +73,9 @@ function SWEP:PlayHitSound()
 	self:EmitSound("physics/concrete/concrete_break"..math.random(2,3)..".wav", 75, math.random(95, 105))
 end
 
-if SERVER then
-function SWEP:OnMeleeHit(hitent, hitflesh, tr)
-	if hitent:IsValid() and hitent:IsPlayer() and CurTime() >= (hitent._NextLeadPipeEffect or 0) then
-		hitent._NextLeadPipeEffect = CurTime() + 1.5
 
-		--hitent:GiveStatus("disorientation")
-		local x = math.Rand(0.75, 1)
-		x = x * (math.random(2) == 2 and 1 or -1)
-
-		local ang = Angle(1 - x, x, 0) * 50
-		hitent:ViewPunch(ang)
-
-		local eyeangles = hitent:EyeAngles()
-		eyeangles:RotateAroundAxis(eyeangles:Up(), ang.yaw)
-		eyeangles:RotateAroundAxis(eyeangles:Right(), ang.pitch)
-		eyeangles.pitch = math.Clamp(ang.pitch, -89, 89)
-		eyeangles.roll = 0
-		hitent:SetEyeAngles(eyeangles)
+function SWEP:OnMeleeHit(hitent)
+	if hitent:IsValid() and hitent:IsPlayer() then
+		hitent:GiveStatus("knockdown", 4)
 	end
-end
 end
