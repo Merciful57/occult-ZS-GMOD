@@ -33,6 +33,8 @@ SWEP.Weight = 4
 SWEP.MeleeDamage = 25
 SWEP.NoDismantle = true
 
+SWEP.MeleeKnockBack = 250
+
 SWEP.Unarmed = false
 
 SWEP.Undroppable = false
