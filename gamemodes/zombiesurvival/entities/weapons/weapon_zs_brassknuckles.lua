@@ -35,6 +35,9 @@ SWEP.NoDismantle = true
 
 SWEP.MeleeKnockBack = 250
 
+SWEP.Primary.Delay = 0.7
+
+
 SWEP.Unarmed = false
 
 SWEP.Undroppable = false
