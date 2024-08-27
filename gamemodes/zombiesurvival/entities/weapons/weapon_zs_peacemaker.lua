@@ -44,6 +44,9 @@ SWEP.Tier = 1
 SWEP.ConeMax = 3.75
 SWEP.ConeMin = 2
 
+SWEP.Pierces = 6
+SWEP.Penetration = 0.6
+
 SWEP.IronSightsPos = Vector(-4.65, 4, 0.25)
 SWEP.IronSightsAng = Vector(0, 0, 1)
 
