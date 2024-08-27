@@ -14,6 +14,8 @@ if CLIENT then
 	SWEP.HUD3DBone = "SS.Grip.Dummy"
 end
 
+SWEP.Slot = 3
+
 SWEP.HoldType = "shotgun"
 
 SWEP.ViewModel = "models/weapons/rarri/v_newlandpattern.mdl"
