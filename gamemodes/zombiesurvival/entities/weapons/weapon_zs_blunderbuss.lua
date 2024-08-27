@@ -22,6 +22,8 @@ SWEP.ViewModel = "models/weapons/rarri/v_newlandpattern.mdl"
 SWEP.WorldModel = "models/weapons/rarri/w_newlandpattern.mdl"
 SWEP.UseHands = false
 
+SWEP.Undroppable = true
+
 SWEP.Primary.Sound = Sound("weapons/musket/musket_fire_9.wav")
 SWEP.Primary.Damage = 4
 SWEP.Primary.NumShots = 45
