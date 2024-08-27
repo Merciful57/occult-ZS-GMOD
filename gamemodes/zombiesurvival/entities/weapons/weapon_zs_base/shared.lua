@@ -328,6 +328,10 @@ function SWEP:ShootBullets(dmg, numbul, cone)
 	local owner = self:GetOwner()
 	self:SendWeaponAnimation()
 	owner:DoAttackEvent()
+	
+	local dir = owner:GetAimVector()
+	local start = owner:GetShootPos()
+	
 	if self.Recoil > 0 then
 		local r = math.Rand(0.8, 1)
 		owner:ViewPunch(Angle(r * -self.Recoil, 0, (1 - r) * (math.random(2) == 1 and -1 or 1) * self.Recoil))
@@ -337,8 +341,26 @@ function SWEP:ShootBullets(dmg, numbul, cone)
 		POINTSMULTIPLIER = self.PointsMultiplier
 	end
 
+	
 	owner:LagCompensation(true)
-	owner:FireBulletsLua(owner:GetShootPos(), owner:GetAimVector(), cone, numbul, dmg, nil, self.Primary.KnockbackScale, self.TracerName, self.BulletCallback, self.Primary.HullSize, nil, self.Primary.MaxDistance, nil, self)
+	if self.Pierces and self.Pierces > 0 and self.Penetration and self.Penetration > 0 then
+		local pendmg = dmg
+		local tr = owner:CompensatedPenetratingMeleeTrace(4092, 0.01, start, dir)
+		local ent
+		
+		for i, trace in ipairs(tr) do
+			if not trace.Hit then continue end
+			pendmg = pendmg * self.Penetration
+			if i > self.Pierces - 1 or pendmg < 1 then break end
+			ent = trace.Entity
+
+			if ent and ent:IsValid() then
+				owner:FireBulletsLua(trace.HitPos, dir, 0, numbul,pendmg, nil, self.Primary.KnockbackScale, "", self.BulletCallback, self.Primary.HullSize, nil, self.Primary.MaxDistance, nil, self)
+			end
+		end
+	end
+	
+	owner:FireBulletsLua(start, dir, cone, numbul, dmg, nil, self.Primary.KnockbackScale, self.TracerName, self.BulletCallback, self.Primary.HullSize, nil, self.Primary.MaxDistance, nil, self)
 	owner:LagCompensation(false)
 
 	if self.PointsMultiplier then
