@@ -69,3 +69,14 @@ end
 function SWEP:PlayHitFleshSound()
 	self:EmitSound("physics/flesh/flesh_bloody_break.wav", 80, math.random(95, 105))
 end
+
+function SWEP:OnMeleeHit(hitent) 
+	if hitent:IsValid() and hitent:IsPlayer() then
+		local bleed = hitent:GiveStatus("bleed")
+		if bleed then
+			bleed:AddDamage(999)
+			bleed.DamPerTick = 44
+			bleed.Damager = self:GetOwner()
+		end
+	end
+end
