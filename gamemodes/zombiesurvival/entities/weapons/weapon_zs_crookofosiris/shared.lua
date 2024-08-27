@@ -1,5 +1,5 @@
 SWEP.PrintName = "'Osiris' Sharp Melee"
-SWEP.Description = "The Crook of Osiris."
+SWEP.Description = "Revelation 16:4"
 
 SWEP.Base = "weapon_zs_basemelee"
 
@@ -29,7 +29,7 @@ if CLIENT then
 	}
 end
 
-SWEP.MeleeDamage = 225
+SWEP.MeleeDamage = 0
 SWEP.MeleeRange = 160
 SWEP.MeleeSize = 3.0
 SWEP.MeleeKnockBack = 0
