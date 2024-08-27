@@ -51,7 +51,7 @@ SWEP.SwingSound = Sound( "weapons/zs_power/power1.ogg" )
 SWEP.HitSound = Sound( "weapons/zs_power/power4.wav" )
 
 SWEP.FistKnockback = true
-SWEP.MeleeKnockBack = 200
+SWEP.MeleeKnockBack = 400
 
 SWEP.Primary.Delay = 0.65
 
