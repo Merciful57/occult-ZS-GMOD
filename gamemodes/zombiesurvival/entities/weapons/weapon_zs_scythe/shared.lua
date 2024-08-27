@@ -1,4 +1,4 @@
-SWEP.PrintName = "Great Scythe"
+SWEP.PrintName = "'Scythe' Sharp Melee"
 SWEP.Description = "A great scythe that can pierce and cut through multiple zombies. Has a 3 hit combo, the last hit deals extra damage."
 
 SWEP.Base = "weapon_zs_basemelee"
