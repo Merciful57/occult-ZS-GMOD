@@ -26,7 +26,7 @@ SWEP.NoDismantle = true
 SWEP.AllowQualityWeapons = false
 
 SWEP.Primary.Sound = Sound("Weapon_USP.Single")
-SWEP.Primary.Damage = 26
+SWEP.Primary.Damage = 20
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.25
 
