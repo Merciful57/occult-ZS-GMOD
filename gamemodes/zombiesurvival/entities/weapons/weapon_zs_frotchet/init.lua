@@ -15,15 +15,14 @@ function SWEP:OnMeleeHit(hitent, hitflesh, tr)
 		hitent:AddLegDamageExt(secondary and 18 or 15, owner, self, SLOWTYPE_COLD)
 	end
 
-	if tr.HitWorld and tr.HitNormal.z > 0.8 and hitent == Entity(0) and secondary then
-		local ice = ents.Create("env_protrusionspike")
-		if ice:IsValid() then
-			ice:SetPos(tr.HitPos)
-			ice:SetOwner(owner)
-			ice.Damage = self.MeleeDamage * 0.85
-			ice.Team = owner:Team()
-			ice:Spawn()
-		end
+
+	local ice = ents.Create("env_protrusionspike")
+	if ice:IsValid() then
+		ice:SetPos(tr.HitPos)
+		ice:SetOwner(owner)
+		ice.Damage = self.MeleeDamage * 0.85
+		ice.Team = owner:Team()
+		ice:Spawn()
 	end
 end
 
