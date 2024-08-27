@@ -38,6 +38,9 @@ SWEP.Primary.DefaultClip = 25
 SWEP.NoDismantle = true
 SWEP.AllowQualityWeapons = false
 
+SWEP.Pierces = 6
+SWEP.Penetration = 1
+
 SWEP.Primary.Gesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 
