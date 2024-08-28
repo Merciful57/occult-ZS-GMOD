@@ -30,6 +30,9 @@ SWEP.Primary.Delay = 1
 SWEP.Primary.Damage = 45
 SWEP.Primary.NumShots = 1
 
+SWEP.Pierces = 6
+SWEP.Penetration = 0.6
+
 SWEP.Primary.ClipSize = 6
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
