@@ -71,7 +71,7 @@ SWEP.Recoil = 0
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.ReloadSpeed = 0.6
-SWEP.ReloadDelay = 0.5
+SWEP.ReloadDelay = 0.25
 
 SWEP.Tier = 2
 
