@@ -28,7 +28,7 @@ SWEP.UseHands = true
 SWEP.Primary.Sound = Sound("Weapon_Deagle.Single")
 SWEP.Primary.Damage = 52
 SWEP.Primary.NumShots = 1
-SWEP.Primary.Delay = 0.32
+SWEP.Primary.Delay = 0.62
 SWEP.Primary.KnockbackScale = 2
 
 SWEP.Primary.ClipSize = 7
