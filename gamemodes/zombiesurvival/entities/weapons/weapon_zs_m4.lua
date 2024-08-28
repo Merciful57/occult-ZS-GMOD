@@ -29,6 +29,9 @@ SWEP.Primary.Damage = 38
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.11
 
+SWEP.Pierces = 4
+SWEP.Penetration = 0.6
+
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "ar2"
