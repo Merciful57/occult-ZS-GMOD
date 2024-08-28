@@ -20,6 +20,8 @@ SWEP.Base = "weapon_zs_base"
 
 SWEP.HoldType = "ar2"
 
+SWEP.HeadshotMulti = 3
+
 SWEP.ViewModel = "models/weapons/cstrike/c_rif_aug.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_aug.mdl"
 SWEP.UseHands = true
