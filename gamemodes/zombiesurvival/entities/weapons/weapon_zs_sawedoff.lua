@@ -67,7 +67,7 @@ SWEP.ReloadPlugSound = Sound("Weapon_Shotgun.Reload")
 
 SWEP.ConeMax = 9
 SWEP.ConeMin = 7.75
-SWEP.Recoil = 7.5
+SWEP.Recoil = 0
 
 SWEP.WalkSpeed = SPEED_SLOWER
 SWEP.ReloadSpeed = 0.6
