@@ -37,7 +37,7 @@ SWEP.ConeMax = 2.5
 SWEP.ConeMin = 1.25
 
 SWEP.ReloadSpeed = 0.75
-SWEP.HeadshotMulti = 2
+SWEP.HeadshotMulti = 2.6
 
 SWEP.Tier = 2
 
