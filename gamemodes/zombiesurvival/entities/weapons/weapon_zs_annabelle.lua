@@ -30,6 +30,9 @@ SWEP.Primary.Damage = 74
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.9
 
+SWEP.Pierces = 4
+SWEP.Penetration = 0.3
+
 SWEP.ReloadDelay = 0.4
 
 SWEP.Primary.ClipSize = 5
