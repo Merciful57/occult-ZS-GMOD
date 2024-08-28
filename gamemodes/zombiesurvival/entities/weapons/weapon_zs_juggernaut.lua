@@ -39,8 +39,8 @@ SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_AR2
 
 SWEP.Recoil = 4
 
-SWEP.ConeMax = 6
-SWEP.ConeMin = 2.4
+SWEP.ConeMax = 16
+SWEP.ConeMin = 0.01
 
 SWEP.WalkSpeed = SPEED_SLOWEST
 
