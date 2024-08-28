@@ -64,7 +64,6 @@ SWEP.FireAnimSpeed = 1.35
 SWEP.ReloadSpeed = 0.43
 
 SWEP.Tier = 5
-SWEP.MaxStock = 2
 
 GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_CLIP_SIZE, 1, 1)
 
