@@ -31,6 +31,8 @@ SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.62
 SWEP.Primary.KnockbackScale = 2
 
+SWEP.HeadshotMulti = 3
+
 SWEP.Primary.ClipSize = 7
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "pistol"
