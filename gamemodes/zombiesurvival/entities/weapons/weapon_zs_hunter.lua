@@ -30,6 +30,9 @@ SWEP.Base = "weapon_zs_base"
 
 SWEP.HoldType = "ar2"
 
+SWEP.Pierces = 10
+SWEP.Penetration = 1
+
 SWEP.ViewModel = "models/weapons/cstrike/c_snip_awp.mdl"
 SWEP.WorldModel = "models/weapons/w_snip_awp.mdl"
 SWEP.UseHands = true
