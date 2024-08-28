@@ -19,6 +19,8 @@ SWEP.Base = "weapon_zs_base"
 
 SWEP.HoldType = "smg"
 
+SWEP.HeadshotMulti = 2.6
+
 SWEP.ViewModel = "models/weapons/cstrike/c_smg_p90.mdl"
 SWEP.WorldModel = "models/weapons/w_smg_p90.mdl"
 SWEP.UseHands = true
