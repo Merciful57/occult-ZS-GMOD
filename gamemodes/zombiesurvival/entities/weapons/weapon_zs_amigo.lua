@@ -31,7 +31,7 @@ SWEP.Primary.Damage = 18.5
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.15
 
-SWEP.Primary.ClipSize = 25
+SWEP.Primary.ClipSize = 20
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "ar2"
 GAMEMODE:SetupDefaultClip(SWEP.Primary)
