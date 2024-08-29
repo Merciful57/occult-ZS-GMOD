@@ -445,9 +445,15 @@ GM:AddPointShopItem("opsmatrix",		ITEMCAT_TRINKETS,		50,				"trinket_opsmatrix")
 GM:AddPointShopItem("supasm",			ITEMCAT_TRINKETS,		70,				"trinket_supasm").SubCategory =									ITEMSUBCAT_TRINKETS_OFFENSIVE
 GM:AddPointShopItem("pulseimpedance",	ITEMCAT_TRINKETS,		70,				"trinket_pulseimpedance").SubCategory =							ITEMSUBCAT_TRINKETS_OFFENSIVE
 
+item =
 GM:AddPointShopItem("cans",			ITEMCAT_OTHER,			16,				"weapon_zs_can_small")
+item.CanMakeFromScrap = true
+item =
 GM:AddPointShopItem("canm",			ITEMCAT_OTHER,			64,				"weapon_zs_can_medium")
+item.CanMakeFromScrap = true
+item =
 GM:AddPointShopItem("canl",			ITEMCAT_OTHER,			92	,				"weapon_zs_can_large")
+item.CanMakeFromScrap = true
 GM:AddPointShopItem("flashbomb",		ITEMCAT_OTHER,			5,				"weapon_zs_flashbomb")
 GM:AddPointShopItem("molotov",			ITEMCAT_OTHER,			15,				"weapon_zs_molotov")
 GM:AddPointShopItem("grenade",			ITEMCAT_OTHER,			15,				"weapon_zs_grenade")
