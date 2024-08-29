@@ -853,8 +853,10 @@ function GM:HumanHUD(screenscale)
 		draw_SimpleTextBlurry(translate.Format("giving_items_to", lockon:Name()), "ZSHUDFontSmall", w * 0.5, h * 0.55 + txth, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 
-	if gamemode.Call("PlayerCanPurchase", MySelf) and MySelf:GetZSRemortLevel() < 1 then
+	if MySelf:GetZSRemortLevel() < 1 and not MySelf:IsCarrying() then --8/29
 		draw_SimpleTextBlurry(translate.Get("press_f2_for_the_points_shop"), "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	elseif MySelf:GetZSRemortLevel() < 1 and MySelf:IsCarrying() then
+		draw_SimpleTextBlurry("Props follow your mouse, rotate them with alt, snap them to the grid with alt+Shift.", "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 
 	if MySelf:GetZSRemortLevel() < 1 then --8/29
