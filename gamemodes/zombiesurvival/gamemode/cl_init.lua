@@ -866,7 +866,7 @@ function GM:HumanHUD(screenscale)
 						draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
 					end
 					if MySelf:GetAmmoCount("Scrap") > 7 then
-						draw_SimpleTextBlurry("Press F2 and Go to Remantler > Scrap Shop to buy ammo.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+						draw_SimpleTextBlurry("Press F2 and Go to Remantler > Scrap Shop to get your starting ammo.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
 					end
 				end
 			end
