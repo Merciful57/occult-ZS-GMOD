@@ -862,10 +862,10 @@ function GM:HumanHUD(screenscale)
 				end
 				
 				if not MySelf:GetActiveWeapon().MeleeDamage then
-					if MySelf:GetAmmoCount("Scrap") < 8 then
+					if MySelf:GetAmmoCount("Scrap") > 50 or MySelf:GetAmmoCount("Scrap") < 50 then
 						draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
 					end
-					if MySelf:GetAmmoCount("Scrap") > 7 then
+					if MySelf:GetAmmoCount("Scrap") == 50 then
 						draw_SimpleTextBlurry("Press F2 and Go to Remantler > Scrap Shop to get your starting ammo.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
 					end
 				end
