@@ -853,18 +853,35 @@ function GM:HumanHUD(screenscale)
 		draw_SimpleTextBlurry(translate.Format("giving_items_to", lockon:Name()), "ZSHUDFontSmall", w * 0.5, h * 0.55 + txth, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 
-	if MySelf:GetZSRemortLevel() < 1 and not MySelf:IsCarrying() then --8/29
-		draw_SimpleTextBlurry(translate.Get("press_f2_for_the_points_shop"), "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
-	elseif MySelf:GetZSRemortLevel() < 1 and MySelf:IsCarrying() then
-		draw_SimpleTextBlurry("Props follow your mouse, rotate them with alt, snap them to the grid with alt+Shift.", "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
-	end
-
-	if MySelf:GetZSRemortLevel() < 1 and not MySelf:IsCarrying() and not MySelf:GetActiveWeapon().HealStrength then --8/29
-		draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
-	elseif MySelf:GetZSRemortLevel() < 1 and MySelf:IsCarrying() and not MySelf:GetActiveWeapon().HealStrength then
-		draw_SimpleTextBlurry("Props can be nailed with a hammer, buy a hammer and some nails in F2.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
-	elseif MySelf:GetZSRemortLevel() < 1 and MySelf:GetActiveWeapon().HealStrength then
-		draw_SimpleTextBlurry("Left click to repair, right click to nail props, R to unnail.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	if MySelf:GetZSRemortLevel() < 1 then 
+		if not MySelf:IsCarrying() then
+				draw_SimpleTextBlurry(translate.Get("press_f2_for_the_points_shop"), "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
+			if not MySelf:GetActiveWeapon().HealStrength then
+				if MySelf:GetActiveWeapon().MeleeDamage then
+					draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+				end
+				
+				if not MySelf:GetActiveWeapon().MeleeDamage then
+					if MySelf:GetAmmoCount("Scrap") < 8 then
+						draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+					end
+					if MySelf:GetAmmoCount("Scrap") > 7 then
+						draw_SimpleTextBlurry("Press F2 and Go to Remantler > Scrap Shop to buy ammo.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+					end
+				end
+			end
+		end
+		
+		if MySelf:IsCarrying() then
+			draw_SimpleTextBlurry("Props follow your mouse, rotate them with alt, snap them to the grid with alt+Shift.", "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
+			if not MySelf:GetActiveWeapon().HealStrength then
+				draw_SimpleTextBlurry("Props can be nailed with a hammer, buy a hammer and some nails in F2.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+			end
+		end
+		
+		if MySelf:GetActiveWeapon().HealStrength then 
+			draw_SimpleTextBlurry("Left click to repair, right click to nail props, R to unnail.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		end
 	end
 	
 end
