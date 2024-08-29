@@ -859,8 +859,12 @@ function GM:HumanHUD(screenscale)
 		draw_SimpleTextBlurry("Props follow your mouse, rotate them with alt, snap them to the grid with alt+Shift.", "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 
-	if MySelf:GetZSRemortLevel() < 1 then --8/29
+	if MySelf:GetZSRemortLevel() < 1 and not MySelf:IsCarrying() and not MySelf:GetActiveWeapon().HealStrength then --8/29
 		draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	elseif MySelf:GetZSRemortLevel() < 1 and MySelf:IsCarrying() and not MySelf:GetActiveWeapon().HealStrength then
+		draw_SimpleTextBlurry("Props can be nailed with a hammer, buy a hammer and some nails in F2.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	elseif MySelf:GetZSRemortLevel() < 1 and MySelf:GetActiveWeapon().HealStrength then
+		draw_SimpleTextBlurry("Left click to repair, right click to nail props, R to unnail.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 	
 end
