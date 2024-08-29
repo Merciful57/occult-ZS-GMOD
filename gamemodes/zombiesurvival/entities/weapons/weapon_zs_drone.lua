@@ -50,8 +50,6 @@ SWEP.ResupplyAmmoType = "smg1"
 
 SWEP.WalkSpeed = SPEED_FAST
 
-SWEP.MaxStock = 6
-
 SWEP.DeployClass = "prop_drone"
 SWEP.DeployAmmoType = "smg1"
 
