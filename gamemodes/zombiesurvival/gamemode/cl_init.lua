@@ -1003,6 +1003,12 @@ function GM:ZombieHUD()
 			end
 		end
 	end
+	
+	if MySelf:GetZSRemortLevel() < 1 then 
+		local x = ScrW() * 0.5
+		local y = ScrH() * 0.8
+		draw_SimpleTextBlurry("Type !human in chat to change teams.", "ZSHUDFontSmall", x, y, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	end
 end
 
 function GM:RequestedDefaultCart()
