@@ -88,6 +88,8 @@ SWEP.Primary.Damage = 32
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.1
 
+SWEP.HeadshotMulti = 3
+
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
 SWEP.Primary.Ammo = "ar2"
