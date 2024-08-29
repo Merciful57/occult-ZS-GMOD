@@ -1,4 +1,4 @@
-SWEP.PrintName = "Flash Bomb"
+SWEP.PrintName = "'Flash' Grenade"
 SWEP.Description = "Deals no damage but stuns all zombies around the flash, especially if they're looking at it."
 
 SWEP.Base = "weapon_zs_basethrown"
