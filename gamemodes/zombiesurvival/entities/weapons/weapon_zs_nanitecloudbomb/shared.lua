@@ -1,4 +1,4 @@
-SWEP.PrintName = "Nanite Cloud Bomb"
+SWEP.PrintName = "'Nanite' Repair Grenade"
 SWEP.Description = "Explodes in to a cloud of nanites. Heals all props and deployables in the radius."
 
 SWEP.Base = "weapon_zs_basethrown"
