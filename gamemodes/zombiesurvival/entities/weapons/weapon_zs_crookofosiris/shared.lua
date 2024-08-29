@@ -47,8 +47,8 @@ SWEP.Tier = 6
 SWEP.MaxStock = 1
 
 SWEP.AllowQualityWeapons = true
-
-GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.01)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_FIRE_DELAY, -0.08, 1)
+GAMEMODE:AttachWeaponModifier(SWEP, WEAPON_MODIFIER_MELEE_RANGE, 3, 1)
 
 function SWEP:PlaySwingSound()
 	self:EmitSound("weapons/osiris/axe_swing_miss"..math.random(1, 2)..".wav", 90, 135)
