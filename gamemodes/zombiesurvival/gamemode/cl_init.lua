@@ -856,7 +856,7 @@ function GM:HumanHUD(screenscale)
 	end
 
 	if MySelf:GetZSRemortLevel() < 1 then --8/29
-		draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 835, COLOR_GRAY, TEXT_ALIGN_CENTER)
+		draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 805, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
 	
 end
