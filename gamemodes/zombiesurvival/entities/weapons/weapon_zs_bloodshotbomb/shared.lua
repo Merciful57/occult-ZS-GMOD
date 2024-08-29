@@ -1,4 +1,4 @@
-SWEP.PrintName = "Bloodshot Bomb"
+SWEP.PrintName = "'Bloodshot' Armor Grenade"
 SWEP.Description = "A cloud of strength and defence boosting gas affecting all humans in the radius, also providing a small amount of blood armor."
 
 SWEP.Base = "weapon_zs_basethrown"
