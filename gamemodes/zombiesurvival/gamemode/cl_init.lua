@@ -854,6 +854,11 @@ function GM:HumanHUD(screenscale)
 	if gamemode.Call("PlayerCanPurchase", MySelf) and MySelf:GetZSRemortLevel() < 1 then
 		draw_SimpleTextBlurry(translate.Get("press_f2_for_the_points_shop"), "ZSHUDFontSmall", w * 0.5, screenscale * 135, COLOR_GRAY, TEXT_ALIGN_CENTER)
 	end
+
+	if MySelf:GetZSRemortLevel() < 1 then --8/29
+		draw_SimpleTextBlurry("Hold Z while walking to go through nailed props.", "ZSHUDFontSmall", w * 0.5, screenscale * 835, COLOR_GRAY, TEXT_ALIGN_CENTER)
+	end
+	
 end
 
 function GM:_HUDPaint()
