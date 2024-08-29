@@ -136,41 +136,41 @@ GM.AmmoResupply = table.ToAssoc({"ar2", "pistol", "smg1", "357", "xbowbolt", "bu
 -- Scrap --
 -----------
 item =
-GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			60,				"weapon_zs_resupplybox")
+GM:AddStartingItem("resupplybox",		ITEMCAT_TOOLS,			15,				"weapon_zs_resupplybox")
 item.Countables = "prop_resupplybox"
 item.CanMakeFromScrap = true
 item =
 GM:AddStartingItem("nail",				ITEMCAT_AMMO,			4,				nil,							"10 Nails",							"It's just 10 nails.",					"ammo_nail",						function(pl) pl:GiveAmmo(10, "GaussEnergy", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("pistolammo",		ITEMCAT_AMMO,			16,				nil,							"16 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(16, "pistol", true) end)
+GM:AddStartingItem("pistolammo",		ITEMCAT_AMMO,			4,				nil,							"16 pistol ammo",				nil,									"ammo_pistol",						function(pl) pl:GiveAmmo(16, "pistol", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("shotgunammo",		ITEMCAT_AMMO,			16,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)
+GM:AddStartingItem("shotgunammo",		ITEMCAT_AMMO,			4,				nil,							"12 shotgun ammo",				nil,									"ammo_shotgun",						function(pl) pl:GiveAmmo(12, "buckshot", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("smgammo",			ITEMCAT_AMMO,			16,				nil,							"36 SMG ammo",					nil,									"ammo_smg",							function(pl) pl:GiveAmmo(36, "smg1", true) end)
+GM:AddStartingItem("smgammo",			ITEMCAT_AMMO,			4,				nil,							"36 SMG ammo",					nil,									"ammo_smg",							function(pl) pl:GiveAmmo(36, "smg1", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("rifleammo",		ITEMCAT_AMMO,			16,				nil,							"8 rifle ammo",					nil,									"ammo_rifle",						function(pl) pl:GiveAmmo(8, "357", true) end)
+GM:AddStartingItem("rifleammo",		ITEMCAT_AMMO,			4,				nil,							"8 rifle ammo",					nil,									"ammo_rifle",						function(pl) pl:GiveAmmo(8, "357", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("crossbowammo",		ITEMCAT_AMMO,			16,				nil,							"8 crossbow bolts",				nil,									"ammo_bolts",						function(pl) pl:GiveAmmo(8,	"XBowBolt",	true) end)
+GM:AddStartingItem("crossbowammo",		ITEMCAT_AMMO,			4,				nil,							"8 crossbow bolts",				nil,									"ammo_bolts",						function(pl) pl:GiveAmmo(8,	"XBowBolt",	true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("assaultrifleammo",	ITEMCAT_AMMO,			16,				nil,							"32 assault rifle ammo",		nil,									"ammo_assault",						function(pl) pl:GiveAmmo(32, "ar2", true) end)
+GM:AddStartingItem("assaultrifleammo",	ITEMCAT_AMMO,			4,				nil,							"32 assault rifle ammo",		nil,									"ammo_assault",						function(pl) pl:GiveAmmo(32, "ar2", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("pulseammo",		ITEMCAT_AMMO,			16,				nil,							"30 pulse ammo",				nil,									"ammo_pulse",						function(pl) pl:GiveAmmo(30, "pulse", true) end)
+GM:AddStartingItem("pulseammo",		ITEMCAT_AMMO,			4,				nil,							"30 pulse ammo",				nil,									"ammo_pulse",						function(pl) pl:GiveAmmo(30, "pulse", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("impactmine",		ITEMCAT_AMMO,			16,				nil,							"3 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(3, "impactmine", true) end)
+GM:AddStartingItem("impactmine",		ITEMCAT_AMMO,			4,				nil,							"3 explosives",					nil,									"ammo_explosive",					function(pl) pl:GiveAmmo(3, "impactmine", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("chemical",			ITEMCAT_AMMO,			16,				nil,							"20 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(20, "chemical", true) end)
+GM:AddStartingItem("chemical",			ITEMCAT_AMMO,			4,				nil,							"20 chemical vials",			nil,									"ammo_chemical",					function(pl) pl:GiveAmmo(20, "chemical", true) end)
 item.CanMakeFromScrap = true
 item =
-GM:AddStartingItem("25mkit",			ITEMCAT_AMMO,			16,		nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
+GM:AddStartingItem("25mkit",			ITEMCAT_AMMO,			4,		nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
 item.CanMakeFromScrap = true
 
 ------------
