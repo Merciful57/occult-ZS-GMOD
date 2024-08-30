@@ -36,7 +36,7 @@ SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 SWEP.UseHands = true
 
 SWEP.MeleeDamage = 90
-SWEP.MeleeRange = 67
+SWEP.MeleeRange = 120
 SWEP.MeleeSize = 2.5
 
 SWEP.Primary.Delay = 1.25
