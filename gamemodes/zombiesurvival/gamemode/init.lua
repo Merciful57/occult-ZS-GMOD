@@ -2725,7 +2725,6 @@ function GM:EntityTakeDamage(ent, dmginfo)
 	local dmg = dmginfo:GetDamage()
 	if dmg > 0 then
 		local holder, status = ent:GetHolder()
-		if holder and not holder.BuffTaut then status:Remove() end
 
 		local dmgpos = dmginfo:GetDamagePosition()
 		local hasdmgsess = attacker:IsPlayer() and attacker:HasDamageNumberSession()
