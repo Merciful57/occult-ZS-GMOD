@@ -462,7 +462,7 @@ function meta:DamageNails(attacker, inflictor, damage, dmginfo)
 
 	if self:GetBarricadeHealth() <= 0 then
 		if self:GetModel() ~= "" and self:GetModel() ~= "models/error.mdl" then
-			if self:GetName() == "" and self:GetVolume() < 100 then
+			if self:GetName() == "" then
 				self:Fire("break", "", 0.01)
 				self:Fire("kill", "", 0.05)
 			else
