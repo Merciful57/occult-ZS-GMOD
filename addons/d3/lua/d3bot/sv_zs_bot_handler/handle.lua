@@ -44,13 +44,15 @@ hook.Add("Think", D3bot.BotHooksId.."🤔", function()
 		if not D3bot.UseConsoleBots then
 			-- Hackish method to get bots back into game. (player.CreateNextBot created bots do not trigger the StartCommand hook while they are dead)
 			if not bot:OldAlive() then  
-				gamemode.Call("PlayerDeathThink", bot)
-				if (not bot.StartSpectating or bot.StartSpectating <= CurTime()) and not (GAMEMODE.RoundEnded or bot.Revive or bot.NextSpawnTime) and bot:GetObserverMode() ~= OBS_MODE_NONE then
-					if GAMEMODE:GetWaveActive() then
-						bot:RefreshDynamicSpawnPoint()
-						bot:UnSpectateAndSpawn()
-					else
-						bot:ChangeToCrow()
+				if bot.DeathTime + (8 - GAMEMODE:GetWave()) < CurTime() then
+					gamemode.Call("PlayerDeathThink", bot)
+					if (not bot.StartSpectating or bot.StartSpectating <= CurTime()) and not (GAMEMODE.RoundEnded or bot.Revive or bot.NextSpawnTime) and bot:GetObserverMode() ~= OBS_MODE_NONE then
+						if GAMEMODE:GetWaveActive() then
+							bot:RefreshDynamicSpawnPoint()
+							bot:UnSpectateAndSpawn()
+						else
+							bot:ChangeToCrow()
+						end
 					end
 				end
 			end

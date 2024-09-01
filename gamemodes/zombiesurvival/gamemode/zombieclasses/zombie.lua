@@ -237,6 +237,7 @@ if SERVER then
 		if ( suicide ) then return end
 		local newZKT = GetGlobalInt("ZombiesKilledTeam") or 0
 		SetGlobalInt("ZombiesKilledTeam", (newZKT + 1) )
+		pl.DeathTime = CurTime()
 	end
 end
 
