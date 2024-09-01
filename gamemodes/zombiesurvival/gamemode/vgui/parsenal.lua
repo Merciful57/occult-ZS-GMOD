@@ -86,6 +86,63 @@ local function ItemPanelThink(self)
 			end
 		end
 	end
+	
+	if self:IsHovered(self) then
+		if not GAMEMODE.AlwaysQuickBuy then return end
+		local shoptbl = self.ShopTabl
+		local viewer = self.NoPoints and GAMEMODE.RemantlerInterface.TrinketsFrame.Viewer or GAMEMODE.ArsenalInterface.Viewer
+
+		if not shoptbl then return end
+		local sweptable = GAMEMODE.ZSInventoryItemData[shoptbl.SWEP] or weapons.Get(shoptbl.SWEP)
+
+		if not sweptable then return end
+
+		for _, v in pairs(self:GetParent():GetChildren()) do
+			v.On = false
+		end
+		self.On = true
+
+		GAMEMODE:SupplyItemViewerDetail(viewer, sweptable, shoptbl)
+
+		local screenscale = BetterScreenScale()
+		local canammo = GAMEMODE:HasPurchaseableAmmo(sweptable)
+
+		local purb = viewer.m_PurchaseB
+		purb.ID = self.ID
+		purb.DoClick = function() RunConsoleCommand("zs_pointsshopbuy", self.ID, self.NoPoints and "scrap") end
+		purb:SetPos(canammo and viewer:GetWide() / 4 - viewer:GetWide() / 8 - 20 or viewer:GetWide() / 4, viewer:GetTall() - 64 * screenscale)
+		purb:SetVisible(true)
+
+		local purl = viewer.m_PurchaseLabel
+		purl:SetPos(purb:GetWide() / 2 - purl:GetWide() / 2, purb:GetTall() * 0.35 - purl:GetTall() * 0.5)
+		purl:SetVisible(true)
+
+		local ppurbl = viewer.m_PurchasePrice
+		local price = self.NoPoints and math.ceil(GAMEMODE:PointsToScrap(shoptbl.Worth)) or math.floor(shoptbl.Worth * (MySelf.ArsenalDiscount or 1))
+		ppurbl:SetText(price .. (self.NoPoints and " Scrap" or " Points"))
+		ppurbl:SizeToContents()
+		ppurbl:SetPos(purb:GetWide() / 2 - ppurbl:GetWide() / 2, purb:GetTall() * 0.75 - ppurbl:GetTall() * 0.5)
+		ppurbl:SetVisible(true)
+
+		purb = viewer.m_AmmoB
+		if canammo then
+			purb.AmmoType = GAMEMODE.AmmoToPurchaseNames[sweptable.Primary.Ammo]
+			purb.DoClick = function() RunConsoleCommand("zs_pointsshopbuy", "ps_"..purb.AmmoType) end
+		end
+		purb:SetPos(viewer:GetWide() * (3/4) - purb:GetWide() / 2, viewer:GetTall() - 64 * screenscale)
+		purb:SetVisible(canammo)
+
+		purl = viewer.m_AmmoL
+		purl:SetPos(purb:GetWide() / 2 - purl:GetWide() / 2, purb:GetTall() * 0.35 - purl:GetTall() * 0.5)
+		purl:SetVisible(canammo)
+
+		ppurbl = viewer.m_AmmoPrice
+		price = math.floor(8 * (MySelf.ArsenalDiscount or 1))
+		ppurbl:SetText(price .. " Points")
+		ppurbl:SizeToContents()
+		ppurbl:SetPos(purb:GetWide() / 2 - ppurbl:GetWide() / 2, purb:GetTall() * 0.75 - ppurbl:GetTall() * 0.5)
+		ppurbl:SetVisible(canammo)
+	end
 end
 
 local colBG = Color(20, 20, 20)
