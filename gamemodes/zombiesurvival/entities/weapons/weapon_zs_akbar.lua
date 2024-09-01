@@ -30,8 +30,8 @@ SWEP.Primary.Damage = 22
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 0.17
 
-SWEP.Pierces = 10
-SWEP.Penetration = 1
+SWEP.Pierces = 5
+SWEP.Penetration = 0.6
 
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Automatic = true
