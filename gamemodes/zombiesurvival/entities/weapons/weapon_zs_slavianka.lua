@@ -26,7 +26,7 @@ SWEP.UseHands = true
 
 SWEP.ReloadSound = Sound("weapons/tfa_tannenberg_mosin_nagant_1891/kar98_magin.wav")
 SWEP.Primary.Sound = Sound("weapons/tfa_tannenberg_mosin_nagant_1891/mosin1891_fp.wav")
-SWEP.Primary.Damage = 25
+SWEP.Primary.Damage = 65
 SWEP.Primary.NumShots = 1
 SWEP.Primary.Delay = 2
 SWEP.ReloadDelay = 0.7
