@@ -53,12 +53,6 @@ function MakepOptions()
 	list:AddItem(check)
 
 	check = vgui.Create("DCheckBoxLabel", Window)
-	check:SetText("Always quick buy from arsenal and remantler")
-	check:SetConVar("zs_alwaysquickbuy")
-	check:SizeToContents()
-	list:AddItem(check)
-
-	check = vgui.Create("DCheckBoxLabel", Window)
 	check:SetText("Automatic suicide when changing classes")
 	check:SetConVar("zs_suicideonchange")
 	check:SizeToContents()
