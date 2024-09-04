@@ -3592,6 +3592,8 @@ VoiceSetTranslate["models/player/dewobedil/touhou/junko/default_p.mdl"] = VOICES
 function GM:PlayerSpawn(pl)
 	pl:ConCommand("zs_noironsights 1")
 	pl:ConCommand("zs_weaponhudmode 1.00")
+	pl:ConCommand("zs_alwaysquickbuy 1")
+
 	
 	pl:StripWeapons()
 	pl:WipePlayerInventory()
