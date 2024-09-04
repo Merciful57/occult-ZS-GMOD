@@ -368,6 +368,9 @@ function GM:ShowTeam(pl)
 	if pl:Team() == TEAM_HUMAN and not self.ZombieEscape then
 		pl:SendLua(self:GetWave() > 0 and "GAMEMODE:OpenArsenalMenu()" or "GAMEMODE:OpenArsenalMenu()")
 	end
+	if pl:Team() == TEAM_UNDEAD and not self.ZombieEscape then
+		pl:SendLua(self:GetWave() > 0 and "GAMEMODE:OpenZArsenalMenu()" or "GAMEMODE:OpenZArsenalMenu()")--8/31
+	end
 end
 
 function GM:ShowSpare1(pl)
