@@ -119,7 +119,7 @@ local function ItemPanelThink(self)
 
 		local ppurbl = viewer.m_PurchasePrice
 		local price = self.NoPoints and math.ceil(GAMEMODE:PointsToScrap(shoptbl.Worth)) or math.floor(shoptbl.Worth * (MySelf.ArsenalDiscount or 1))
-		ppurbl:SetText(price .. (self.NoPoints and " Scrap" or " Points"))
+		ppurbl:SetText(price .. (self.NoPoints and " Scrap" or " Silver"))
 		ppurbl:SizeToContents()
 		ppurbl:SetPos(purb:GetWide() / 2 - ppurbl:GetWide() / 2, purb:GetTall() * 0.75 - ppurbl:GetTall() * 0.5)
 		ppurbl:SetVisible(true)
@@ -138,7 +138,7 @@ local function ItemPanelThink(self)
 
 		ppurbl = viewer.m_AmmoPrice
 		price = math.floor(8 * (MySelf.ArsenalDiscount or 1))
-		ppurbl:SetText(price .. " Points")
+		ppurbl:SetText(price .. " Silver")
 		ppurbl:SizeToContents()
 		ppurbl:SetPos(purb:GetWide() / 2 - ppurbl:GetWide() / 2, purb:GetTall() * 0.75 - ppurbl:GetTall() * 0.5)
 		ppurbl:SetVisible(canammo)
