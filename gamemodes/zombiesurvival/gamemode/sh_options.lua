@@ -94,6 +94,16 @@ function GM:AddPointShopItem(signature, category, price, swep, name, desc, model
 	return item
 end
 
+function GM:AddZPointShopItem(signature, category, price, swep, name, desc, model, callback)
+	local int = GetGlobalInt(signature)
+	local price = (int * int)
+	local item = self:AddItem(signature, category, price, swep, name, desc, model, callback)
+	item.PointShop = true
+	
+	
+	return item
+end
+
 -- How much ammo is considered one 'clip' of ammo? For use with setting up weapon defaults. Works directly with zs_survivalclips
 GM.AmmoCache = {}
 GM.AmmoCache["ar2"]							= 48		-- Assault rifles.
