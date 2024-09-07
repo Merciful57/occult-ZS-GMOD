@@ -183,6 +183,25 @@ item =
 GM:AddStartingItem("25mkit",			ITEMCAT_AMMO,			4,		nil,							"25 Medical Kit power",			"25 extra power for the Medical Kit.",	"ammo_medpower",					function(pl) pl:GiveAmmo(25, "Battery", true) end)
 item.CanMakeFromScrap = true
 
+-----------
+-- Zombie Shit --
+-----------
+
+-- traits
+GM:AddZPointShopItem("Damage gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
+GM:AddZPointShopItem("Damage gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
+GM:AddZPointShopItem("Swing speed gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
+GM:AddZPointShopItem("Swing speed per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
+
+GM:AddZPointShopItem("HP gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_waveofdeath").SubCategory =								ITEMSUBCAT_ZTRINKETS_DEFENSIVE
+GM:AddZPointShopItem("HP gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_vengeance").SubCategory =								ITEMSUBCAT_ZTRINKETS_DEFENSIVE
+
+GM:AddZPointShopItem("Move speed gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_rulenumber1").SubCategory =								ITEMSUBCAT_ZTRINKETS_PERFORMANCE
+GM:AddZPointShopItem("Move speed gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_deathdodging").SubCategory =								ITEMSUBCAT_ZTRINKETS_PERFORMANCE
+GM:AddZPointShopItem("Reach gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_hellronin").SubCategory =								ITEMSUBCAT_ZTRINKETS_PERFORMANCE
+GM:AddZPointShopItem("Reach gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_crowdsurfing").SubCategory =								ITEMSUBCAT_ZTRINKETS_PERFORMANCE
+--abilities
+
 ------------
 -- Points --
 ------------
