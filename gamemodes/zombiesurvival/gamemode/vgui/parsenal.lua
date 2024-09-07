@@ -1,3 +1,5 @@
+--if pl:Team() == TEAM_UNDEAD then return end
+
 local function pointslabelThink(self)
 	local points = MySelf:GetPoints()
 	if self.m_LastPoints ~= points then
@@ -119,7 +121,7 @@ local function ItemPanelThink(self)
 
 		local ppurbl = viewer.m_PurchasePrice
 		local price = self.NoPoints and math.ceil(GAMEMODE:PointsToScrap(shoptbl.Worth)) or math.floor(shoptbl.Worth * (MySelf.ArsenalDiscount or 1))
-		ppurbl:SetText(price .. (self.NoPoints and " Scrap" or " Silver"))
+		ppurbl:SetText(price .. (self.NoPoints and " Scrap" or " Silver")) --9/4
 		ppurbl:SizeToContents()
 		ppurbl:SetPos(purb:GetWide() / 2 - ppurbl:GetWide() / 2, purb:GetTall() * 0.75 - ppurbl:GetTall() * 0.5)
 		ppurbl:SetVisible(true)
@@ -138,7 +140,7 @@ local function ItemPanelThink(self)
 
 		ppurbl = viewer.m_AmmoPrice
 		price = math.floor(8 * (MySelf.ArsenalDiscount or 1))
-		ppurbl:SetText(price .. " Silver")
+		ppurbl:SetText(price .. " Silver") --9/4
 		ppurbl:SizeToContents()
 		ppurbl:SetPos(purb:GetWide() / 2 - ppurbl:GetWide() / 2, purb:GetTall() * 0.75 - ppurbl:GetTall() * 0.5)
 		ppurbl:SetVisible(canammo)
@@ -409,6 +411,7 @@ function GM:AddShopItem(list, i, tab, issub, nopointshop)
 	itempan.Think = ItemPanelThink
 	itempan.Paint = ItemPanelPaint
 	itempan.DoClick = ItemPanelDoClick
+	itempan.OnCursorEntered = ItemPanelOnCursorEntered
 	itempan.DoRightClick = function()
 		local menu = DermaMenu(itempan)
 		menu:AddOption("Buy", function() RunConsoleCommand("zs_pointsshopbuy", itempan.ID, itempan.NoPoints and "scrap") end)
@@ -442,15 +445,24 @@ function GM:AddShopItem(list, i, tab, issub, nopointshop)
 		local counter = vgui.Create("ItemAmountCounter", itempan)
 		counter:SetItemID(i)
 	end
-
-	local name = tab.Name or ""
-	local namelab = EasyLabel(itempan, name, "ZSHUDFontSmaller", COLOR_WHITE)
-	namelab:SetPos(12 * screenscale, itempan:GetTall() * (nottrinkets and 0.8 or 0.7) - namelab:GetTall() * 0.5)
-	if missing_skill then
-		namelab:SetAlpha(30)
+	
+	if tab.Category == ITEMCAT_ZTRINKETS then
+		local nameint = GetGlobalInt('tab.Signature')
+		--local name = tab.Signature.." "..nameint
+		local name = tab.Signature
+		local namelab = EasyLabel(itempan, name, "ZSHUDFontSmaller", COLOR_WHITE)
+		namelab:SetPos(12 * screenscale, itempan:GetTall() * (0.7) - namelab:GetTall() * 1.5)
+		itempan.NameLabel = namelab
+	else
+		local name = tab.Name or ""
+		local namelab = EasyLabel(itempan, name, "ZSHUDFontSmaller", COLOR_WHITE)
+		namelab:SetPos(12 * screenscale, itempan:GetTall() * (nottrinkets and 0.8 or 0.7) - namelab:GetTall() * 0.5)
+		if missing_skill then
+			namelab:SetAlpha(30)
+		end
+		itempan.NameLabel = namelab
 	end
-	itempan.NameLabel = namelab
-
+	
 	local alignri = (issub and (320 + 32) or (nopointshop and 32 or 20)) * screenscale
 
 	local pricelabel = EasyLabel(itempan, "", "ZSHUDFontTiny")
@@ -463,7 +475,12 @@ function GM:AddShopItem(list, i, tab, issub, nopointshop)
 		if nopointshop then
 			price = tostring(math.ceil(self:PointsToScrap(tab.Price)))
 		end
-		pricelabel:SetText(price..(nopointshop and " Scrap" or " Silver"))
+		if tab.Category == ITEMCAT_ZTRINKETS then
+			local price = price / 2
+			pricelabel:SetText(price..(" Silver"))
+		else
+			pricelabel:SetText(price..(nopointshop and " Scrap" or " Silver"))
+		end
 	end
 	pricelabel:SizeToContents()
 	pricelabel:AlignRight(alignri)
