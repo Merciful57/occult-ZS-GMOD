@@ -796,7 +796,8 @@ function GM:OpenArsenalMenu()
 	for catid, catname in ipairs(GAMEMODE.ItemCategories) do
 		local hasitems = false
 		for i, tab in ipairs(GAMEMODE.Items) do
-			if tab.Category == catid and tab.PointShop then
+			if tab.Category == catid and tab.PointShop and not (tab.Category == 9 or tab.Category == 10) then
+				
 				hasitems = true
 				break
 			end
@@ -862,7 +863,7 @@ function GM:OpenArsenalMenu()
 			sheet.Panel:SetPos(0, tabhei + 2)
 
 			for i, tab in ipairs(GAMEMODE.Items) do
-				if tab.PointShop and tab.Category == catid then
+				if tab.PointShop and tab.Category == catid and not (tab.Category == 9 or tab.Category == 10) then
 					self:AddShopItem(
 						trinkets and tabpane.Grids[tab.SubCategory] or tabpane.Grid or tabpane.Grids[tab.Tier or 1],
 						i, tab
