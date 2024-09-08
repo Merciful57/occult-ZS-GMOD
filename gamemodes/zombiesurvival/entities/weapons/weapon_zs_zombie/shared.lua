@@ -116,7 +116,13 @@ function SWEP:Swung()
 	local owner = self:GetOwner()
 
 	local hit = false
-	local traces = owner:CompensatedZombieMeleeTrace(self.MeleeReach, self.MeleeSize)
+
+	local REACHDEATHMULTI = (((GetGlobalInt("Reach gain per death"))/100) * (GetGlobalInt("ZombiesKilledTeam")))
+	local REACHWAVEMULTI = ((GetGlobalInt("Reach gain per wave")) * (GAMEMODE:GetWave()))
+	
+	local reachmod = self.MeleeReach + REACHDEATHMULTI + REACHWAVEMULTI
+	
+	local traces = owner:CompensatedZombieMeleeTrace(reachmod, self.MeleeSize)
 	local prehit = self.PreHit
 	if prehit then
 		local ins = true
@@ -128,17 +134,31 @@ function SWEP:Swung()
 		end
 		if ins then
 			local eyepos = owner:EyePos()
-			if prehit.Entity:IsValid() and prehit.Entity:NearestPoint(eyepos):DistToSqr(eyepos) <= self.MeleeReach * self.MeleeReach then
+			if prehit.Entity:IsValid() and prehit.Entity:NearestPoint(eyepos):DistToSqr(eyepos) <= reachmod * reachmod then
 				table.insert(traces, prehit)
 			end
 		end
 		self.PreHit = nil
 	end
 
-	local damage = (self:GetDamage(self:GetTracesNumPlayers(traces)) * GAMEMODE:GetWave() )
+	local damage = (self:GetDamage(self:GetTracesNumPlayers(traces)))
 	local effectdata = EffectData()
 	local ent
 
+	if self:GetOwner():IsBot() then 
+		local BASEBOTDMG = (10 * GAMEMODE:GetWave())		
+		damage = (BASEBOTDMG)
+	else
+		local BASEPLAYERDMG = (10 * GAMEMODE:GetWave())
+		local DMGWAVEMULTI = (GetGlobalInt("Damage gain per wave") * (GAMEMODE:GetWave()))
+		local DMGDEATHMULTI = (((GetGlobalInt("Damage gain per death"))/10) * ((GetGlobalInt("ZombiesKilledTeam"))/100))
+		damage = (BASEPLAYERDMG + DMGDEATHMULTI + DMGWAVEMULTI)
+		if damage < 1 then
+			damage = 10
+		end
+	end
+	
+	
 	for _, trace in ipairs(traces) do
 		if not trace.Hit then continue end
 
@@ -357,7 +377,12 @@ function SWEP:StartSwinging()
 	if self.MeleeDelay > 0 then
 		self:SetSwingEndTime(CurTime() + self.MeleeDelay * armdelay)
 
-		local trace = owner:CompensatedMeleeTrace(self.MeleeReach, self.MeleeSize)
+		local REACHDEATHMULTI = (((GetGlobalInt("Reach gain per death"))/100) * (GetGlobalInt("ZombiesKilledTeam")))
+		local REACHWAVEMULTI = ((GetGlobalInt("Reach gain per wave")) * (GAMEMODE:GetWave()))
+		
+		local reachmod = self.MeleeReach + REACHDEATHMULTI + REACHWAVEMULTI
+
+		local trace = owner:CompensatedMeleeTrace(reachmod, self.MeleeSize)
 		if trace.HitNonWorld and not trace.Entity:IsPlayer() then
 			trace.IsPreHit = true
 			self.PreHit = trace
@@ -395,7 +420,21 @@ end
 
 function SWEP:Deploy()
 	self.IdleAnimation = CurTime() + self:SequenceDuration()
-
+	
+	--[[
+	if self:GetOwner():IsBot() then 
+		local poop = shit
+	else
+		local HUMANBASEREACH = 40
+		local HUMANBASEDELAY = 0.74
+		local REACHDEATHMULTI = (((GetGlobalInt("Reach gain per death"))/100) * (GetGlobalInt("ZombiesKilledTeam")))
+		local REACHWAVEMULTI = ((GetGlobalInt("Reach gain per wave")) * (GAMEMODE:GetWave()))
+		self.MeleeReach = 99999999
+		--self.MeleeReach = ( HUMANBASEREACH + REACHDEATHMULTI + REACHWAVEMULTI )
+		--self.MeleeDelay = 0
+	end
+	]]
+	
 	if self.DelayWhenDeployed and self.Primary.Delay > 0 then
 		self:SetNextPrimaryFire(CurTime() + self.Primary.Delay)
 		self:SetNextSecondaryFire(self:GetNextPrimaryFire() + 0.5)

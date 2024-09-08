@@ -212,19 +212,40 @@ if SERVER then
 	end
 	
 	function CLASS:OnSpawned(pl)
-		local ZKTHealthCalc = ( ( 50 + ( 50 * (GAMEMODE:GetWave() ) + (GetGlobalInt("ZombiesKilledTeam") or 0 ) ) ) )
-		pl:SetHealth(ZKTHealthCalc)
-		pl:SetMaxHealth(ZKTHealthCalc)
-		pl:SetSpeed( (160 + (20 * GAMEMODE:GetWave()) ) )
-
-		if GAMEMODE:GetWave() > 1 then
-			pl:StripWeapons()
-			pl:Give("weapon_zs_fleshcreeper")
+		if pl:IsBot() then
+			local ZKTHealthCalc = ( ( 50 + ( 50 * (GAMEMODE:GetWave() ) + (GetGlobalInt("ZombiesKilledTeam") or 0 ) ) ) )
+			pl:SetHealth(ZKTHealthCalc)
+			pl:SetMaxHealth(ZKTHealthCalc)
+			pl:SetSpeed( (160 + (20 * GAMEMODE:GetWave()) ) )
+			pl:Give("weapon_zs_zombie")
+			pl:SelectWeapon("weapon_zs_zombie")
+		else
+			
+			local HPDEATHMULTI = ( ( ( 1 +( (GetGlobalInt("HP gain per death"))/5)) * (GetGlobalInt("ZombiesKilledTeam") ) ) )  
+			local PLAYERZOMBIEBASEHEALTH = ( 100 * (GAMEMODE:GetWave() ) )
+			local HPWAVEMULTI = ( 10 * (GetGlobalInt("HP gain per wave") * (GAMEMODE:GetWave()) ) )
+			local ZKTHealthCalc = ( PLAYERZOMBIEBASEHEALTH + HPWAVEMULTI + HPDEATHMULTI )
+			if ZKTHealthCalc < 1 then
+				ZKTHealthCalc = 100
+			end
+			pl:SetHealth(ZKTHealthCalc)
+			pl:SetMaxHealth(ZKTHealthCalc)
+			local MOVEDEATHMULTI = (((GetGlobalInt("Move speed gain per death"))/100) * (GetGlobalInt("ZombiesKilledTeam")))
+			local MOVEWAVEMULTI = ((GetGlobalInt("Move speed gain per wave")) * (GAMEMODE:GetWave()))
+			local PLAYERZOMBIEBASEMOVE = (160 + (20 * GAMEMODE:GetWave()) )
+			local PlayerSpeedCalc = ( PLAYERZOMBIEBASEMOVE + MOVEDEATHMULTI + MOVEWAVEMULTI )
+			pl:SetSpeed(PlayerSpeedCalc)
 			pl:Give("weapon_zs_zombie")
 			pl:SelectWeapon("weapon_zs_zombie")
 		end
+		
+		local HasSpawnSwep = GetGlobalInt("Place Spawn")
+		if HasSpawnSwep == 1 then
+			pl:Give("weapon_zs_fleshcreeper")
+		end
+		pl:SelectWeapon("weapon_zs_zombie")
 	end
-
+	
 	function CLASS:OnKilled(pl, attacker, inflictor, suicide, headshot, dmginfo)
 		pl:SetAllowFullRotation(false)
 		local amount = pl:OBBMaxs():Length()
