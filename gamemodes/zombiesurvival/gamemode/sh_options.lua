@@ -213,6 +213,8 @@ GM:AddZPointShopItem("Reach gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinke
 GM:AddZPointShopItem("Reach gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_crowdsurfing").SubCategory =								ITEMSUBCAT_ZTRINKETS_PERFORMANCE
 --abilities
 
+GM:AddZPointShopItem("Place Spawn",			ITEMCAT_ZABILITY,		10,				"weapon_zs_fleshcreeper").SubCategory =								ITEMSUBCAT_ZTRINKETS_PERFORMANCE
+
 ------------
 -- Points --
 ------------
