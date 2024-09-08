@@ -242,11 +242,12 @@ function GM:SupplyItemViewerDetail(viewer, sweptable, shoptbl)
 	local desctext = sweptable.Description or ""
 	if not self.ZSInventoryItemData[shoptbl.SWEP] then
 		viewer.ModelPanel:SetModel(sweptable.WorldModel)
-		local mins, maxs = viewer.ModelPanel.Entity:GetRenderBounds()
-		viewer.ModelPanel:SetCamPos(mins:Distance(maxs) * Vector(1.15, 0.75, 0.5))
-		viewer.ModelPanel:SetLookAt((mins + maxs) / 2)
-		viewer.m_VBG:SetVisible(true)
-
+		if shoptbl.Category ~= ITEMCAT_ZABILITY then
+			local mins, maxs = viewer.ModelPanel.Entity:GetRenderBounds()
+			viewer.ModelPanel:SetCamPos(mins:Distance(maxs) * Vector(1.15, 0.75, 0.5))
+			viewer.ModelPanel:SetLookAt((mins + maxs) / 2)
+			viewer.m_VBG:SetVisible(true)
+		end
 		if sweptable.NoDismantle then
 			desctext = desctext .. "\nCannot be dismantled for scrap."
 		end
