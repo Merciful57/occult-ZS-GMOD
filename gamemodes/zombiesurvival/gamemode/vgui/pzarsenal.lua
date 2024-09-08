@@ -669,7 +669,7 @@ function GM:OpenZArsenalMenu(remantler)
 			list:SetTall(ammoframe:GetTall() - 32)
 
 			for j, tab in ipairs(GAMEMODE.Items) do
-				if tab.CanMakeFromScrap then
+				if tab.Category == ITEMCAT_ZABILITY then
 					self:AddShopItem(list, j, tab, false, true)
 				end
 			end
