@@ -190,8 +190,8 @@ item.CanMakeFromScrap = true
 -- traits
 GM:AddZPointShopItem("Damage gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
 GM:AddZPointShopItem("Damage gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
-GM:AddZPointShopItem("Swing speed gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
-GM:AddZPointShopItem("Swing speed per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
+--GM:AddZPointShopItem("Swing speed gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
+--GM:AddZPointShopItem("Swing speed per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_momentumsupsysii").SubCategory =								ITEMSUBCAT_ZTRINKETS_OFFENSIVE
 
 GM:AddZPointShopItem("HP gain per wave",			ITEMCAT_ZTRINKETS,		10,				"trinket_waveofdeath").SubCategory =								ITEMSUBCAT_ZTRINKETS_DEFENSIVE
 GM:AddZPointShopItem("HP gain per death",			ITEMCAT_ZTRINKETS,		10,				"trinket_vengeance").SubCategory =								ITEMSUBCAT_ZTRINKETS_DEFENSIVE
