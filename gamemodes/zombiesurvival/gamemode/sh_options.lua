@@ -64,6 +64,13 @@ GM.ItemSubCategories = {
 	[ITEMSUBCAT_TRINKETS_SPECIAL] = "Special"
 }
 
+GM.ItemZSubCategories = {
+	[ITEMSUBCAT_ZTRINKETS_DEFENSIVE] = "Defensive",
+	[ITEMSUBCAT_ZTRINKETS_OFFENSIVE] = "Offensive",
+	[ITEMSUBCAT_ZTRINKETS_PERFORMANCE] = "Performnace"
+	
+}
+
 --[[
 Humans select what weapons (or other things) they want to start with and can even save favorites. Each object has a number of 'Worth' points.
 Signature is a unique signature to give in case the item is renamed or reordered. Don't use a number or a string number!
