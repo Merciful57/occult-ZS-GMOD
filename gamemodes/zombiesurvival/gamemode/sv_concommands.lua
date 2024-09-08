@@ -8,22 +8,40 @@ concommand.Add("zs_pointsshopbuy", function(sender, command, arguments)
 	id = tonumber(id) or id
 	local itemtab = FindItem(id)
 	if sender:IsValidZombie() then
+		if GAMEMODE:GetInventoryItemType(itemtab.SWEP) == INVCAT_TRINKETS then
+			local cum = GetGlobalInt(id) --it stands for cumulative
+			if cum < 1 then 
+				cum = 1
+			end
+			local cumprice = (cum * cum) --Modify this line to scale cost
+			if sender:Frags() < (cumprice) then	
+				sender:CenterNotify(COLOR_RED, "You need "..cumprice.." Silver to buy "..id.." level "..cum)
+			return end	
+			sender:AddFrags(0 - (cumprice)) 
+			SetGlobalInt(id, (cum or 0) + 1)
+			sender:CenterNotify(COLOR_GREEN, id.." Level "..cum)
+			sender:CenterNotify(COLOR_GREEN, "Purchased for "..cumprice.." Silver") 
+			return
+		end
 		
 		local cum = GetGlobalInt(id)
-		if cum < 1 then 
-			cum = 1
+		if cum > 0 then
+			sender:CenterNotify(COLOR_RED, id.." ability is already unlocked")
+			return
 		end
-		local cumprice = (cum * cum) --Modify this line to scale cost
+		
+		local cumprice = 100
+		
 		if sender:Frags() < (cumprice) then	
-			sender:CenterNotify(COLOR_RED, id.." Level "..cum)
-			sender:CenterNotify(COLOR_RED, "You need "..cumprice.." Silver to buy this")
-		return end	
+			sender:CenterNotify(COLOR_RED, "You need "..cumprice.." Silver to buy "..id.." ability")
+			return 
+		end	
 		sender:AddFrags(0 - (cumprice)) 
-		SetGlobalInt(id, (cum or 0) + 1)
-		sender:CenterNotify(COLOR_GREEN, id.." Level "..cum)
-		sender:CenterNotify(COLOR_GREEN, "Purchased for "..cumprice.." Silver") 
-		return
+		SetGlobalInt(id, 1)
+		sender:CenterNotify(COLOR_GREEN, "Purchased ability"..id.." for "..cumprice.." Silver") 
+		return 	
 	end
+		
 	if not (sender:IsValid() and sender:IsConnected() and sender:IsValidLivingHuman()) or #arguments == 0 then return end
 	local usescrap = arguments[2]
 
